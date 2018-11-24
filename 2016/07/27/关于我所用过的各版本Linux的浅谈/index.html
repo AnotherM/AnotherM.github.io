@@ -1,0 +1,973 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="个人观点,">
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0">
+
+
+
+
+
+
+<meta name="description" content="以下所写仅为个人观点，真实感受请自己体验，如有雷同，那就让它雷同吧文中总览部分来源于维基百科-Linux发行版列表 图片来源于Google  先列出我所用过的Linux，按使用先后排序 Ubuntu Ubuntu Kylin Kali Linux Deepin elementary OS CentOS Debian Arch Linux">
+<meta name="keywords" content="个人观点">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于我所用过的各版本Linux的浅谈">
+<meta property="og:url" content="https://anotherm.github.io/2016/07/27/关于我所用过的各版本Linux的浅谈/index.html">
+<meta property="og:site_name" content="Another.M">
+<meta property="og:description" content="以下所写仅为个人观点，真实感受请自己体验，如有雷同，那就让它雷同吧文中总览部分来源于维基百科-Linux发行版列表 图片来源于Google  先列出我所用过的Linux，按使用先后排序 Ubuntu Ubuntu Kylin Kali Linux Deepin elementary OS CentOS Debian Arch Linux">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/b/b0/NewTux.svg">
+<meta property="og:updated_time" content="2016-07-27T13:54:21.733Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="关于我所用过的各版本Linux的浅谈">
+<meta name="twitter:description" content="以下所写仅为个人观点，真实感受请自己体验，如有雷同，那就让它雷同吧文中总览部分来源于维基百科-Linux发行版列表 图片来源于Google  先列出我所用过的Linux，按使用先后排序 Ubuntu Ubuntu Kylin Kali Linux Deepin elementary OS CentOS Debian Arch Linux">
+<meta name="twitter:image" content="https://upload.wikimedia.org/wikipedia/commons/b/b0/NewTux.svg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+
+
+
+
+  <title> 关于我所用过的各版本Linux的浅谈 | Another.M </title>
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-89085652-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Another.M</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope="" itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://anotherm.github.io/2016/07/27/关于我所用过的各版本Linux的浅谈/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Another.M">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Another.M">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                关于我所用过的各版本Linux的浅谈
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-07-27T15:57:39+08:00">
+                2016-07-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/学习相关/" itemprop="url" rel="index">
+                    <span itemprop="name">学习相关</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="https://upload.wikimedia.org/wikipedia/commons/b/b0/NewTux.svg" width="200" align="right"></p>
+<h3 id="以下所写仅为个人观点，真实感受请自己体验，如有雷同，那就让它雷同吧"><a href="#以下所写仅为个人观点，真实感受请自己体验，如有雷同，那就让它雷同吧" class="headerlink" title="以下所写仅为个人观点，真实感受请自己体验，如有雷同，那就让它雷同吧"></a>以下所写仅为个人观点，真实感受请自己体验，如有雷同，那就让它雷同吧</h3><p>文中总览部分来源于<a href="https://zh.wikipedia.org/wiki/Linux发行版列表" target="_blank" rel="noopener">维基百科-Linux发行版列表</a></p>
+<p>图片来源于<a href="https://www.google.com.hk/imgres?imgurl=https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/NewTux.svg/2000px-NewTux.svg.png&amp;imgrefurl=https://zh.wikipedia.org/wiki/Linux&amp;h=2400&amp;w=2000&amp;tbnid=NWUz_uyHoU1KUM:&amp;tbnh=160&amp;tbnw=133&amp;docid=cGRBAcKAJbrXXM&amp;usg=__4boGWOohNRnKuVnlkVaLWmuv6kw=&amp;sa=X&amp;ved=0ahUKEwjM16jQsZPOAhXCRY8KHarjAygQ9QEIHjAA" target="_blank" rel="noopener">Google</a></p>
+<hr>
+<h2 id="先列出我所用过的Linux，按使用先后排序"><a href="#先列出我所用过的Linux，按使用先后排序" class="headerlink" title="先列出我所用过的Linux，按使用先后排序"></a>先列出我所用过的Linux，按使用先后排序</h2><ul>
+<li><a href="http://cn.ubuntu.com/" target="_blank" rel="noopener">Ubuntu</a></li>
+<li><a href="http://www.ubuntukylin.com/" target="_blank" rel="noopener">Ubuntu Kylin</a></li>
+<li><a href="https://www.kali.org/" target="_blank" rel="noopener">Kali Linux</a></li>
+<li><a href="https://www.deepin.org/" target="_blank" rel="noopener">Deepin</a></li>
+<li><a href="https://elementary.io/" target="_blank" rel="noopener">elementary OS</a></li>
+<li><a href="https://www.centos.org/" target="_blank" rel="noopener">CentOS</a></li>
+<li><a href="https://www.debian.org" target="_blank" rel="noopener">Debian</a></li>
+<li><a href="https://www.archlinux.org/" target="_blank" rel="noopener">Arch Linux</a></li>
+</ul>
+<hr>
+<a id="more"></a>
+<h2 id="以下为各版本的个人体会，推荐度基于整体综合考虑"><a href="#以下为各版本的个人体会，推荐度基于整体综合考虑" class="headerlink" title="以下为各版本的个人体会，推荐度基于整体综合考虑"></a>以下为各版本的个人体会，推荐度基于整体综合考虑</h2><h3 id="Ubuntu"><a href="#Ubuntu" class="headerlink" title="Ubuntu"></a>Ubuntu</h3><ul>
+<li>简介：基于Debian，由Canonical公司赞助</li>
+<li>使用感受：直观感觉就是上手非常容易，自带LibreOffice，自带Firefox，安装软件可以通过软件中心，或者直接<code>apt-get install &quot;package name&quot;</code>(16.04版本已经精简为apt)，而且界面相对于其他的Linux来说很漂亮，适用于外观党，而且懒得折腾界面与不会折腾的新手，目前在实体机上依然使用中</li>
+<li>推荐度：★★★★</li>
+</ul>
+<h3 id="Ubuntu-Kylin"><a href="#Ubuntu-Kylin" class="headerlink" title="Ubuntu Kylin"></a>Ubuntu Kylin</h3><ul>
+<li>简介：基于Ubuntu的Linux发行版，以中国大陆用户为主，中文名为“优麒麟” 主要开发者为 Ubuntu Kylin 社区、国防科学技术大学（NUDT）与 Canonical公司</li>
+<li>使用感受：说白了就是Ubuntu的中国定制版，本地化比较好一些，自带软件相对于Ubuntu有一些不同，其余与Ubuntu基本没有太大区别，但是由于个人有一些精神洁癖，所以这个版本并未使用超过2小时</li>
+<li>推荐度：★★★</li>
+</ul>
+<h3 id="Kali-Linux"><a href="#Kali-Linux" class="headerlink" title="Kali Linux"></a>Kali Linux</h3><ul>
+<li>简介：基于Debian的Linux发行版， 设计用于数字鉴识和渗透测试。由Offensive Security Ltd维护和资助。</li>
+<li>使用感受：在Android 2.3时期就听说过使用手机虚拟机跑BackTrack可以破解别人的无线网，虽然我试过没成功，但是后来BackTrack发展成了这个Kali Linux，我用虚拟机和实体机分别尝试过，但是因为是用于渗透和破解的系统，过于高端而当时我的技术不达标所以放弃了，总的来说就是如果你想往渗透破解反编译这方面发展的话，可以考虑使用</li>
+<li>推荐度：★★★</li>
+</ul>
+<h3 id="Deepin"><a href="#Deepin" class="headerlink" title="Deepin"></a>Deepin</h3><ul>
+<li>简介：基于Ubuntu，0.x版基于Debian。经历过多个桌面环境的变更（IceWM,xfce,LXDE,GNOME)，从Linux Deepin 12.12开始使用自主研发的DDE，15.2已重新基于Debian并切DDE已经升级为3.0</li>
+<li>使用感受：当初无意间注意到的，版本还是14，貌似就是这个时候火起来的，尝试实体机安装了一下，安装过程竟然简单到点三次下一步就可以了，而且自带一些深度软件，也就是其发行公司自行开发的软件，短暂用了一段时间，优点是比Ubuntu还容易上手，由于14基于Ubuntu，所以用起来还算不错，新版本15据说是因为换了Debian变得不算太稳定，并且由于个人已经将Ubuntu作为常用系统，所以新版本只在虚拟机上看了看，总的来说，是个不错的选择，并且这个系统前景很宽阔，可以作为常用</li>
+<li>推荐度：★★★★</li>
+</ul>
+<h3 id="elementary-OS"><a href="#elementary-OS" class="headerlink" title="elementary OS"></a>elementary OS</h3><ul>
+<li>简介：基于Ubuntu的Linux发行版。它使用一个自己开发的基于GNOME的名为Pantheon的桌面环境，从为Ubuntu设计的一套主题和应用程序发展而来</li>
+<li>使用感受：当初没事的时候找到的，但个人使用没超过15分钟，简单来说就是一套改了主题的Ubuntu，而且改得还挺不错，据一些网络评论说是可以提供类似于Mac OS X的体验，但是我没觉得，不过对于外观党，是个不错的选择</li>
+<li>推荐度：★★</li>
+</ul>
+<h3 id="CentOS"><a href="#CentOS" class="headerlink" title="CentOS"></a>CentOS</h3><ul>
+<li>简介：Linux发行版之一，它是来自于Red Hat Enterprise Linux依照开放源代码规定发布的源代码所编译而成，属于Red Hat系，使用RPM作为软件包</li>
+<li>使用感受：一共安装了4次，使用的版本为Everything ISO，也就是全功能版，第一次安装由于是体验，所以就选择了最大化安装（虚拟机），用了大概一个小时，体验还算不错，因为是区别于Debian系列的Red Hat系，所以使用起来很新颖，于是想要实体机尝试一下，刚开始安装的时候选了最小化安装，结果就得到了一句话：“这特么是什么鬼”。后来查了查，最小化安装没有GUI，也就是没有图形界面，然后选了KDE作为桌面环境安装了一次，但是KDE桌面稳定个人觉得有些难用，所以又选择了GNOME来安装，用了大概一个小时，还是用回了Ubuntu，对于CentOS个人是特别满意的，因为这系统虽然自带<a href="http://openjdk.java.net/" target="_blank" rel="noopener">OpenJDK</a>，但是个人相对来说还是喜欢用<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="noopener">OracleJDK</a>，而OracleJDK分两种安装格式，一种是RPM，一种是压缩包，简而言之，Red Hat系对于开发支持方面比Ubuntu高的多一些，实际使用差别不大</li>
+<li>推荐度：★★★★</li>
+</ul>
+<h3 id="Debian"><a href="#Debian" class="headerlink" title="Debian"></a>Debian</h3><ul>
+<li>简介：由GPL和其他自由软件许可协议授权的自由软件组成的操作系统，由Debian项目（Debian Project）组织维护，Software in the Public Interest提供支持并持有商标作为保护机构</li>
+<li>使用感受：要说感受比较深的应该就是这个了，毕竟Ubuntu和Kali Linux都是基于Debian的，提供xfce,LXDE,GNOME,KDE四种桌面环境，同CentOS,还是GNOME相对来说好折腾一些，但实际使用上手不如Ubuntu与Deepin容易，功能相对于CentOS比较弱，因为Debian的精神就是坚守Unix和自由软件，所以对于用户的选择很多，也就是玩Linux熟练到一定程度之后就可以尝试一下使用Debian，不管别人对我怎么看，对于我来说，这个系统就是个随便改，改得面目全非都行，反正是拿来玩的系统，用它来做开发，还是因人而异了</li>
+<li>推荐度：★★★</li>
+</ul>
+<h3 id="Arch-Linux"><a href="#Arch-Linux" class="headerlink" title="Arch Linux"></a>Arch Linux</h3><ul>
+<li>简介：基于<a href="https://zh.wikipedia.org/wiki/KISS原则" target="_blank" rel="noopener">KISS原则</a>（Keep It Simple, Stupid 的首字母缩略字），朝向轻量（lightweight）以及简单（simple）的Linux发行版</li>
+<li>使用感受：刚开始使用的时候我是拒绝的，因为<a href="http://cn.ezbsystems.com/ultraiso/index.html" target="_blank" rel="noopener">UltraISO</a>刻录的U盘启动盘在EFI下根本没法启动，别的Linux发行版却一点儿问题都没有，后来用了一个软件直接把Arch Linux刻到了硬盘里启动后，等了半天发现怎么没界面？后来才反应过来，这货特么的没有GUI，没有GUI，没有GUI，只有一个命令行，当时我就陷入了深思，后来看了看<a href="https://wiki.archlinux.org/index.php/Main_page_(简体中文" target="_blank" rel="noopener">Arch Linux的Wiki</a>)，果断放弃了，因为我还没到达光靠命令行或终端就能解决一切问题的地步。</li>
+<li>推荐度：★★</li>
+</ul>
+<hr>
+<p>以上的一些，纯属个人经验，具体使用哪个版本，还要你们自己自行尝试，还是那句话：因人而异，不过总的来说，我推荐三个：Deepin适合日常娱乐，Ubuntu适合入手练习Linux，CentOS适合开发</p>
+<p>顺便说个使用难度排序：Deepin  &lt;  Ubuntu  =  Ubuntu Kylin  =  elementary OS  &lt;  CentOS  ≈  Debian &lt;  Kali Linux  &lt;  Arch Linux </p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/个人观点/" rel="tag"># 个人观点</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/04/14/Markdown语法测试/" rel="next" title="Markdown常用语法测试">
+                <i class="fa fa-chevron-left"></i> Markdown常用语法测试
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/11/25/1121-1125学习总结/" rel="prev" title="1121-1125学习总结">
+                1121-1125学习总结 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="Another.M">
+          <p class="site-author-name" itemprop="name">Another.M</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/AnotherM" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://steamcommunity.com/id/anotherm4" target="_blank" title="Steam">
+                  
+                    <i class="fa fa-fw fa-steam"></i>
+                  
+                  Steam
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#以下所写仅为个人观点，真实感受请自己体验，如有雷同，那就让它雷同吧"><span class="nav-number">1.</span> <span class="nav-text">以下所写仅为个人观点，真实感受请自己体验，如有雷同，那就让它雷同吧</span></a></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#先列出我所用过的Linux，按使用先后排序"><span class="nav-number"></span> <span class="nav-text">先列出我所用过的Linux，按使用先后排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#以下为各版本的个人体会，推荐度基于整体综合考虑"><span class="nav-number"></span> <span class="nav-text">以下为各版本的个人体会，推荐度基于整体综合考虑</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Ubuntu"><span class="nav-number">1.</span> <span class="nav-text">Ubuntu</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Ubuntu-Kylin"><span class="nav-number">2.</span> <span class="nav-text">Ubuntu Kylin</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Kali-Linux"><span class="nav-number">3.</span> <span class="nav-text">Kali Linux</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deepin"><span class="nav-number">4.</span> <span class="nav-text">Deepin</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#elementary-OS"><span class="nav-number">5.</span> <span class="nav-text">elementary OS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CentOS"><span class="nav-number">6.</span> <span class="nav-text">CentOS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Debian"><span class="nav-number">7.</span> <span class="nav-text">Debian</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Arch-Linux"><span class="nav-number">8.</span> <span class="nav-text">Arch Linux</span></a></li></ol></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Another.M</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

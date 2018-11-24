@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Another.M</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://anotherm.github.io/"/>
+  <updated>2018-11-19T15:24:29.574Z</updated>
+  <id>https://anotherm.github.io/</id>
+  
+  <author>
+    <name>Another.M</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>fuckJava</title>
+    <link href="https://anotherm.github.io/2018/11/19/fuckJava/"/>
+    <id>https://anotherm.github.io/2018/11/19/fuckJava/</id>
+    <published>2018-11-19T14:10:16.000Z</published>
+    <updated>2018-11-19T15:24:29.574Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="fxckUJava"><a href="#fxckUJava" class="headerlink" title="fxckUJava"></a><b>fxckUJava</b></h1><p>昨天花时间研究了一下Spring与SpringBoot相关的知识，然后过了一天，整个人就是这种感觉</p><p><img src="https://tu.jiuwa.net/pic/20171105/1509886023460480.jpg" width="240" height="auto/"></p><p>今天看了看Flask</p><p>然后就有了这篇文章的标题—-<b>fxckUJava</b></p><p>关于这篇文章的内容呢，就是教你用9行写出一个网站</p><font style="font-size:32px;font-family:幼圆">所以：</font><p><img src="https://file.digitaling.com/eImg/uimages/20160414/1460627797867376.jpg" width="240" height="auto/"></p><h2 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h2><ul><li>First: 你会用电脑</li><li>Second: 你会装Python并且会添加环境变量</li><li>Third: 你会用cmd</li></ul><font style="font-size:32px;font-family:幼圆;">如果这些你都不具备的话那还是回家洗洗睡吧</font><hr><h3 id="接下来是正文"><a href="#接下来是正文" class="headerlink" title="接下来是正文"></a>接下来是正文</h3><ol><li>在以上条件都具备之后，打开cmd，执行pip install flask</li><li>新建一个后缀名为.py的文件</li><li>打开.py这个文件</li><li><p>写入<br><br></p><p> from flask import Flask</p><p> app = Flask(<strong>name</strong>)</p></li></ol><pre><code>@app.route(&apos;/&apos;)def index():    return &apos;fxckUJava&apos;if __name__ == &apos;__main__&apos;:    app.run()</code></pre><ol start="5"><li>用cmd找到这个文件（cd命令）</li><li>使用python xxx .py(xxx为你的文件名)，出现下图后，打开浏览器，访问127.0.0.1:5000<ul><li>如果看不到任何东西或者页面没反应的话，恩，从头看看哪里搞错了吧<br><img src="/images/flask.png" witdh="auto" height="auto"></li></ul></li></ol><p>附：<a href="http://flask.pocoo.org" target="_blank" rel="noopener">Flask官网</a> <a href="https://www.python.org/" target="_blank" rel="noopener">Python官网</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;fxckUJava&quot;&gt;&lt;a href=&quot;#fxckUJava&quot; class=&quot;headerlink&quot; title=&quot;fxckUJava&quot;&gt;&lt;/a&gt;&lt;b&gt;fxckUJava&lt;/b&gt;&lt;/h1&gt;&lt;p&gt;昨天花时间研究了一下Spring与SpringBoot相关的知识，然后
+      
+    
+    </summary>
+    
+      <category term="学习相关" scheme="https://anotherm.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%9B%B8%E5%85%B3/"/>
+    
+    
+      <category term="小世界" scheme="https://anotherm.github.io/tags/%E5%B0%8F%E4%B8%96%E7%95%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>0320-0407学习总结</title>
+    <link href="https://anotherm.github.io/2017/04/08/0320-0407%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
+    <id>https://anotherm.github.io/2017/04/08/0320-0407学习总结/</id>
+    <published>2017-04-08T02:10:34.000Z</published>
+    <updated>2017-04-08T03:09:35.986Z</updated>
+    
+    <content type="html"><![CDATA[<p>#03.20-04.07学习总结</p><p><strong><em>因为升本考试和一些其他的私事，所以将这三周合并来写</em></strong></p><p>##总体工作</p><ul><li><a href="http://anotherm4.tk" target="_blank" rel="noopener">anotherm4.tk</a>再次重新设计</li><li>添加Chrome移动端状态栏变色（可能只限于Android和iOS）</li><li>开启Tomcat APR模式</li><li>服务器安装fail2ban增强安全性</li><li>网页数据库测试部分已经完成</li></ul><hr><a id="more"></a><p>##详细工作</p><ul><li>重新设计<ul><li>目前效果可以直接访问来查看，使用的框架为Google的<a href="https://getmdl.io/" target="_blank" rel="noopener">Material Design Lite</a></li></ul></li><li>添加状态栏变色<ul><li>只需要加一句话 <code>&lt;meta name=&quot;theme-color&quot; content=&quot;#123456&quot;&gt;</code>其中<code>#123456</code>可以改为自己想要的颜色</li></ul></li><li>开启Tomcat APR模式<ul><li>参考<a href="http://blog.csdn.net/xyang81/article/details/51502766" target="_blank" rel="noopener">http://blog.csdn.net/xyang81/article/details/51502766</a></li><li>具体步骤简述<ul><li>下载<a href="https://tomcat.apache.org/tomcat-8.5-doc/apr.html" target="_blank" rel="noopener">APR</a>(本人使用的是Tomcat8)</li><li>使用<code>yum groupinstall &quot;development tools&quot;</code>安装GCC等</li><li>编译APR(默认输出位置为<code>/usr/local/apr</code>)</li><li>修改环境变量(具体参考原作者博客内容)</li></ul></li></ul></li><li>服务器安装fali2ban<ul><li>一行代码 <code>yum install fail2ban</code></li><li>修改<code>/etc/fali2ban/jail.conf</code>或者建立<code>/etc/fail2ban/jail.local</code>自定义规则</li><li>使用<code>service fali2ban start</code>启动或者<code>service fail2ban restart</code>重启fali2ban来应用定义的规则</li><li>使用<code>chkconfig fail2ban on</code>来设置开机启动</li><li>具体参考<a href="https://linux.cn/article-5067-1.html" target="_blank" rel="noopener">https://linux.cn/article-5067-1.html</a></li></ul></li><li><p>网页数据库测试部分已经完成</p><ul><li><p>暂未实现增删改查，只是测试</p></li><li><p><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRqsH8kgkz98IPNki0OGAqU3sxW4xyiBLyyt9WqaGeETC4qMZes" alt=""></p></li></ul></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;#03.20-04.07学习总结&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;因为升本考试和一些其他的私事，所以将这三周合并来写&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;##总体工作&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://anotherm4.tk&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;anotherm4.tk&lt;/a&gt;再次重新设计&lt;/li&gt;
+&lt;li&gt;添加Chrome移动端状态栏变色（可能只限于Android和iOS）&lt;/li&gt;
+&lt;li&gt;开启Tomcat APR模式&lt;/li&gt;
+&lt;li&gt;服务器安装fail2ban增强安全性&lt;/li&gt;
+&lt;li&gt;网页数据库测试部分已经完成&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+    
+    </summary>
+    
+    
+      <category term="别人实习我学习" scheme="https://anotherm.github.io/tags/%E5%88%AB%E4%BA%BA%E5%AE%9E%E4%B9%A0%E6%88%91%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>博客界面效果小更新</title>
+    <link href="https://anotherm.github.io/2017/04/04/%E5%8D%9A%E5%AE%A2%E7%95%8C%E9%9D%A2%E6%95%88%E6%9E%9C%E5%B0%8F%E6%9B%B4%E6%96%B0/"/>
+    <id>https://anotherm.github.io/2017/04/04/博客界面效果小更新/</id>
+    <published>2017-04-04T04:43:04.000Z</published>
+    <updated>2017-04-08T03:14:13.730Z</updated>
+    
+    <content type="html"><![CDATA[<p>因<a href="http://dev.duoshuo.com/threads/58d1169ae293b89a20c57241" target="_blank" rel="noopener">多说即将关闭</a>，所以整了整网页，准备取消多说服务，顺便翻了翻我现在正在使用的<a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">NexT主题</a>，发现主题作者更新了，尤其意外的发现添加了<a href="https://github.com/hustcc/canvas-nest.js" target="_blank" rel="noopener">canvas nest</a>这个动态背景效果，于是连带Hexo一起更新了一下</p><p>目前使用的背景为NexT的three_wave，具体可在作者主题文档找到</p><p>至于评论系统，反正也没人评论，所以干脆不弄了</p><p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUOl1UjyCPHz25v4bcZGUABXTM9jEonQiAgzFHZylGyrmSnyCvLQ" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;因&lt;a href=&quot;http://dev.duoshuo.com/threads/58d1169ae293b89a20c57241&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;多说即将关闭&lt;/a&gt;，所以整了整网页，准备取消多说服务，顺便翻了翻我现在正在使
+      
+    
+    </summary>
+    
+      <category term="新发现" scheme="https://anotherm.github.io/categories/%E6%96%B0%E5%8F%91%E7%8E%B0/"/>
+    
+    
+      <category term="小天地" scheme="https://anotherm.github.io/tags/%E5%B0%8F%E5%A4%A9%E5%9C%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>0313-0317学习总结</title>
+    <link href="https://anotherm.github.io/2017/03/17/0313-0317%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
+    <id>https://anotherm.github.io/2017/03/17/0313-0317学习总结/</id>
+    <published>2017-03-17T13:11:22.000Z</published>
+    <updated>2017-04-04T04:39:12.768Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="03-13-03-17学习总结"><a href="#03-13-03-17学习总结" class="headerlink" title="03.13-03.17学习总结"></a>03.13-03.17学习总结</h1><p>##总体工作</p><ul><li>网页改版</li><li>App样板已经完成</li></ul><hr><a id="more"></a><p>##详细工作</p><ul><li>网页改版自<a href="https://getmdl.io/" target="_blank" rel="noopener">Material Design Lite</a>的模板，其中背景效果来源于<a href="https://github.com/hustcc/canvas-nest.js" target="_blank" rel="noopener">hustcc的canvas-nest.js</a><ul><li>样板已经可以访问<a href="http://anotherm4.tk/" target="_blank" rel="noopener">anotherm4.tk</a></li><li>数据库与Java代码相关均未编写</li></ul></li><li>客户端样板图<ul><li><img src="/images/screenmobile1.png" alt=""></li><li><img src="/images/screenmobile2.png" alt=""></li></ul></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;03-13-03-17学习总结&quot;&gt;&lt;a href=&quot;#03-13-03-17学习总结&quot; class=&quot;headerlink&quot; title=&quot;03.13-03.17学习总结&quot;&gt;&lt;/a&gt;03.13-03.17学习总结&lt;/h1&gt;&lt;p&gt;##总体工作&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;网页改版&lt;/li&gt;
+&lt;li&gt;App样板已经完成&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+    
+    </summary>
+    
+      <category term="学习相关" scheme="https://anotherm.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%9B%B8%E5%85%B3/"/>
+    
+    
+      <category term="别人实习我学习" scheme="https://anotherm.github.io/tags/%E5%88%AB%E4%BA%BA%E5%AE%9E%E4%B9%A0%E6%88%91%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>0303-0307学习总结</title>
+    <link href="https://anotherm.github.io/2017/03/08/0306-0310%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
+    <id>https://anotherm.github.io/2017/03/08/0306-0310学习总结/</id>
+    <published>2017-03-08T01:58:11.000Z</published>
+    <updated>2017-04-04T04:39:27.870Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="03-06-03-10学习总结"><a href="#03-06-03-10学习总结" class="headerlink" title="03.06-03.10学习总结"></a>03.06-03.10学习总结</h1><p>##总体工作</p><ul><li>设计网页</li><li>设计App</li></ul><hr><a id="more"></a><p>##详细工作</p><ul><li>Web端基础功能设计<img src="/images/screenmain2.png" alt=""></li><li>Web端多用户设计（<strong>暂定功能</strong>）<img src="/images/screenmain1.png" alt=""></li><li><p>目前效果<img src="/images/eff.png" alt=""></p></li><li><p>移动端基础功能设计<br><img src="/images/screenmobile2.png" width="540" height="960/"></p></li><li>移动端多用户设计（<strong>暂定功能</strong>）<br><img src="/images/screenmobile1.png" width="540" height="960/"></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;03-06-03-10学习总结&quot;&gt;&lt;a href=&quot;#03-06-03-10学习总结&quot; class=&quot;headerlink&quot; title=&quot;03.06-03.10学习总结&quot;&gt;&lt;/a&gt;03.06-03.10学习总结&lt;/h1&gt;&lt;p&gt;##总体工作&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;设计网页&lt;/li&gt;
+&lt;li&gt;设计App&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+    
+    </summary>
+    
+      <category term="学习相关" scheme="https://anotherm.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%9B%B8%E5%85%B3/"/>
+    
+    
+      <category term="别人实习我学习" scheme="https://anotherm.github.io/tags/%E5%88%AB%E4%BA%BA%E5%AE%9E%E4%B9%A0%E6%88%91%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>0227-0231学习总结</title>
+    <link href="https://anotherm.github.io/2017/03/08/0227-0303%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
+    <id>https://anotherm.github.io/2017/03/08/0227-0303学习总结/</id>
+    <published>2017-03-08T01:57:41.000Z</published>
+    <updated>2017-03-10T06:37:18.448Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="02-27-03-03学习总结"><a href="#02-27-03-03学习总结" class="headerlink" title="02.27-03.03学习总结"></a>02.27-03.03学习总结</h1><h2 id="总体工作"><a href="#总体工作" class="headerlink" title="总体工作"></a>总体工作</h2><ul><li>VPS服务器的域名绑定</li><li>编写测试网页</li></ul><hr><a id="more"></a><h2 id="详细工作"><a href="#详细工作" class="headerlink" title="详细工作"></a>详细工作</h2><ul><li>由于学习使用并且<a href="http://www.freenom.com/zh/index.html" target="_blank" rel="noopener">Freenom</a>/<a href="http://www.dot.tk/zh/index.html" target="_blank" rel="noopener">Dot TK</a>提供的TK域名是免费的，所以本人申请了<a href="http://anotherm4.tk" target="_blank" rel="noopener">anotherm4.tk</a>作为自己的域名</li><li>使用<code>nano /usr/local/tomcat/conf/server.xml</code>修改Tomcat相关配置<ul><li>查找8080并修改为80</li><li>查找<code>&lt;Host&gt;</code>标签，在<code>&lt;Host&gt;&lt;/Host&gt;</code>之间添加<code>&lt;Context path=&quot;&quot; docBase=&quot;&quot; debug=&quot;0&quot; reloadable=&quot;true&quot; /&gt;</code><ul><li>其中path为虚拟目录的名字，也就是域名</li><li>docBase为想要展示的主页目录</li></ul></li></ul></li><li>申请<a href="https://www.dnspod.cn" target="_blank" rel="noopener">DNSPod</a>或者<a href="https://www.cloudxns.net/" target="_blank" rel="noopener">CloudXNS</a>加速国内解析<ul><li>添加域名</li><li>添加A记录,记录值为服务器IP</li><li>等待解析成功</li></ul></li><li>重启Tomcat并访问域名，如果看到Tomcat首页则为成功</li><li>使用Eclipse编写测试网页，并打包成war格式文件上传到<code>/usr/local/tomcat/webapps</code>目录，重启Tomcat并测试</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;02-27-03-03学习总结&quot;&gt;&lt;a href=&quot;#02-27-03-03学习总结&quot; class=&quot;headerlink&quot; title=&quot;02.27-03.03学习总结&quot;&gt;&lt;/a&gt;02.27-03.03学习总结&lt;/h1&gt;&lt;h2 id=&quot;总体工作&quot;&gt;&lt;a href=&quot;#总体工作&quot; class=&quot;headerlink&quot; title=&quot;总体工作&quot;&gt;&lt;/a&gt;总体工作&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;VPS服务器的域名绑定&lt;/li&gt;
+&lt;li&gt;编写测试网页&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+    
+    </summary>
+    
+      <category term="学习相关" scheme="https://anotherm.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%9B%B8%E5%85%B3/"/>
+    
+    
+      <category term="别人实习我学习" scheme="https://anotherm.github.io/tags/%E5%88%AB%E4%BA%BA%E5%AE%9E%E4%B9%A0%E6%88%91%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>0220-0224学习总结</title>
+    <link href="https://anotherm.github.io/2017/03/08/0220-0224%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
+    <id>https://anotherm.github.io/2017/03/08/0220-0224学习总结/</id>
+    <published>2017-03-08T00:55:31.000Z</published>
+    <updated>2017-03-08T02:02:24.032Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="02-20-02-24学习总结"><a href="#02-20-02-24学习总结" class="headerlink" title="02.20-02.24学习总结"></a>02.20-02.24学习总结</h1><h2 id="总体工作"><a href="#总体工作" class="headerlink" title="总体工作"></a>总体工作</h2><ul><li>设立工作目标<ul><li>尝试编写一个类似于“每日一句”的网站</li><li>编写一个与网站对应的App</li></ul></li></ul><hr><a id="more"></a><h2 id="详细工作"><a href="#详细工作" class="headerlink" title="详细工作"></a>详细工作</h2><ul><li>网站环境搭建<ul><li>基础环境搭建<ul><li>购买云主机或者VPS服务器 (<strong><em>由于云主机限制比较多，所以本人购买了VPS</em></strong>)</li><li>进入主机服务商提供的控制面板</li><li>安装新系统（<strong><em>在这里我选择的是CentOS x86_64 Minimal</em></strong>)</li><li>使用<code>yum update</code>更新系统</li><li>使用<code>rpm -qa |grep ssh</code>查询SSH是否已经安装，如果未安装则使用<code>yum install openssh-server</code>安装SSH</li><li>使用<code>service sshd start</code>启动SSH服务</li><li>查询Vi/Vim/Nano编辑器是否安装，如果已安装则使用<code>nano /etc/ssh/sshd_config</code>修改SSH端口号</li><li>使用iptable相关命令开放SSH端口</li></ul></li><li>应用环境搭建<ul><li>使用PuTTY或者其他SSH相关软件连接远程主机的SSH服务</li><li>以root用户登陆后创建新用户（<strong><em>非必要</em></strong>）</li><li>查询JDK/Tomcat/MySQL是否安装（<strong><em>建议JDK为Oracle版</em></strong>）</li><li>下载Oracle JDK/Tomcat（<strong><em>可在本地下载完成后使用相关软件上传至服务器</em></strong>）</li><li>若已安装OpenJDK则可用<code>yum remove java-1.7.0-openjdk</code>移除</li><li>使用<code>yum localinstall jdk-8u25-linux-x64.rpm</code>安装Oracle JDK</li><li>使用<code>nano /etc/profile</code>修改系统环境变量</li><li>添加并保存<pre><code>export JAVA_HOME=/usr/java/jdk<br>  export JRE_HOME=/usr/java/jdk/jre<br>  export PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin<br>  export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib</code></pre></li><li>安装Tomcat（<strong><em>同理于JDK</em></strong>）</li><li>添加环境<pre><code>export TOMCAT_HOME=/usr/local/tomcat7<br>export CATALINA_HOME=/usr/local/tomcat7</code></pre></li><li>使用<code>./usr/local/bin/startup.sh</code>启动Tomcat</li><li>使用<code>echo /usr/local/bin/catalina.sh &gt;&gt; /etc/rc.d/init.d/tomcat</code>和<code>chkconfig -add /etc/rc.d/init.d/tomcat</code>添加到服务</li><li>使用<code>chmod 755 /etc/rc.d/init.d/tomcat</code>修改权限</li><li>重启服务器</li><li>使用<code>service tomcat start</code>和<code>service tomcat stop</code>验证修改</li><li>使用<code>yum install mysql-server mysql mysql-devel</code>安装MySQL</li><li>使用<code>service mysql start</code>启动服务</li><li>使用<code>chkconfig mysql on</code>设置MySQL开机启动</li><li>使用<code>mysqladmin -u root password &#39;root&#39;</code>给root用户设置密码</li><li>使用<code>mysql -u root -p &lt;password&gt;</code>登陆MySQL并创建测试表(<strong><em>非必要</em></strong>)</li></ul></li></ul></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;02-20-02-24学习总结&quot;&gt;&lt;a href=&quot;#02-20-02-24学习总结&quot; class=&quot;headerlink&quot; title=&quot;02.20-02.24学习总结&quot;&gt;&lt;/a&gt;02.20-02.24学习总结&lt;/h1&gt;&lt;h2 id=&quot;总体工作&quot;&gt;&lt;a href=&quot;#总体工作&quot; class=&quot;headerlink&quot; title=&quot;总体工作&quot;&gt;&lt;/a&gt;总体工作&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;设立工作目标&lt;ul&gt;
+&lt;li&gt;尝试编写一个类似于“每日一句”的网站&lt;/li&gt;
+&lt;li&gt;编写一个与网站对应的App&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+    
+    </summary>
+    
+      <category term="学习相关" scheme="https://anotherm.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%9B%B8%E5%85%B3/"/>
+    
+    
+      <category term="别人实习我学习" scheme="https://anotherm.github.io/tags/%E5%88%AB%E4%BA%BA%E5%AE%9E%E4%B9%A0%E6%88%91%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>0102-0106学习总结</title>
+    <link href="https://anotherm.github.io/2017/01/06/0102-0106%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
+    <id>https://anotherm.github.io/2017/01/06/0102-0106学习总结/</id>
+    <published>2017-01-06T08:58:58.000Z</published>
+    <updated>2017-01-06T10:04:05.839Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="0102-0106学习总结"><a href="#0102-0106学习总结" class="headerlink" title="0102-0106学习总结"></a>0102-0106学习总结</h1><h2 id="上周工作目标：完成此应用基本功能，并考虑添加Root相关，功能"><a href="#上周工作目标：完成此应用基本功能，并考虑添加Root相关，功能" class="headerlink" title="上周工作目标：完成此应用基本功能，并考虑添加Root相关，功能"></a>上周工作目标：完成此应用基本功能，并考虑添加Root相关，功能</h2><ul><li>已完成，Root相关功能未添加</li></ul><hr><a id="more"></a><h2 id="详细工作"><a href="#详细工作" class="headerlink" title="详细工作"></a>详细工作</h2><ul><li><p>完成Button相关操作，打开，复制包名，使用Google Play查找，卸载功能</p><ul><li>相关代码：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">public void btnCopy(View view) &#123;</span><br><span class="line">    ClipboardManager clipboardManager = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);</span><br><span class="line">    clipboardManager.setText(getIntent().getStringExtra(&quot;PackageName&quot;));</span><br><span class="line">    if(clipboardManager.hasText())&#123;</span><br><span class="line">        Snackbar.make(view,&quot;Success&quot;,Snackbar.LENGTH_LONG).show();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public void btnOpen(View view) &#123;</span><br><span class="line">    Intent intent = getPackageManager().getLaunchIntentForPackage(getIntent().getStringExtra(&quot;PackageName&quot;));</span><br><span class="line">    startActivity(intent);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public void btnGooglePlay(View view) &#123;</span><br><span class="line">    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(&quot;http://play.google.com/store/apps/details?id=&quot; + getIntent().getStringExtra(&quot;PackageName&quot;)));</span><br><span class="line">    startActivity(intent);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public void btnUninstall(View view) &#123;</span><br><span class="line">    Intent intent = new Intent(Intent.ACTION_DELETE, Uri.parse(&quot;package:&quot; + getIntent().getStringExtra(&quot;PackageName&quot;)));</span><br><span class="line">    startActivity(intent);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ul></li><li><p>总体程序演示视频<br><iframe height="480" width="272" src="/images/demo1.mp4" frameborder="0"></iframe></p></li></ul><p><strong>目前相关源代码已上传至Github，地址：<a href="https://github.com/AnotherM/AppManager" target="_blank" rel="noopener">https://github.com/AnotherM/AppManager</a></strong></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;0102-0106学习总结&quot;&gt;&lt;a href=&quot;#0102-0106学习总结&quot; class=&quot;headerlink&quot; title=&quot;0102-0106学习总结&quot;&gt;&lt;/a&gt;0102-0106学习总结&lt;/h1&gt;&lt;h2 id=&quot;上周工作目标：完成此应用基本功能，并考虑添加Root相关，功能&quot;&gt;&lt;a href=&quot;#上周工作目标：完成此应用基本功能，并考虑添加Root相关，功能&quot; class=&quot;headerlink&quot; title=&quot;上周工作目标：完成此应用基本功能，并考虑添加Root相关，功能&quot;&gt;&lt;/a&gt;上周工作目标：完成此应用基本功能，并考虑添加Root相关，功能&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;已完成，Root相关功能未添加&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+    
+    </summary>
+    
+      <category term="学习相关" scheme="https://anotherm.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%9B%B8%E5%85%B3/"/>
+    
+    
+      <category term="别人实习我学习" scheme="https://anotherm.github.io/tags/%E5%88%AB%E4%BA%BA%E5%AE%9E%E4%B9%A0%E6%88%91%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>1226-1230学习总结</title>
+    <link href="https://anotherm.github.io/2016/12/30/1226-1230%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
+    <id>https://anotherm.github.io/2016/12/30/1226-1230学习总结/</id>
+    <published>2016-12-30T07:08:36.000Z</published>
+    <updated>2017-01-06T09:22:37.279Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="12-26-12-30"><a href="#12-26-12-30" class="headerlink" title="12.26-12.30"></a>12.26-12.30</h1><h2 id="上周工作目标"><a href="#上周工作目标" class="headerlink" title="上周工作目标"></a>上周工作目标</h2><ul><li>未完成：由于可能涉及不同版本Android之间API有差异，所以暂时考虑作为后续功能开发</li><li>整个项目已经基本成型</li></ul><hr><a id="more"></a><h2 id="详细工作"><a href="#详细工作" class="headerlink" title="详细工作"></a>详细工作</h2><ul><li><p>完成程序ImageView的Transtation动画效果以及ImageView的高斯模糊</p><ul><li>演示视频<br><iframe height="480" width="272" src="/images/demo.mp4" frameborder="0"></iframe></li><li><p>示例代码</p><ul><li>Transtation效果：为两个ImageView添加同一个<code>android:transitionName</code>属性即可。</li><li><p>高斯模糊：来源于<a href="https://segmentfault.com/a/1190000004554679" target="_blank" rel="noopener">https://segmentfault.com/a/1190000004554679</a></p><p><strong>注：若使用Google官方API，Transtation效果只能在API21以上实现，高斯模糊为API19</strong></p></li></ul></li></ul></li><li><p>下周目标：完成此程序基本功能，考虑添加Root方面功能</p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;12-26-12-30&quot;&gt;&lt;a href=&quot;#12-26-12-30&quot; class=&quot;headerlink&quot; title=&quot;12.26-12.30&quot;&gt;&lt;/a&gt;12.26-12.30&lt;/h1&gt;&lt;h2 id=&quot;上周工作目标&quot;&gt;&lt;a href=&quot;#上周工作目标&quot; class=&quot;headerlink&quot; title=&quot;上周工作目标&quot;&gt;&lt;/a&gt;上周工作目标&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;未完成：由于可能涉及不同版本Android之间API有差异，所以暂时考虑作为后续功能开发&lt;/li&gt;
+&lt;li&gt;整个项目已经基本成型&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+    
+    </summary>
+    
+      <category term="学习相关" scheme="https://anotherm.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%9B%B8%E5%85%B3/"/>
+    
+    
+      <category term="别人实习我学习" scheme="https://anotherm.github.io/tags/%E5%88%AB%E4%BA%BA%E5%AE%9E%E4%B9%A0%E6%88%91%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>1219-1223学习总结</title>
+    <link href="https://anotherm.github.io/2016/12/23/1219-1223%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
+    <id>https://anotherm.github.io/2016/12/23/1219-1223学习总结/</id>
+    <published>2016-12-23T09:49:00.000Z</published>
+    <updated>2017-01-07T10:10:36.269Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="12-19-12-23学习总结"><a href="#12-19-12-23学习总结" class="headerlink" title="12.19-12.23学习总结"></a>12.19-12.23学习总结</h1><h2 id="上周工作目标"><a href="#上周工作目标" class="headerlink" title="上周工作目标"></a>上周工作目标</h2><ul><li>继续完成应用管理<ul><li>已经完成应用管理显示应用部分</li></ul></li></ul><hr><a id="more"></a><h2 id="详细工作"><a href="#详细工作" class="headerlink" title="详细工作"></a>详细工作</h2><ul><li><p>完成RecyclerView使用ViewHolder的数据绑定</p><ul><li>初步截图<br><img src="/images/AppManagerMain1.png" alt=""></li><li><p>附上主要源代码<br></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">public class ItemAdapter extends RecyclerView.Adapter&lt;ItemAdapter.ViewHolder&gt; &#123;</span><br><span class="line">    private List&lt;PackageInfo&gt; packageInfoList;</span><br><span class="line">    private PackageManager packageManager;</span><br><span class="line">    private Context context;</span><br><span class="line"></span><br><span class="line">    public ItemAdapter(Context context, List&lt;PackageInfo&gt; packageInfoList) &#123;</span><br><span class="line">        this.context = context;</span><br><span class="line">        this.packageInfoList = packageInfoList;</span><br><span class="line">        packageManager = context.getPackageManager();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">        @Override</span><br><span class="line">        public ItemAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) &#123;</span><br><span class="line">        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_container,parent,false);</span><br><span class="line">        return new ViewHolder(view);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void onBindViewHolder(ViewHolder holder, int position) &#123;</span><br><span class="line">        final PackageInfo packageInfo=packageInfoList.get(position);</span><br><span class="line">        holder.appName.setText(packageInfo.applicationInfo.loadLabel(packageManager));</span><br><span class="line">        holder.appIcon.setImageDrawable(packageInfo.applicationInfo.loadIcon(packageManager));</span><br><span class="line">        holder.itemView.setOnClickListener(new View.OnClickListener() &#123;</span><br><span class="line">            @Override</span><br><span class="line">            public void onClick(View view) &#123;</span><br><span class="line">                Intent intent = new Intent(packageManager.getLaunchIntentForPackage(packageInfo.packageName));//根据包名启动此应用</span><br><span class="line">                context.startActivity(intent);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public int getItemCount() &#123;</span><br><span class="line">        return packageInfoList.size();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    class ViewHolder extends RecyclerView.ViewHolder &#123;</span><br><span class="line">        TextView appName;</span><br><span class="line">        TextView appSize;</span><br><span class="line">        ImageView appIcon;</span><br><span class="line"></span><br><span class="line">        ViewHolder(View itemView) &#123;</span><br><span class="line">            super(itemView);</span><br><span class="line">            appName = (TextView) itemView.findViewById(R.id.container_app_name);</span><br><span class="line">            appSize = (TextView) itemView.findViewById(R.id.container_app_size);</span><br><span class="line">            appIcon = (ImageView) itemView.findViewById(R.id.container_icon);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">public class MainActivity extends AppCompatActivity &#123;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    protected void onCreate(Bundle savedInstanceState) &#123;</span><br><span class="line">        super.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.activity_main);</span><br><span class="line"></span><br><span class="line">        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);</span><br><span class="line">        setSupportActionBar(toolbar);</span><br><span class="line">        toolbar.setTitle(getTitle());</span><br><span class="line"></span><br><span class="line">        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab_refresh);</span><br><span class="line">        fab.setOnClickListener(new View.OnClickListener() &#123;</span><br><span class="line">            @Override</span><br><span class="line">            public void onClick(View view) &#123;</span><br><span class="line">                Snackbar.make(view, &quot;refresh&quot;, Snackbar.LENGTH_LONG)</span><br><span class="line">                    .setAction(&quot;Action&quot;, null).show();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.list_main);</span><br><span class="line">        List&lt;PackageInfo&gt; packageInfoList = new ArrayList&lt;&gt;();</span><br><span class="line">        List&lt;PackageInfo&gt; list = getPackageManager().getInstalledPackages(0);</span><br><span class="line">        for (PackageInfo info : list) &#123;</span><br><span class="line">            if ((info.applicationInfo.flags &amp; ApplicationInfo.FLAG_SYSTEM) == 0) &#123;</span><br><span class="line">                packageInfoList.add(info);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        recyclerView.setLayoutManager(new LinearLayoutManager(this));</span><br><span class="line">        recyclerView.addItemDecoration(new DividerItemDecoration(this,DividerItemDecoration.VERTICAL));</span><br><span class="line">        recyclerView.setHasFixedSize(true);</span><br><span class="line">        recyclerView.setAdapter(new ItemAdapter(this, packageInfoList));</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ul></li><li><p>下周目标：完成应用的缓存，APK大小，数据大小的计算部分</p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;12-19-12-23学习总结&quot;&gt;&lt;a href=&quot;#12-19-12-23学习总结&quot; class=&quot;headerlink&quot; title=&quot;12.19-12.23学习总结&quot;&gt;&lt;/a&gt;12.19-12.23学习总结&lt;/h1&gt;&lt;h2 id=&quot;上周工作目标&quot;&gt;&lt;a href=&quot;#上周工作目标&quot; class=&quot;headerlink&quot; title=&quot;上周工作目标&quot;&gt;&lt;/a&gt;上周工作目标&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;继续完成应用管理&lt;ul&gt;
+&lt;li&gt;已经完成应用管理显示应用部分&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+    
+    </summary>
+    
+      <category term="学习相关" scheme="https://anotherm.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%9B%B8%E5%85%B3/"/>
+    
+    
+      <category term="别人实习我学习" scheme="https://anotherm.github.io/tags/%E5%88%AB%E4%BA%BA%E5%AE%9E%E4%B9%A0%E6%88%91%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>1212-1216学习总结</title>
+    <link href="https://anotherm.github.io/2016/12/16/1212-1216%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
+    <id>https://anotherm.github.io/2016/12/16/1212-1216学习总结/</id>
+    <published>2016-12-16T08:20:16.000Z</published>
+    <updated>2017-01-07T10:07:02.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="12-12-12-16学习总结"><a href="#12-12-12-16学习总结" class="headerlink" title="12.12-12.16学习总结"></a>12.12-12.16学习总结</h1><h2 id="上周工作目标"><a href="#上周工作目标" class="headerlink" title="上周工作目标"></a>上周工作目标</h2><ul><li>完成AsyncTask部分与添加Firebase并将其列为StudyJams的进阶赛项目<ul><li>已完成</li><li>额外完成：应用图标设计，添加Admob</li></ul></li></ul><hr><p><strong>完整源代码已经可以下载：<a href="https://github.com/AnotherM/Daily" target="_blank" rel="noopener">项目地址</a></strong>/<strong><a href="https://github.com/AnotherM/Daily/raw/master/app/app-release.apk" target="_blank" rel="noopener">APK下载地址</a></strong></p><p><em>使用时请注意将addTestDevice(“XXXXXXXXXXXXXXXXXXX”)添加到MainActivity的AdRequest.Builder之后，此句可以在Logcat中找到，或者将AdView部分注释</em></p><hr><a id="more"></a><h2 id="详细工作"><a href="#详细工作" class="headerlink" title="详细工作"></a>详细工作</h2><ul><li>完成AsyncTask部分<ul><li>代码已经在上一篇文章结尾处呈现</li></ul></li><li>应用图标设计</li></ul><p><strong><em>2017.1.7更新：图标设计过程等相关图片已经丢失</em></strong></p><ul><li>Firebase以及Admob相关<ul><li>在Android Studio中点击<code>Tools</code>-<code>Firebase</code>或者使用登陆<a href="https://firebase.google.cn/" target="_blank" rel="noopener">Firebase</a>，按照其<a href="https://firebase.google.cn/docs/" target="_blank" rel="noopener">相关文档</a>使用即可，如无法访问，请确认你能使用<a href="https://www.google.com/" target="_blank" rel="noopener">Google</a>，在此不做赘述。</li></ul></li><li>下周计划：新闻客户端告一段落，继续完成应用管理</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;12-12-12-16学习总结&quot;&gt;&lt;a href=&quot;#12-12-12-16学习总结&quot; class=&quot;headerlink&quot; title=&quot;12.12-12.16学习总结&quot;&gt;&lt;/a&gt;12.12-12.16学习总结&lt;/h1&gt;&lt;h2 id=&quot;上周工作目标&quot;&gt;&lt;a href=&quot;#上周工作目标&quot; class=&quot;headerlink&quot; title=&quot;上周工作目标&quot;&gt;&lt;/a&gt;上周工作目标&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;完成AsyncTask部分与添加Firebase并将其列为StudyJams的进阶赛项目&lt;ul&gt;
+&lt;li&gt;已完成&lt;/li&gt;
+&lt;li&gt;额外完成：应用图标设计，添加Admob&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;完整源代码已经可以下载：&lt;a href=&quot;https://github.com/AnotherM/Daily&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;项目地址&lt;/a&gt;&lt;/strong&gt;/&lt;strong&gt;&lt;a href=&quot;https://github.com/AnotherM/Daily/raw/master/app/app-release.apk&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;APK下载地址&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;使用时请注意将addTestDevice(“XXXXXXXXXXXXXXXXXXX”)添加到MainActivity的AdRequest.Builder之后，此句可以在Logcat中找到，或者将AdView部分注释&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+    
+    </summary>
+    
+      <category term="学习相关" scheme="https://anotherm.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%9B%B8%E5%85%B3/"/>
+    
+    
+      <category term="别人实习我学习" scheme="https://anotherm.github.io/tags/%E5%88%AB%E4%BA%BA%E5%AE%9E%E4%B9%A0%E6%88%91%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>1205-1209学习总结</title>
+    <link href="https://anotherm.github.io/2016/12/09/1205-1209%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
+    <id>https://anotherm.github.io/2016/12/09/1205-1209学习总结/</id>
+    <published>2016-12-09T06:46:05.000Z</published>
+    <updated>2018-11-19T14:12:11.729Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="11-28-12-01学习总结"><a href="#11-28-12-01学习总结" class="headerlink" title="11.28-12.01学习总结"></a>11.28-12.01学习总结</h1><h2 id="上周工作目标"><a href="#上周工作目标" class="headerlink" title="上周工作目标"></a>上周工作目标</h2><ul><li><p>测试并完成手机应用管理dataBeanList部分代码</p><ul><li>未完成，项目推迟，现专注于新闻客户端</li></ul></li><li><p>完成新闻客户端解析后的Json数据到CardView的绑定部分</p><ul><li>已完成</li></ul></li></ul><hr><a id="more"></a><h2 id="详细工作"><a href="#详细工作" class="headerlink" title="详细工作"></a>详细工作</h2><ul><li><p>新闻客户端</p><ul><li>基础功能已完成：其中暂未使用WebView进行页面的打开<br><img src="/images/result.jpg" alt=""></li><li><p>程序核心代码：Json解析部分</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">class JsonUtil &#123;</span><br><span class="line">    List&lt;DataBean&gt; getJsonData(String URL) throws Exception &#123;</span><br><span class="line">        List&lt;DataBean&gt; dataBeanList = new ArrayList&lt;&gt;();</span><br><span class="line">        JSONObject jsonObject = new JSONObject(new ConnectionUtil().request(URL, &quot;GET&quot;));</span><br><span class="line">        JSONArray jsonArray = new JSONArray(jsonObject.optJSONObject(&quot;result&quot;).optString(&quot;data&quot;));</span><br><span class="line">        for (int i = 0; i &lt; jsonArray.length(); i++) &#123;</span><br><span class="line">            DataBean dataBean = new DataBean();</span><br><span class="line">            JSONObject object = jsonArray.optJSONObject(i);</span><br><span class="line">            String title = object.optString(&quot;title&quot;);</span><br><span class="line">            String date = object.optString(&quot;date&quot;);</span><br><span class="line">            String authorName = object.optString(&quot;author_name&quot;);</span><br><span class="line">            String thumbnailPic1 = object.optString(&quot;thumbnail_pic_s&quot;);</span><br><span class="line">            String thumbnailPic2 = object.optString(&quot;thumbnail_pic_s02&quot;);</span><br><span class="line">            String thumbnailPic3 = object.optString(&quot;thumbnail_pic_s03&quot;);</span><br><span class="line">            String url = object.optString(&quot;url&quot;);</span><br><span class="line">            dataBean.setTitle(title);</span><br><span class="line">            dataBean.setDate(date);</span><br><span class="line">            dataBean.setAuthor(authorName);</span><br><span class="line">            dataBean.setImg1Url(thumbnailPic1);</span><br><span class="line">            dataBean.setImg2Url(thumbnailPic2);</span><br><span class="line">            dataBean.setImg3Url(thumbnailPic3);</span><br><span class="line">            dataBean.setWebUrl(url);</span><br><span class="line">            dataBeanList.add(dataBean);</span><br><span class="line">        &#125;</span><br><span class="line">        return dataBeanList;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>程序核心代码：Adapter部分</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br></pre></td><td class="code"><pre><span class="line">public class RecyclerViewAdapter extends RecyclerView.Adapter&lt;RecyclerView.ViewHolder&gt; &#123;</span><br><span class="line">    private Context context;</span><br><span class="line">    private List&lt;DataBean&gt; dataBeanList;</span><br><span class="line">    public InputStream imgUrl;</span><br><span class="line"></span><br><span class="line">    public RecyclerViewAdapter(Context context, List&lt;DataBean&gt; list) &#123;</span><br><span class="line">        this.context = context;</span><br><span class="line">        dataBeanList = new ArrayList&lt;&gt;();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    public void setData(List&lt;DataBean&gt; list) &#123;</span><br><span class="line">        dataBeanList.addAll(list);</span><br><span class="line">        notifyDataSetChanged();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) &#123;</span><br><span class="line">        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.data_card, parent, false);</span><br><span class="line">        return new ViewHolder(view);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) &#123;</span><br><span class="line">        if (holder instanceof ViewHolder) &#123;</span><br><span class="line">            ViewHolder viewHolder = (ViewHolder) holder;</span><br><span class="line">            viewHolder.tvTitle.setText(dataBeanList.get(position).getTitle());</span><br><span class="line">            //viewHolder.tvContent.setText(dataBeanList.request(position));待开发</span><br><span class="line">            viewHolder.tvAuthor.setText(dataBeanList.get(position).getAuthor());</span><br><span class="line">            viewHolder.tvDate.setText(dataBeanList.get(position).getDate());</span><br><span class="line">            try &#123;</span><br><span class="line"></span><br><span class="line">                if (dataBeanList.get(position).getImg1Url() != null) &#123;</span><br><span class="line">                    imgUrl = (InputStream) new URL(dataBeanList.get(position).getImg1Url()).getContent();</span><br><span class="line">                &#125; else if (dataBeanList.get(position).getImg2Url() != null) &#123;</span><br><span class="line">                    imgUrl = (InputStream) new URL(dataBeanList.get(position).getImg2Url()).getContent();</span><br><span class="line">                &#125; else if (dataBeanList.get(position).getImg3Url() != null) &#123;</span><br><span class="line">                    imgUrl = (InputStream) new URL(dataBeanList.get(position).getImg3Url()).getContent();</span><br><span class="line">                &#125;</span><br><span class="line">                Bitmap bitmap= BitmapFactory.decodeStream(imgUrl);</span><br><span class="line">                viewHolder.ivImg.setImageBitmap(bitmap);</span><br><span class="line">            &#125; catch (Exception e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    @Override</span><br><span class="line">    public int getItemCount() &#123;</span><br><span class="line">        return dataBeanList == null ? 0 : dataBeanList.size();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private class ViewHolder extends RecyclerView.ViewHolder &#123;</span><br><span class="line">        TextView tvAuthor;</span><br><span class="line">        TextView tvTitle;</span><br><span class="line">        TextView tvDate;</span><br><span class="line">        //TextView tvContent;</span><br><span class="line">        ImageView ivImg;</span><br><span class="line">        ImageView ivMenu;</span><br><span class="line"></span><br><span class="line">        ViewHolder(View itemView) &#123;</span><br><span class="line">            super(itemView);</span><br><span class="line">            ivMenu = (ImageView) itemView.findViewById(R.id.data_menu);</span><br><span class="line">            tvAuthor = (TextView) itemView.findViewById(R.id.data_author);</span><br><span class="line">            tvTitle = (TextView) itemView.findViewById(R.id.data_title);</span><br><span class="line">            tvDate = (TextView) itemView.findViewById(R.id.data_date);</span><br><span class="line">            // tvContent = (TextView) itemView.findViewById(R.id.data_content);待开发</span><br><span class="line">            ivImg = (ImageView) itemView.findViewById(R.id.data_image);</span><br><span class="line">            ivMenu.setOnClickListener(new View.OnClickListener() &#123;</span><br><span class="line">                @Override</span><br><span class="line">                public void onClick(View view) &#123;</span><br><span class="line">                    new AlertDialog.Builder(context).setMessage(R.string.on_developing).show();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">            itemView.setOnClickListener(new View.OnClickListener() &#123;</span><br><span class="line">                @Override</span><br><span class="line">                public void onClick(View view) &#123;</span><br><span class="line">                    Intent intent = new Intent(Intent.ACTION_VIEW);</span><br><span class="line">                    intent.setData(Uri.parse(dataBeanList.get(getAdapterPosition()).getWebUrl()));</span><br><span class="line">                    /*</span><br><span class="line">                    Bundle bundle = new Bundle();</span><br><span class="line">                    bundle.putString(&quot;Author&quot;, dataBeanList.request(getAdapterPosition()).getAuthor());</span><br><span class="line">                    bundle.putString(&quot;Title&quot;, dataBeanList.request(getAdapterPosition()).getTitle());</span><br><span class="line">                    intent.putExtra(&quot;Content&quot;,dataBeanList.request(getAdapterPosition()))待开发</span><br><span class="line">                    bundle.putString(&quot;Date&quot;, dataBeanList.request(getAdapterPosition()).getDate());</span><br><span class="line">                    bundle.putString(&quot;Img1&quot;, dataBeanList.request(getAdapterPosition()).getImg1Url());</span><br><span class="line">                    bundle.putString(&quot;Img2&quot;, dataBeanList.request(getAdapterPosition()).getImg2Url());</span><br><span class="line">                    bundle.putString(&quot;Img3&quot;, dataBeanList.request(getAdapterPosition()).getImg3Url());</span><br><span class="line">                    bundle.putString(&quot;url&quot;, dataBeanList.request(getAdapterPosition()).getWebUrl());</span><br><span class="line">                    intent.putExtras(bundle);</span><br><span class="line">                    */</span><br><span class="line">                    context.startActivity(intent);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>程序核心代码：Connection部分</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">class ConnectionUtil&#123;</span><br><span class="line">    String request(String strUrl, String method) throws Exception &#123;</span><br><span class="line">        HttpURLConnection conn;</span><br><span class="line">        BufferedReader reader;</span><br><span class="line">        String rs;</span><br><span class="line">        StringBuilder sb = new StringBuilder();</span><br><span class="line">        URL url = new URL(strUrl);</span><br><span class="line">        conn = (HttpURLConnection) url.openConnection();</span><br><span class="line">        if (method == null || method.equals(&quot;GET&quot;)) &#123;</span><br><span class="line">            conn.setRequestMethod(&quot;GET&quot;);</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            conn.setRequestMethod(&quot;POST&quot;);</span><br><span class="line">            conn.setDoOutput(true);</span><br><span class="line">        &#125;</span><br><span class="line">        conn.setUseCaches(false);</span><br><span class="line">        conn.setConnectTimeout(5000 * 3);</span><br><span class="line">        conn.setReadTimeout(5000 * 3);</span><br><span class="line">        conn.setInstanceFollowRedirects(false);</span><br><span class="line">        conn.connect();</span><br><span class="line">        InputStream is = conn.getInputStream();</span><br><span class="line">        reader = new BufferedReader(new InputStreamReader(is, &quot;UTF-8&quot;));</span><br><span class="line">        String strRead;</span><br><span class="line">        while ((strRead = reader.readLine()) != null) &#123;</span><br><span class="line">            sb.append(strRead);</span><br><span class="line">        &#125;</span><br><span class="line">        rs = sb.toString();</span><br><span class="line">        reader.close();</span><br><span class="line">        return rs;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>已将源代码上载至Github：<a href="https://github.com/AnotherM/Daily" target="_blank" rel="noopener">https://github.com/AnotherM/Daily</a></p></li><li><p>本地代码正在进行使用AsyncTask的改造</p><ul><li>大致思路：新建一个类extends自AsyncTask并implements它的方法，主要为四个：<code>onPreExecute(){//UI操作}</code>，<code>doInBackground(){//数据操作}</code>,<code>onPostUpdate(){//数据更新时的UI操作}</code>，<code>onPostExecute(){//数据更新后的UI操作}</code> </li><li>源代码示例：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">public class AsyncUtil extends AsyncTask&lt;String, Void, List&lt;DataBean&gt;&gt; &#123;</span><br><span class="line">    private ProgressBar progressBar;</span><br><span class="line">    private Context context;</span><br><span class="line">    private RecyclerView recyclerView;</span><br><span class="line"></span><br><span class="line">    public AsyncUtil(Context context, ProgressBar progressBar, RecyclerView recyclerView) &#123;</span><br><span class="line">        this.context = context;</span><br><span class="line">        this.progressBar = progressBar;</span><br><span class="line">        this.recyclerView = recyclerView;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    protected void onPreExecute() &#123;</span><br><span class="line">        super.onPreExecute();</span><br><span class="line">        progressBar.setVisibility(View.VISIBLE);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    protected List&lt;DataBean&gt; doInBackground(String... strings) &#123;</span><br><span class="line">        try &#123;</span><br><span class="line">            return new JsonUtil().getJsonData(strings[0]);</span><br><span class="line">        &#125; catch (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">            return null;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    protected void onPostExecute(List&lt;DataBean&gt; list) &#123;</span><br><span class="line">        super.onPostExecute(list);</span><br><span class="line">        RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(context.getApplicationContext(), list);</span><br><span class="line">        recyclerView.setAdapter(recyclerViewAdapter);</span><br><span class="line">        progressBar.setVisibility(View.GONE);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ul></li><li><p>下周计划：完成AsyncTask部分与添加Firebase并将其列为StudyJams的进阶赛项目 </p></li></ul></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;11-28-12-01学习总结&quot;&gt;&lt;a href=&quot;#11-28-12-01学习总结&quot; class=&quot;headerlink&quot; title=&quot;11.28-12.01学习总结&quot;&gt;&lt;/a&gt;11.28-12.01学习总结&lt;/h1&gt;&lt;h2 id=&quot;上周工作目标&quot;&gt;&lt;a href=&quot;#上周工作目标&quot; class=&quot;headerlink&quot; title=&quot;上周工作目标&quot;&gt;&lt;/a&gt;上周工作目标&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;测试并完成手机应用管理dataBeanList部分代码&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;未完成，项目推迟，现专注于新闻客户端&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;完成新闻客户端解析后的Json数据到CardView的绑定部分&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;已完成&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+    
+    </summary>
+    
+      <category term="学习相关" scheme="https://anotherm.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%9B%B8%E5%85%B3/"/>
+    
+    
+      <category term="别人实习我学习" scheme="https://anotherm.github.io/tags/%E5%88%AB%E4%BA%BA%E5%AE%9E%E4%B9%A0%E6%88%91%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>1128-1202学习总结</title>
+    <link href="https://anotherm.github.io/2016/12/02/1128-1202%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
+    <id>https://anotherm.github.io/2016/12/02/1128-1202学习总结/</id>
+    <published>2016-12-02T07:37:38.000Z</published>
+    <updated>2016-12-16T08:55:58.396Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="11-28-12-01学习总结"><a href="#11-28-12-01学习总结" class="headerlink" title="11.28-12.01学习总结"></a>11.28-12.01学习总结</h1><h2 id="上周工作目标"><a href="#上周工作目标" class="headerlink" title="上周工作目标"></a>上周工作目标</h2><ul><li><p>完成手机应用管理基本功能并列为StudyJams进阶赛待选项目</p><ul><li>未完成，项目重新设计</li><li>已完成部分逻辑代码</li></ul></li><li><p>完成新闻客户端的聚合数据API部分</p><ul><li>已完成</li><li>额外完成：Json解析</li></ul></li></ul><hr><a id="more"></a><h2 id="详细工作"><a href="#详细工作" class="headerlink" title="详细工作"></a>详细工作</h2><ul><li>手机应用管理<ul><li>界面重新设计<ul><li>由RecyclerView + CardView并设置弹出菜单改为RecyclerView + CardView点击进入Fragment管理</li><li>重新设计后的界面如下<br><img src="/images/AppManagerRedesign1.png" alt=""><br><img src="/images/AppManagerRedesign2.png" alt=""><br><img src="/images/AppManagerRedesign3.png" alt=""><br>其中图2下半部分与图3是经过Adapter链接到一起的</li></ul></li><li>逻辑代码<ul><li>已将RecyclerView以及Adapter完成</li><li>已将DataBean完成</li><li>已将Fragment部分完成</li><li>暂未完成使用<code>List&lt;DataBean&gt; dataBeanList=new ArrayList&lt;&gt;();</code>进行数据传输</li></ul></li><li>暂未将源代码上载至Github</li><li>下周计划：测试并完成dataBeanList部分代码</li></ul></li><li><p>新闻客户端</p><ul><li><p>界面略有改动</p><ul><li>已将<a href="/images/DailyCard.png">原CardView设计</a>的Content部分（用于显示抓取的网页部分内容）注释掉，作为待开发项目</li><li>使用<code>tools:listitem=&quot;@layout/data_card&quot;</code>属性将CardView列到RecyclerView/ListView</li><li>改动后的界面如下<br><img src="/images/DailyRedesign1.png" alt=""><br><img src="/images/DailyRedesign2.png" alt=""></li></ul></li><li><p>逻辑代码基本完成</p><ul><li><p>已将ViewPager + TabLayout + Fragment基本掌握熟练</p><ul><li><p>XML代码部分:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;android.support.design.widget.TabLayout</span><br><span class="line">      android:id=@+id/tabs</span><br><span class="line">      android:layout_width=&quot;match_parent&quot;</span><br><span class="line">      android:layout_height=&quot;wrap_content&quot;</span><br><span class="line">      app:tabMode=&quot;scrollable&quot;/&gt;</span><br><span class="line"></span><br><span class="line">      &lt;android.support.v4.view.ViewPager</span><br><span class="line">          android:id=@+id/view_container</span><br><span class="line">          android:layout_width=&quot;match_parent&quot;</span><br><span class="line">          android:layout_height=&quot;match_parent&quot;</span><br><span class="line">          app:layout_behavior=&quot;&quot;@string/appbar_scrolling_view_behavior&quot;/&gt;</span><br></pre></td></tr></table></figure></li><li><p>JAVA代码部分:</p><ul><li><p>MainActivity：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">TabLayout tablayout = (TabLayout) findViewById (R.id.tabs);</span><br><span class="line">ViewPager viewPager = (ViewPager) findViewById (R.id.view_container);</span><br><span class="line">ViewPagerAdapter ViewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(),this);</span><br><span class="line">viewPager.setAdapter(ViewPagerAdapter);</span><br><span class="line">tabLayout.setupWithViewPager(viewPager);</span><br></pre></td></tr></table></figure></li><li><p>ViewPagerAdapter部分：创建一个ViewPagerAdapter继承自FragmentPagerAdapter或FragmentStatePagerAdapter即可，后者可以动态创建销毁Fragment，有助于节省内存，但在每次使用的时候需要重新加载相关进程</p></li><li>ViewPagerFragment部分:同理与ViewPagerAdapter，继承于Fragment;</li></ul></li></ul></li><li>Json解析已完成<ul><li>懒得敲代码了，因为用Markdown敲代码有些累，貌似Visual Code对Markdown的支持不是太好，具体实现思路：使用<code>HttpUrlConnection</code>进行链接,使用<code>BufferdReader</code>和<code>StringBuiler</code>进行得到数据的拼接，使用<code>URL</code>来制定链接地址，也可使用<a href="https://square.github.io/retrofit/" target="_blank" rel="noopener">Retrofit</a>这个开源项目来简化<code>HttpUrlConnection</code>请求</li></ul></li></ul></li><li>暂未将代码上载至Github</li><li>下周计划：完成解析后的Json数据到CardView的绑定部分</li></ul></li></ul><p>相关链接：<a href="http://blog.csdn.net/fumier/article/details/46793153" target="_blank" rel="noopener">TabLayout、ViewPager和Fragment的多页面滑动</a>  <a href="http://liuyvhao.blog.51cto.com/11690759/1786843" target="_blank" rel="noopener">使用TabLayout、ViewPager和Fragment实现顶部菜单可滑动切换</a>  <a href="http://www.jianshu.com/p/c091918429e9" target="_blank" rel="noopener">JSON语法及其在android下的解析</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;11-28-12-01学习总结&quot;&gt;&lt;a href=&quot;#11-28-12-01学习总结&quot; class=&quot;headerlink&quot; title=&quot;11.28-12.01学习总结&quot;&gt;&lt;/a&gt;11.28-12.01学习总结&lt;/h1&gt;&lt;h2 id=&quot;上周工作目标&quot;&gt;&lt;a href=&quot;#上周工作目标&quot; class=&quot;headerlink&quot; title=&quot;上周工作目标&quot;&gt;&lt;/a&gt;上周工作目标&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;完成手机应用管理基本功能并列为StudyJams进阶赛待选项目&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;未完成，项目重新设计&lt;/li&gt;
+&lt;li&gt;已完成部分逻辑代码&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;完成新闻客户端的聚合数据API部分&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;已完成&lt;/li&gt;
+&lt;li&gt;额外完成：Json解析&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+    
+    </summary>
+    
+      <category term="学习相关" scheme="https://anotherm.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%9B%B8%E5%85%B3/"/>
+    
+    
+      <category term="别人实习我学习" scheme="https://anotherm.github.io/tags/%E5%88%AB%E4%BA%BA%E5%AE%9E%E4%B9%A0%E6%88%91%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>1121-1125学习总结</title>
+    <link href="https://anotherm.github.io/2016/11/25/1121-1125%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
+    <id>https://anotherm.github.io/2016/11/25/1121-1125学习总结/</id>
+    <published>2016-11-25T08:34:08.000Z</published>
+    <updated>2016-12-02T09:10:14.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="11-21-11-25学习总结"><a href="#11-21-11-25学习总结" class="headerlink" title="11.21-11.25学习总结"></a>11.21-11.25学习总结</h1><h2 id="总体工作"><a href="#总体工作" class="headerlink" title="总体工作"></a>总体工作</h2><ul><li>设立工作目标<ul><li>尝试开始编写一款手机应用管理的App</li><li>尝试开始编写一款新闻客户端App（API：<a href="https://www.juhe.cn/docs/api/id/235" target="_blank" rel="noopener">聚合数据</a>）</li><li>尝试学习MVC，MVP与MVVM</li></ul></li></ul><hr><a id="more"></a><h2 id="详细工作"><a href="#详细工作" class="headerlink" title="详细工作"></a>详细工作</h2><ul><li><p>手机应用管理App</p><ul><li>已将界面设计完毕<ul><li>App主界面：应用总体的容器<br><img src="/images/AppManagerMain.png" width="640" height="400"></li><li>App数据界面：将接收到的数据设置到其上的容器<br><img src="/images/AppManagerCard.png" width="640" height="400"></li><li>App内容界面：展示数据列表的容器<br><img src="/images/AppManagerContent.png" width="640" height="400"></li></ul></li><li>大致逻辑已经完成<ul><li>已将RecyclerView部分处理完成<br>相关链接：<a href="http://frank-zhu.github.io/android/2015/01/16/android-recyclerview-part-1/" target="_blank" rel="noopener">RecyclerView使用详解</a>/<a href="http://blog.csdn.net/lmj623565791/article/details/45059587" target="_blank" rel="noopener">Android RecyclerView 使用完全解析</a> <a href="http://www.kymjs.com/code/2016/07/10/01" target="_blank" rel="noopener">深入浅出 RecyclerView</a></li><li>已了解PackageManager使用方法<br>相关链接：<a href="http://www.cnblogs.com/mainroadlee/archive/2011/05/23/android_get_installed_app.html" target="_blank" rel="noopener">Android获取已安装应用信息</a>/<a href="http://blog.csdn.net/qinjuning/article/details/6867806" target="_blank" rel="noopener">Android中PackageManager的使用</a></li><li>暂未完成数据到内容的展示，经过Debug得到DataBean已经拥有数据</li></ul></li><li>暂未将源代码上载至Github</li><li>下周计划：完成此应用基本功能并列为<a href="http://www.studyjamscn.com/" target="_blank" rel="noopener">StudyJams</a>进阶赛待选项目</li></ul></li><li><p>新闻客户端App</p><ul><li>已将界面设计完毕<ul><li>界面设计同上，但数据接收界面略有改动：<br><img src="/images/DailyCard.png" width="640" height="400"></li></ul></li><li>已将官方Demo中的TabLayout和ViewPager部分掌握<br>详细思路：在activity_main.xml里调用TabLayout与ViewPager控件并设置id，通过设置TabLayout的<code>app:tabMode=&quot;scrollable&quot;</code>属性可以使Tab标题数量超过5个的部分通过滑动来显示，然后在MainActivity.java里声明<code>findViewById</code>来调用相关控件，由于ViewPager要求Adapter，所以需要设置一个继承自<code>FragmentStatePagerAdapter</code>或<code>FragmentPagerAdapter</code>的Adapter，然后继承其相关方法</li><li>其他方面已经基本构思完成，诸如收藏功能，将网页部分内容抓取到数据卡片Content部分的功能，“几小时前发布”功能</li><li>下周计划：完成聚合数据的API测试部分</li></ul></li><li>架构学习<ul><li>暂未尝试练习，通过学习<a href="http://www.jianshu.com/p/2fbb3fc84449" target="_blank" rel="noopener">Android开发架构选择MVP or MVVM</a>/<a href="https://www.tianmaying.com/tutorial/AndroidMVC" target="_blank" rel="noopener">MVC,MVP,MVVM与架构经验谈</a>/<a href="https://github.com/googlesamples/android-architecture" target="_blank" rel="noopener">Android Architecture Blueprints</a>等已经基本对这些架构有所了解</li></ul></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;11-21-11-25学习总结&quot;&gt;&lt;a href=&quot;#11-21-11-25学习总结&quot; class=&quot;headerlink&quot; title=&quot;11.21-11.25学习总结&quot;&gt;&lt;/a&gt;11.21-11.25学习总结&lt;/h1&gt;&lt;h2 id=&quot;总体工作&quot;&gt;&lt;a href=&quot;#总体工作&quot; class=&quot;headerlink&quot; title=&quot;总体工作&quot;&gt;&lt;/a&gt;总体工作&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;设立工作目标&lt;ul&gt;
+&lt;li&gt;尝试开始编写一款手机应用管理的App&lt;/li&gt;
+&lt;li&gt;尝试开始编写一款新闻客户端App（API：&lt;a href=&quot;https://www.juhe.cn/docs/api/id/235&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;聚合数据&lt;/a&gt;）&lt;/li&gt;
+&lt;li&gt;尝试学习MVC，MVP与MVVM&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+    
+    </summary>
+    
+      <category term="学习相关" scheme="https://anotherm.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%9B%B8%E5%85%B3/"/>
+    
+    
+      <category term="别人实习我学习" scheme="https://anotherm.github.io/tags/%E5%88%AB%E4%BA%BA%E5%AE%9E%E4%B9%A0%E6%88%91%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于我所用过的各版本Linux的浅谈</title>
+    <link href="https://anotherm.github.io/2016/07/27/%E5%85%B3%E4%BA%8E%E6%88%91%E6%89%80%E7%94%A8%E8%BF%87%E7%9A%84%E5%90%84%E7%89%88%E6%9C%ACLinux%E7%9A%84%E6%B5%85%E8%B0%88/"/>
+    <id>https://anotherm.github.io/2016/07/27/关于我所用过的各版本Linux的浅谈/</id>
+    <published>2016-07-27T07:57:39.000Z</published>
+    <updated>2016-07-27T13:54:21.733Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://upload.wikimedia.org/wikipedia/commons/b/b0/NewTux.svg" width="200" align="right"></p><h3 id="以下所写仅为个人观点，真实感受请自己体验，如有雷同，那就让它雷同吧"><a href="#以下所写仅为个人观点，真实感受请自己体验，如有雷同，那就让它雷同吧" class="headerlink" title="以下所写仅为个人观点，真实感受请自己体验，如有雷同，那就让它雷同吧"></a>以下所写仅为个人观点，真实感受请自己体验，如有雷同，那就让它雷同吧</h3><p>文中总览部分来源于<a href="https://zh.wikipedia.org/wiki/Linux发行版列表" target="_blank" rel="noopener">维基百科-Linux发行版列表</a></p><p>图片来源于<a href="https://www.google.com.hk/imgres?imgurl=https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/NewTux.svg/2000px-NewTux.svg.png&amp;imgrefurl=https://zh.wikipedia.org/wiki/Linux&amp;h=2400&amp;w=2000&amp;tbnid=NWUz_uyHoU1KUM:&amp;tbnh=160&amp;tbnw=133&amp;docid=cGRBAcKAJbrXXM&amp;usg=__4boGWOohNRnKuVnlkVaLWmuv6kw=&amp;sa=X&amp;ved=0ahUKEwjM16jQsZPOAhXCRY8KHarjAygQ9QEIHjAA" target="_blank" rel="noopener">Google</a></p><hr><h2 id="先列出我所用过的Linux，按使用先后排序"><a href="#先列出我所用过的Linux，按使用先后排序" class="headerlink" title="先列出我所用过的Linux，按使用先后排序"></a>先列出我所用过的Linux，按使用先后排序</h2><ul><li><a href="http://cn.ubuntu.com/" target="_blank" rel="noopener">Ubuntu</a></li><li><a href="http://www.ubuntukylin.com/" target="_blank" rel="noopener">Ubuntu Kylin</a></li><li><a href="https://www.kali.org/" target="_blank" rel="noopener">Kali Linux</a></li><li><a href="https://www.deepin.org/" target="_blank" rel="noopener">Deepin</a></li><li><a href="https://elementary.io/" target="_blank" rel="noopener">elementary OS</a></li><li><a href="https://www.centos.org/" target="_blank" rel="noopener">CentOS</a></li><li><a href="https://www.debian.org" target="_blank" rel="noopener">Debian</a></li><li><a href="https://www.archlinux.org/" target="_blank" rel="noopener">Arch Linux</a></li></ul><hr><a id="more"></a><h2 id="以下为各版本的个人体会，推荐度基于整体综合考虑"><a href="#以下为各版本的个人体会，推荐度基于整体综合考虑" class="headerlink" title="以下为各版本的个人体会，推荐度基于整体综合考虑"></a>以下为各版本的个人体会，推荐度基于整体综合考虑</h2><h3 id="Ubuntu"><a href="#Ubuntu" class="headerlink" title="Ubuntu"></a>Ubuntu</h3><ul><li>简介：基于Debian，由Canonical公司赞助</li><li>使用感受：直观感觉就是上手非常容易，自带LibreOffice，自带Firefox，安装软件可以通过软件中心，或者直接<code>apt-get install &quot;package name&quot;</code>(16.04版本已经精简为apt)，而且界面相对于其他的Linux来说很漂亮，适用于外观党，而且懒得折腾界面与不会折腾的新手，目前在实体机上依然使用中</li><li>推荐度：★★★★</li></ul><h3 id="Ubuntu-Kylin"><a href="#Ubuntu-Kylin" class="headerlink" title="Ubuntu Kylin"></a>Ubuntu Kylin</h3><ul><li>简介：基于Ubuntu的Linux发行版，以中国大陆用户为主，中文名为“优麒麟” 主要开发者为 Ubuntu Kylin 社区、国防科学技术大学（NUDT）与 Canonical公司</li><li>使用感受：说白了就是Ubuntu的中国定制版，本地化比较好一些，自带软件相对于Ubuntu有一些不同，其余与Ubuntu基本没有太大区别，但是由于个人有一些精神洁癖，所以这个版本并未使用超过2小时</li><li>推荐度：★★★</li></ul><h3 id="Kali-Linux"><a href="#Kali-Linux" class="headerlink" title="Kali Linux"></a>Kali Linux</h3><ul><li>简介：基于Debian的Linux发行版， 设计用于数字鉴识和渗透测试。由Offensive Security Ltd维护和资助。</li><li>使用感受：在Android 2.3时期就听说过使用手机虚拟机跑BackTrack可以破解别人的无线网，虽然我试过没成功，但是后来BackTrack发展成了这个Kali Linux，我用虚拟机和实体机分别尝试过，但是因为是用于渗透和破解的系统，过于高端而当时我的技术不达标所以放弃了，总的来说就是如果你想往渗透破解反编译这方面发展的话，可以考虑使用</li><li>推荐度：★★★</li></ul><h3 id="Deepin"><a href="#Deepin" class="headerlink" title="Deepin"></a>Deepin</h3><ul><li>简介：基于Ubuntu，0.x版基于Debian。经历过多个桌面环境的变更（IceWM,xfce,LXDE,GNOME)，从Linux Deepin 12.12开始使用自主研发的DDE，15.2已重新基于Debian并切DDE已经升级为3.0</li><li>使用感受：当初无意间注意到的，版本还是14，貌似就是这个时候火起来的，尝试实体机安装了一下，安装过程竟然简单到点三次下一步就可以了，而且自带一些深度软件，也就是其发行公司自行开发的软件，短暂用了一段时间，优点是比Ubuntu还容易上手，由于14基于Ubuntu，所以用起来还算不错，新版本15据说是因为换了Debian变得不算太稳定，并且由于个人已经将Ubuntu作为常用系统，所以新版本只在虚拟机上看了看，总的来说，是个不错的选择，并且这个系统前景很宽阔，可以作为常用</li><li>推荐度：★★★★</li></ul><h3 id="elementary-OS"><a href="#elementary-OS" class="headerlink" title="elementary OS"></a>elementary OS</h3><ul><li>简介：基于Ubuntu的Linux发行版。它使用一个自己开发的基于GNOME的名为Pantheon的桌面环境，从为Ubuntu设计的一套主题和应用程序发展而来</li><li>使用感受：当初没事的时候找到的，但个人使用没超过15分钟，简单来说就是一套改了主题的Ubuntu，而且改得还挺不错，据一些网络评论说是可以提供类似于Mac OS X的体验，但是我没觉得，不过对于外观党，是个不错的选择</li><li>推荐度：★★</li></ul><h3 id="CentOS"><a href="#CentOS" class="headerlink" title="CentOS"></a>CentOS</h3><ul><li>简介：Linux发行版之一，它是来自于Red Hat Enterprise Linux依照开放源代码规定发布的源代码所编译而成，属于Red Hat系，使用RPM作为软件包</li><li>使用感受：一共安装了4次，使用的版本为Everything ISO，也就是全功能版，第一次安装由于是体验，所以就选择了最大化安装（虚拟机），用了大概一个小时，体验还算不错，因为是区别于Debian系列的Red Hat系，所以使用起来很新颖，于是想要实体机尝试一下，刚开始安装的时候选了最小化安装，结果就得到了一句话：“这特么是什么鬼”。后来查了查，最小化安装没有GUI，也就是没有图形界面，然后选了KDE作为桌面环境安装了一次，但是KDE桌面稳定个人觉得有些难用，所以又选择了GNOME来安装，用了大概一个小时，还是用回了Ubuntu，对于CentOS个人是特别满意的，因为这系统虽然自带<a href="http://openjdk.java.net/" target="_blank" rel="noopener">OpenJDK</a>，但是个人相对来说还是喜欢用<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="noopener">OracleJDK</a>，而OracleJDK分两种安装格式，一种是RPM，一种是压缩包，简而言之，Red Hat系对于开发支持方面比Ubuntu高的多一些，实际使用差别不大</li><li>推荐度：★★★★</li></ul><h3 id="Debian"><a href="#Debian" class="headerlink" title="Debian"></a>Debian</h3><ul><li>简介：由GPL和其他自由软件许可协议授权的自由软件组成的操作系统，由Debian项目（Debian Project）组织维护，Software in the Public Interest提供支持并持有商标作为保护机构</li><li>使用感受：要说感受比较深的应该就是这个了，毕竟Ubuntu和Kali Linux都是基于Debian的，提供xfce,LXDE,GNOME,KDE四种桌面环境，同CentOS,还是GNOME相对来说好折腾一些，但实际使用上手不如Ubuntu与Deepin容易，功能相对于CentOS比较弱，因为Debian的精神就是坚守Unix和自由软件，所以对于用户的选择很多，也就是玩Linux熟练到一定程度之后就可以尝试一下使用Debian，不管别人对我怎么看，对于我来说，这个系统就是个随便改，改得面目全非都行，反正是拿来玩的系统，用它来做开发，还是因人而异了</li><li>推荐度：★★★</li></ul><h3 id="Arch-Linux"><a href="#Arch-Linux" class="headerlink" title="Arch Linux"></a>Arch Linux</h3><ul><li>简介：基于<a href="https://zh.wikipedia.org/wiki/KISS原则" target="_blank" rel="noopener">KISS原则</a>（Keep It Simple, Stupid 的首字母缩略字），朝向轻量（lightweight）以及简单（simple）的Linux发行版</li><li>使用感受：刚开始使用的时候我是拒绝的，因为<a href="http://cn.ezbsystems.com/ultraiso/index.html" target="_blank" rel="noopener">UltraISO</a>刻录的U盘启动盘在EFI下根本没法启动，别的Linux发行版却一点儿问题都没有，后来用了一个软件直接把Arch Linux刻到了硬盘里启动后，等了半天发现怎么没界面？后来才反应过来，这货特么的没有GUI，没有GUI，没有GUI，只有一个命令行，当时我就陷入了深思，后来看了看<a href="https://wiki.archlinux.org/index.php/Main_page_(简体中文" target="_blank" rel="noopener">Arch Linux的Wiki</a>)，果断放弃了，因为我还没到达光靠命令行或终端就能解决一切问题的地步。</li><li>推荐度：★★</li></ul><hr><p>以上的一些，纯属个人经验，具体使用哪个版本，还要你们自己自行尝试，还是那句话：因人而异，不过总的来说，我推荐三个：Deepin适合日常娱乐，Ubuntu适合入手练习Linux，CentOS适合开发</p><p>顺便说个使用难度排序：Deepin  &lt;  Ubuntu  =  Ubuntu Kylin  =  elementary OS  &lt;  CentOS  ≈  Debian &lt;  Kali Linux  &lt;  Arch Linux </p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/b/b0/NewTux.svg&quot; width=&quot;200&quot; align=&quot;right&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;以下所写仅为个人观点，真实感受请自己体验，如有雷同，那就让它雷同吧&quot;&gt;&lt;a href=&quot;#以下所写仅为个人观点，真实感受请自己体验，如有雷同，那就让它雷同吧&quot; class=&quot;headerlink&quot; title=&quot;以下所写仅为个人观点，真实感受请自己体验，如有雷同，那就让它雷同吧&quot;&gt;&lt;/a&gt;以下所写仅为个人观点，真实感受请自己体验，如有雷同，那就让它雷同吧&lt;/h3&gt;&lt;p&gt;文中总览部分来源于&lt;a href=&quot;https://zh.wikipedia.org/wiki/Linux发行版列表&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;维基百科-Linux发行版列表&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;图片来源于&lt;a href=&quot;https://www.google.com.hk/imgres?imgurl=https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/NewTux.svg/2000px-NewTux.svg.png&amp;amp;imgrefurl=https://zh.wikipedia.org/wiki/Linux&amp;amp;h=2400&amp;amp;w=2000&amp;amp;tbnid=NWUz_uyHoU1KUM:&amp;amp;tbnh=160&amp;amp;tbnw=133&amp;amp;docid=cGRBAcKAJbrXXM&amp;amp;usg=__4boGWOohNRnKuVnlkVaLWmuv6kw=&amp;amp;sa=X&amp;amp;ved=0ahUKEwjM16jQsZPOAhXCRY8KHarjAygQ9QEIHjAA&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Google&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;先列出我所用过的Linux，按使用先后排序&quot;&gt;&lt;a href=&quot;#先列出我所用过的Linux，按使用先后排序&quot; class=&quot;headerlink&quot; title=&quot;先列出我所用过的Linux，按使用先后排序&quot;&gt;&lt;/a&gt;先列出我所用过的Linux，按使用先后排序&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://cn.ubuntu.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Ubuntu&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.ubuntukylin.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Ubuntu Kylin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.kali.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Kali Linux&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.deepin.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Deepin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://elementary.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;elementary OS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.centos.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;CentOS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.debian.org&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Debian&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.archlinux.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Arch Linux&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+    
+    </summary>
+    
+      <category term="学习相关" scheme="https://anotherm.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%9B%B8%E5%85%B3/"/>
+    
+    
+      <category term="个人观点" scheme="https://anotherm.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Markdown常用语法测试</title>
+    <link href="https://anotherm.github.io/2016/04/14/Markdown%E8%AF%AD%E6%B3%95%E6%B5%8B%E8%AF%95/"/>
+    <id>https://anotherm.github.io/2016/04/14/Markdown语法测试/</id>
+    <published>2016-04-14T09:50:07.000Z</published>
+    <updated>2016-07-27T13:47:07.580Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://i.imgur.com/NdIIX2x.png" alt="">图片测试</p><h1 id="This-is-a-test-一级标题测试"><a href="#This-is-a-test-一级标题测试" class="headerlink" title="This is a test 一级标题测试"></a>This is a test 一级标题测试</h1><h2 id="This-is-a-test-二级标题测试"><a href="#This-is-a-test-二级标题测试" class="headerlink" title="This is a test 二级标题测试"></a>This is a test 二级标题测试</h2><h3 id="This-is-a-test-三级标题测试"><a href="#This-is-a-test-三级标题测试" class="headerlink" title="This is a test 三级标题测试"></a>This is a test 三级标题测试</h3><h4 id="This-is-a-test-四级标题测试"><a href="#This-is-a-test-四级标题测试" class="headerlink" title="This is a test 四级标题测试"></a>This is a test 四级标题测试</h4><h5 id="This-is-a-test-五级标题测试"><a href="#This-is-a-test-五级标题测试" class="headerlink" title="This is a test 五级标题测试"></a>This is a test 五级标题测试</h5><h6 id="This-is-a-test-六级标题测试"><a href="#This-is-a-test-六级标题测试" class="headerlink" title="This is a test 六级标题测试"></a>This is a test 六级标题测试</h6><a id="more"></a><p><a href="https://github.com/AnotherM" target="_blank" rel="noopener">单击进入我的GitHub</a> 链接测试</p><p><code>public class test{        public void main(String []args){            System.out.println(&quot;Test&quot;);        }    } //代码测试</code></p><pre><code>public class test1{    public void main(String[]args){        System.out.println(&quot;Test1&quot;);    }}//代码块测试</code></pre><blockquote><p>This is a test 注释测试</p></blockquote><ul><li>Test1<ul><li>Test2<ul><li>Test3 多级列表测试</li></ul></li></ul></li></ul><ul><li>Test1</li><li>Test2</li><li>Test3<br>普通列表测试</li></ul><p><em>Test</em> 斜体测试</p><p><strong>Test</strong> 粗体测试</p><table><thead><tr><th>1</th><th>2</th><th>3</th></tr></thead><tbody><tr><td>1</td><td>1</td><td>1</td></tr><tr><td>2</td><td>2</td><td>2</td></tr><tr><td>3</td><td>3</td><td>3</td></tr></tbody></table><p>表格测试</p><hr><p>分割线测试</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://i.imgur.com/NdIIX2x.png&quot; alt=&quot;&quot;&gt;图片测试&lt;/p&gt;
+&lt;h1 id=&quot;This-is-a-test-一级标题测试&quot;&gt;&lt;a href=&quot;#This-is-a-test-一级标题测试&quot; class=&quot;headerlink&quot; title=&quot;This is a test 一级标题测试&quot;&gt;&lt;/a&gt;This is a test 一级标题测试&lt;/h1&gt;&lt;h2 id=&quot;This-is-a-test-二级标题测试&quot;&gt;&lt;a href=&quot;#This-is-a-test-二级标题测试&quot; class=&quot;headerlink&quot; title=&quot;This is a test 二级标题测试&quot;&gt;&lt;/a&gt;This is a test 二级标题测试&lt;/h2&gt;&lt;h3 id=&quot;This-is-a-test-三级标题测试&quot;&gt;&lt;a href=&quot;#This-is-a-test-三级标题测试&quot; class=&quot;headerlink&quot; title=&quot;This is a test 三级标题测试&quot;&gt;&lt;/a&gt;This is a test 三级标题测试&lt;/h3&gt;&lt;h4 id=&quot;This-is-a-test-四级标题测试&quot;&gt;&lt;a href=&quot;#This-is-a-test-四级标题测试&quot; class=&quot;headerlink&quot; title=&quot;This is a test 四级标题测试&quot;&gt;&lt;/a&gt;This is a test 四级标题测试&lt;/h4&gt;&lt;h5 id=&quot;This-is-a-test-五级标题测试&quot;&gt;&lt;a href=&quot;#This-is-a-test-五级标题测试&quot; class=&quot;headerlink&quot; title=&quot;This is a test 五级标题测试&quot;&gt;&lt;/a&gt;This is a test 五级标题测试&lt;/h5&gt;&lt;h6 id=&quot;This-is-a-test-六级标题测试&quot;&gt;&lt;a href=&quot;#This-is-a-test-六级标题测试&quot; class=&quot;headerlink&quot; title=&quot;This is a test 六级标题测试&quot;&gt;&lt;/a&gt;This is a test 六级标题测试&lt;/h6&gt;
+    
+    </summary>
+    
+      <category term="学习相关" scheme="https://anotherm.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%9B%B8%E5%85%B3/"/>
+    
+    
+      <category term="测试" scheme="https://anotherm.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
+  
+</feed>
