@@ -1,15 +1,34 @@
-<!doctype html>
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
 
 
 
   
 
 
-<html class="theme-next mist use-motion" lang="zh-Hans">
+<html class="theme-next muse use-motion" lang="zh-CN">
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
 
 
 
@@ -30,36 +49,7 @@
 
 
 
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
-
-
-
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
 
 
 
@@ -68,32 +58,25 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css">
+<link href="/css/main.css?v=6.6.0" rel="stylesheet" type="text/css">
 
 
-  <meta name="keywords" content="A Not Her M">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.6.0">
 
 
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.6.0">
 
 
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.6.0">
 
 
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0">
-
-
-
+  <link rel="mask-icon" href="/images/logo.svg?v=6.6.0" color="#222">
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Another.M">
-<meta property="og:url" content="https://anotherm.github.io/index.html">
-<meta property="og:site_name" content="Another.M">
-<meta property="og:locale" content="zh-Hans">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Another.M">
+
+
+
 
 
 
@@ -101,14 +84,14 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Mist',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
-    fancybox: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
+    scheme: 'Muse',
+    version: '6.6.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -120,30 +103,38 @@
 </script>
 
 
-
-
-
-
-
-  <title> Another.M </title>
-</head>
-
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
   
 
 
 
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-89085652-1', 'auto');
-  ga('send', 'pageview');
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Another.M">
+<meta property="og:url" content="https://anotherm.github.io/index.html">
+<meta property="og:site_name" content="Another.M">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Another.M">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Another.M" type="application/atom+xml">
+
+
+
+
+  <link rel="canonical" href="https://anotherm.github.io/">
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
 </script>
 
+  <title>Another.M</title>
+  
 
 
 
@@ -153,6 +144,38 @@
 
 
 
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -160,8 +183,7 @@
   
 
   <div class="container sidebar-position-left 
-   page-home 
- ">
+  page-home">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -176,13 +198,15 @@
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+    
       
-        <p class="site-subtitle"></p>
+        <p class="site-subtitle">anotherm4</p>
       
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -190,110 +214,76 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
-            
-            分类
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
-            
-            归档
-          </a>
-        </li>
+          
+          <li class="menu-item menu-item-home menu-item-active">
+
+    
+    
+    
       
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
-            
-            标签
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
-            
-            关于
-          </a>
-        </li>
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
       
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
 
       
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
-            
-            搜索
-          </a>
-        </li>
       
     </ul>
   
 
   
-    <div class="site-search">
-      
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocapitalize="off" autocomplete="off" autocorrect="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
-    </div>
-  </div>
-  <div id="local-search-result"></div>
-</div>
+    
 
+  
 
-
-    </div>
   
 </nav>
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
@@ -306,13 +296,19 @@
   
   
 
-  <article class="post post-type-normal " itemscope="" itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://anotherm.github.io/2018/11/19/fuckJava/">
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://anotherm.github.io/2018/12/01/Archieved/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Another.M">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
@@ -325,13 +321,9 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/2018/11/19/fuckJava/" itemprop="url">
-                  fuckJava
-                </a>
+                
+                <a href="/2018/12/01/Archieved/" class="post-title-link" itemprop="https://anotherm.github.io/index.html">Archieved</a>
               
             
           </h1>
@@ -339,6 +331,11 @@
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -346,13 +343,18 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-19T22:10:16+08:00">
-                2018-11-19
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2018-12-01 12:59:25 / 修改时间：15:32:23" itemprop="dateCreated datePublished" datetime="2018-12-01T12:59:25+08:00">2018-12-01</time>
             
 
             
+              
 
+              
             
           </span>
 
@@ -368,11 +370,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/学习相关/" itemprop="url" rel="index">
-                    <span itemprop="name">学习相关</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Notice/" itemprop="url" rel="index"><span itemprop="name">Notice</span></a></span>
 
                 
                 
@@ -397,7 +395,9 @@
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -406,63 +406,29 @@
       
         
           
-            <h1 id="fxckUJava"><a href="#fxckUJava" class="headerlink" title="fxckUJava"></a><b>fxckUJava</b></h1><p>昨天花时间研究了一下Spring与SpringBoot相关的知识，然后过了一天，整个人就是这种感觉</p>
-<p><img src="https://tu.jiuwa.net/pic/20171105/1509886023460480.jpg" width="240" height="auto/"></p>
-<p>今天看了看Flask</p>
-<p>然后就有了这篇文章的标题—-<b>fxckUJava</b></p>
-<p>关于这篇文章的内容呢，就是教你用9行写出一个网站</p>
-<font style="font-size:32px;font-family:幼圆">所以：</font>
-
-<p><img src="https://file.digitaling.com/eImg/uimages/20160414/1460627797867376.jpg" width="240" height="auto/"></p>
-<h2 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h2><ul>
-<li>First: 你会用电脑</li>
-<li>Second: 你会装Python并且会添加环境变量</li>
-<li>Third: 你会用cmd</li>
-</ul>
-<font style="font-size:32px;font-family:幼圆;">如果这些你都不具备的话那还是回家洗洗睡吧</font>
-
-<hr>
-<h3 id="接下来是正文"><a href="#接下来是正文" class="headerlink" title="接下来是正文"></a>接下来是正文</h3><ol>
-<li>在以上条件都具备之后，打开cmd，执行pip install flask</li>
-<li>新建一个后缀名为.py的文件</li>
-<li>打开.py这个文件</li>
-<li><p>写入<br><br></p>
-<p> from flask import Flask</p>
-<p> app = Flask(<strong>name</strong>)</p>
-</li>
-</ol>
-<pre><code>@app.route(&apos;/&apos;)
-def index():
-    return &apos;fxckUJava&apos;
-
-
-if __name__ == &apos;__main__&apos;:
-    app.run()
-</code></pre><ol start="5">
-<li>用cmd找到这个文件（cd命令）</li>
-<li>使用python xxx .py(xxx为你的文件名)，出现下图后，打开浏览器，访问127.0.0.1:5000<ul>
-<li>如果看不到任何东西或者页面没反应的话，恩，从头看看哪里搞错了吧<br><img src="/images/flask.png" witdh="auto" height="auto"></li>
-</ul>
-</li>
-</ol>
-<p>附：<a href="http://flask.pocoo.org" target="_blank" rel="noopener">Flask官网</a> <a href="https://www.python.org/" target="_blank" rel="noopener">Python官网</a></p>
+            <blockquote>
+<p>2016/11/21-2017/04/07期间学习总结已经归档不可访问<br><br>此博客部分内容已经更新</p>
+</blockquote>
 
           
         
       
     </div>
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
+
+    
+       
+    
+    
+
+    
 
     <footer class="post-footer">
       
@@ -476,6 +442,10 @@ if __name__ == &apos;__main__&apos;:
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -488,13 +458,19 @@ if __name__ == &apos;__main__&apos;:
   
   
 
-  <article class="post post-type-normal " itemscope="" itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://anotherm.github.io/2017/04/08/0320-0407学习总结/">
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://anotherm.github.io/2018/12/01/LearnPython/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Another.M">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
@@ -507,13 +483,9 @@ if __name__ == &apos;__main__&apos;:
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/2017/04/08/0320-0407学习总结/" itemprop="url">
-                  0320-0407学习总结
-                </a>
+                
+                <a href="/2018/12/01/LearnPython/" class="post-title-link" itemprop="https://anotherm.github.io/index.html">LearnPython</a>
               
             
           </h1>
@@ -521,6 +493,11 @@ if __name__ == &apos;__main__&apos;:
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -528,16 +505,39 @@ if __name__ == &apos;__main__&apos;:
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-08T10:10:34+08:00">
-                2017-04-08
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2018-12-01 11:38:17 / 修改时间：19:27:15" itemprop="dateCreated datePublished" datetime="2018-12-01T11:38:17+08:00">2018-12-01</time>
             
 
             
+              
 
+              
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/学习相关/" itemprop="url" rel="index"><span itemprop="name">学习相关</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -557,7 +557,9 @@ if __name__ == &apos;__main__&apos;:
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -565,39 +567,39 @@ if __name__ == &apos;__main__&apos;:
 
       
         
-          <p>#03.20-04.07学习总结</p>
-<p><strong><em>因为升本考试和一些其他的私事，所以将这三周合并来写</em></strong></p>
-<p>##总体工作</p>
-<ul>
-<li><a href="http://anotherm4.tk" target="_blank" rel="noopener">anotherm4.tk</a>再次重新设计</li>
-<li>添加Chrome移动端状态栏变色（可能只限于Android和iOS）</li>
-<li>开启Tomcat APR模式</li>
-<li>服务器安装fail2ban增强安全性</li>
-<li>网页数据库测试部分已经完成</li>
-</ul>
-<hr>
+          <h1 id="Python-Learn-Notes"><a href="#Python-Learn-Notes" class="headerlink" title="Python Learn Notes"></a>Python Learn Notes</h1><blockquote>
+<p>此文章为Python个人学习笔记，仅供学习过程中的参考<br>Thanks to 《Beginning Python From Novice To Professional》</p>
+</blockquote>
+<blockquote>
+<p>The faintest ink is better than the best memory.<br><br>好记性不如烂笔头。</p>
+</blockquote>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/04/08/0320-0407学习总结/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/12/01/LearnPython/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+         
           <!--/noindex-->
         
       
     </div>
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
+
+    
+       
+    
+    
+
+    
 
     <footer class="post-footer">
       
@@ -611,6 +613,10 @@ if __name__ == &apos;__main__&apos;:
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -623,13 +629,19 @@ if __name__ == &apos;__main__&apos;:
   
   
 
-  <article class="post post-type-normal " itemscope="" itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://anotherm.github.io/2017/04/04/博客界面效果小更新/">
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://anotherm.github.io/2018/11/19/fuckJava/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Another.M">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
@@ -642,13 +654,9 @@ if __name__ == &apos;__main__&apos;:
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/2017/04/04/博客界面效果小更新/" itemprop="url">
-                  博客界面效果小更新
-                </a>
+                
+                <a href="/2018/11/19/fuckJava/" class="post-title-link" itemprop="https://anotherm.github.io/index.html">fuckJava</a>
               
             
           </h1>
@@ -656,6 +664,11 @@ if __name__ == &apos;__main__&apos;:
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -663,13 +676,30 @@ if __name__ == &apos;__main__&apos;:
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-04T12:43:04+08:00">
-                2017-04-04
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2018-11-19 22:10:16" itemprop="dateCreated datePublished" datetime="2018-11-19T22:10:16+08:00">2018-11-19</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-12-01 12:27:35" itemprop="dateModified" datetime="2018-12-01T12:27:35+08:00">2018-12-01</time>
+              
             
           </span>
 
@@ -685,11 +715,7 @@ if __name__ == &apos;__main__&apos;:
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/新发现/" itemprop="url" rel="index">
-                    <span itemprop="name">新发现</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/学习相关/" itemprop="url" rel="index"><span itemprop="name">学习相关</span></a></span>
 
                 
                 
@@ -714,7 +740,191 @@ if __name__ == &apos;__main__&apos;:
       </header>
     
 
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
+      
+      
+
+      
+        
+          <h1 id="fxckUJava"><a href="#fxckUJava" class="headerlink" title="fxckUJava"></a><b>fxckUJava</b></h1><p>昨天花时间研究了一下Spring与SpringBoot相关的知识，然后过了一天，整个人就是这种感觉</p>
+<p><img src="https://tu.jiuwa.net/pic/20171105/1509886023460480.jpg" width="240" height="auto/"></p>
+<p>今天看了看Flask</p>
+<p>然后就有了这篇文章的标题—-<b>fxckUJava</b></p>
+<p>关于这篇文章的内容呢，就是教你用9行写出一个网站</p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/11/19/fuckJava/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+         
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+       
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://anotherm.github.io/2017/04/04/博客界面效果小更新/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Another.M">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Another.M">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2017/04/04/博客界面效果小更新/" class="post-title-link" itemprop="https://anotherm.github.io/index.html">博客界面效果小更新</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2017-04-04 12:43:04" itemprop="dateCreated datePublished" datetime="2017-04-04T12:43:04+08:00">2017-04-04</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-12-01 13:34:04" itemprop="dateModified" datetime="2018-12-01T13:34:04+08:00">2018-12-01</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/新发现/" itemprop="url" rel="index"><span itemprop="name">新发现</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -724,26 +934,29 @@ if __name__ == &apos;__main__&apos;:
         
           
             <p>因<a href="http://dev.duoshuo.com/threads/58d1169ae293b89a20c57241" target="_blank" rel="noopener">多说即将关闭</a>，所以整了整网页，准备取消多说服务，顺便翻了翻我现在正在使用的<a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">NexT主题</a>，发现主题作者更新了，尤其意外的发现添加了<a href="https://github.com/hustcc/canvas-nest.js" target="_blank" rel="noopener">canvas nest</a>这个动态背景效果，于是连带Hexo一起更新了一下</p>
-<p>目前使用的背景为NexT的three_wave，具体可在作者主题文档找到</p>
+<p><del>目前使用的背景为NexT的three_wave，具体可在作者主题文档找到</del></p>
 <p>至于评论系统，反正也没人评论，所以干脆不弄了</p>
-<p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUOl1UjyCPHz25v4bcZGUABXTM9jEonQiAgzFHZylGyrmSnyCvLQ" alt=""></p>
+<font color="green">2018.12.01更新：还是canvas nest这个特效炫酷而且不卡，至于评论系统，嗯，洗洗睡吧😂</font>
 
           
         
       
     </div>
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
+
+    
+       
+    
+    
+
+    
 
     <footer class="post-footer">
       
@@ -757,6 +970,10 @@ if __name__ == &apos;__main__&apos;:
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -769,13 +986,19 @@ if __name__ == &apos;__main__&apos;:
   
   
 
-  <article class="post post-type-normal " itemscope="" itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://anotherm.github.io/2017/03/17/0313-0317学习总结/">
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://anotherm.github.io/2016/07/27/关于我所用过的各版本Linux的浅谈/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Another.M">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
@@ -788,13 +1011,9 @@ if __name__ == &apos;__main__&apos;:
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/2017/03/17/0313-0317学习总结/" itemprop="url">
-                  0313-0317学习总结
-                </a>
+                
+                <a href="/2016/07/27/关于我所用过的各版本Linux的浅谈/" class="post-title-link" itemprop="https://anotherm.github.io/index.html">关于我所用过的各版本Linux的浅谈</a>
               
             
           </h1>
@@ -802,6 +1021,11 @@ if __name__ == &apos;__main__&apos;:
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -809,13 +1033,30 @@ if __name__ == &apos;__main__&apos;:
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-17T21:11:22+08:00">
-                2017-03-17
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2016-07-27 15:57:39" itemprop="dateCreated datePublished" datetime="2016-07-27T15:57:39+08:00">2016-07-27</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-12-01 20:39:57" itemprop="dateModified" datetime="2018-12-01T20:39:57+08:00">2018-12-01</time>
+              
             
           </span>
 
@@ -831,11 +1072,7 @@ if __name__ == &apos;__main__&apos;:
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/学习相关/" itemprop="url" rel="index">
-                    <span itemprop="name">学习相关</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/学习相关/" itemprop="url" rel="index"><span itemprop="name">学习相关</span></a></span>
 
                 
                 
@@ -860,7 +1097,9 @@ if __name__ == &apos;__main__&apos;:
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -868,491 +1107,52 @@ if __name__ == &apos;__main__&apos;:
 
       
         
-          <h1 id="03-13-03-17学习总结"><a href="#03-13-03-17学习总结" class="headerlink" title="03.13-03.17学习总结"></a>03.13-03.17学习总结</h1><p>##总体工作</p>
-<ul>
-<li>网页改版</li>
-<li>App样板已经完成</li>
-</ul>
+          <!--<img src="https://upload.wikimedia.org/wikipedia/commons/b/b0/NewTux.svg" width="200" align="right"/>-->
+<h3 id="以下所写仅为个人观点，真实感受请自己体验，如有雷同，那就让它雷同吧"><a href="#以下所写仅为个人观点，真实感受请自己体验，如有雷同，那就让它雷同吧" class="headerlink" title="以下所写仅为个人观点，真实感受请自己体验，如有雷同，那就让它雷同吧"></a><del>以下所写仅为个人观点，真实感受请自己体验，如有雷同，那就让它雷同吧</del></h3><font color="green">2018.12.01更新:拥有VPS管理经验大概2年左右了，期间主要使用CentOS 6，最近更换了Debian 9，所以更新了一下大部分内容</font>
+
+<p>文中部分文字、简介等来源于<a href="https://zh.wikipedia.org/wiki/Linux发行版列表" target="_blank" rel="noopener">维基百科-Linux发行版列表</a></p>
+<p><del><!--图片来源于[Google](https://www.google.com.hk/imgres?imgurl=https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/NewTux.svg/2000px-NewTux.svg.png&imgrefurl=https://zh.wikipedia.org/wiki/Linux&h=2400&w=2000&tbnid=NWUz_uyHoU1KUM:&tbnh=160&tbnw=133&docid=cGRBAcKAJbrXXM&usg=__4boGWOohNRnKuVnlkVaLWmuv6kw=&sa=X&ved=0ahUKEwjM16jQsZPOAhXCRY8KHarjAygQ9QEIHjAA)--></del></p>
 <hr>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/03/17/0313-0317学习总结/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope="" itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://anotherm.github.io/2017/03/08/0306-0310学习总结/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Another.M">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Another.M">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/08/0306-0310学习总结/" itemprop="url">
-                  0303-0307学习总结
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-08T09:58:11+08:00">
-                2017-03-08
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/学习相关/" itemprop="url" rel="index">
-                    <span itemprop="name">学习相关</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="03-06-03-10学习总结"><a href="#03-06-03-10学习总结" class="headerlink" title="03.06-03.10学习总结"></a>03.06-03.10学习总结</h1><p>##总体工作</p>
-<ul>
-<li>设计网页</li>
-<li>设计App</li>
-</ul>
-<hr>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/03/08/0306-0310学习总结/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope="" itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://anotherm.github.io/2017/03/08/0227-0303学习总结/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Another.M">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Another.M">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/08/0227-0303学习总结/" itemprop="url">
-                  0227-0231学习总结
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-08T09:57:41+08:00">
-                2017-03-08
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/学习相关/" itemprop="url" rel="index">
-                    <span itemprop="name">学习相关</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="02-27-03-03学习总结"><a href="#02-27-03-03学习总结" class="headerlink" title="02.27-03.03学习总结"></a>02.27-03.03学习总结</h1><h2 id="总体工作"><a href="#总体工作" class="headerlink" title="总体工作"></a>总体工作</h2><ul>
-<li>VPS服务器的域名绑定</li>
-<li>编写测试网页</li>
-</ul>
-<hr>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/03/08/0227-0303学习总结/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope="" itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://anotherm.github.io/2017/03/08/0220-0224学习总结/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Another.M">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Another.M">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/08/0220-0224学习总结/" itemprop="url">
-                  0220-0224学习总结
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-08T08:55:31+08:00">
-                2017-03-08
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/学习相关/" itemprop="url" rel="index">
-                    <span itemprop="name">学习相关</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="02-20-02-24学习总结"><a href="#02-20-02-24学习总结" class="headerlink" title="02.20-02.24学习总结"></a>02.20-02.24学习总结</h1><h2 id="总体工作"><a href="#总体工作" class="headerlink" title="总体工作"></a>总体工作</h2><ul>
-<li>设立工作目标<ul>
-<li>尝试编写一个类似于“每日一句”的网站</li>
-<li>编写一个与网站对应的App</li>
-</ul>
+<h2 id="先列出我所用过的Linux，按使用先后排序"><a href="#先列出我所用过的Linux，按使用先后排序" class="headerlink" title="先列出我所用过的Linux，按使用先后排序"></a>先列出我所用过的Linux，按使用先后排序</h2><ul>
+<li><a href="http://cn.ubuntu.com/" target="_blank" rel="noopener">Ubuntu</a></li>
+<li><del><a href="http://www.ubuntukylin.com/" target="_blank" rel="noopener">Ubuntu Kylin</a></del></li>
+<li><del><a href="https://www.kali.org/" target="_blank" rel="noopener">Kali Linux</a></del></li>
+<li><del><a href="https://www.deepin.org/" target="_blank" rel="noopener">Deepin</a></del></li>
+<li><del><a href="https://elementary.io/" target="_blank" rel="noopener">elementary OS</a></del></li>
+<li><a href="https://www.centos.org/" target="_blank" rel="noopener">CentOS</a></li>
+<li><a href="https://www.debian.org" target="_blank" rel="noopener">Debian</a></li>
+<li><p><del><a href="https://www.archlinux.org/" target="_blank" rel="noopener">Arch Linux</a></del></p>
+<font color="green">添加Fedora，Manjaro的部分简述，删除和修改了一些无用的描述，把 “★(\u2605)” 更换成为了 “⭐(\u2B50)” ，算是为了网页添加了一丝色彩，虽然不知道能不能被识别</font>
 </li>
 </ul>
 <hr>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/03/08/0220-0224学习总结/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2016/07/27/关于我所用过的各版本Linux的浅谈/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+         
           <!--/noindex-->
         
       
     </div>
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
+
+    
+       
+    
+    
+
+    
 
     <footer class="post-footer">
       
@@ -1366,6 +1166,10 @@ if __name__ == &apos;__main__&apos;:
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -1378,13 +1182,19 @@ if __name__ == &apos;__main__&apos;:
   
   
 
-  <article class="post post-type-normal " itemscope="" itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://anotherm.github.io/2017/01/06/0102-0106学习总结/">
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://anotherm.github.io/2016/04/14/Markdown语法测试/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Another.M">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
@@ -1397,13 +1207,9 @@ if __name__ == &apos;__main__&apos;:
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/2017/01/06/0102-0106学习总结/" itemprop="url">
-                  0102-0106学习总结
-                </a>
+                
+                <a href="/2016/04/14/Markdown语法测试/" class="post-title-link" itemprop="https://anotherm.github.io/index.html">Markdown常用语法测试</a>
               
             
           </h1>
@@ -1411,6 +1217,11 @@ if __name__ == &apos;__main__&apos;:
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -1418,13 +1229,30 @@ if __name__ == &apos;__main__&apos;:
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-01-06T16:58:58+08:00">
-                2017-01-06
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2016-04-14 17:50:07" itemprop="dateCreated datePublished" datetime="2016-04-14T17:50:07+08:00">2016-04-14</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-12-01 15:31:06" itemprop="dateModified" datetime="2018-12-01T15:31:06+08:00">2018-12-01</time>
+              
             
           </span>
 
@@ -1440,11 +1268,7 @@ if __name__ == &apos;__main__&apos;:
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/学习相关/" itemprop="url" rel="index">
-                    <span itemprop="name">学习相关</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/学习相关/" itemprop="url" rel="index"><span itemprop="name">学习相关</span></a></span>
 
                 
                 
@@ -1469,7 +1293,9 @@ if __name__ == &apos;__main__&apos;:
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -1477,32 +1303,35 @@ if __name__ == &apos;__main__&apos;:
 
       
         
-          <h1 id="0102-0106学习总结"><a href="#0102-0106学习总结" class="headerlink" title="0102-0106学习总结"></a>0102-0106学习总结</h1><h2 id="上周工作目标：完成此应用基本功能，并考虑添加Root相关，功能"><a href="#上周工作目标：完成此应用基本功能，并考虑添加Root相关，功能" class="headerlink" title="上周工作目标：完成此应用基本功能，并考虑添加Root相关，功能"></a>上周工作目标：完成此应用基本功能，并考虑添加Root相关，功能</h2><ul>
-<li>已完成，Root相关功能未添加</li>
-</ul>
-<hr>
+          <p><img src="../../images/avatar.jpg" alt="">图片测试</p>
+<h1 id="This-is-a-test-一级标题测试"><a href="#This-is-a-test-一级标题测试" class="headerlink" title="This is a test 一级标题测试"></a>This is a test 一级标题测试</h1><h2 id="This-is-a-test-二级标题测试"><a href="#This-is-a-test-二级标题测试" class="headerlink" title="This is a test 二级标题测试"></a>This is a test 二级标题测试</h2><h3 id="This-is-a-test-三级标题测试"><a href="#This-is-a-test-三级标题测试" class="headerlink" title="This is a test 三级标题测试"></a>This is a test 三级标题测试</h3><h4 id="This-is-a-test-四级标题测试"><a href="#This-is-a-test-四级标题测试" class="headerlink" title="This is a test 四级标题测试"></a>This is a test 四级标题测试</h4><h5 id="This-is-a-test-五级标题测试"><a href="#This-is-a-test-五级标题测试" class="headerlink" title="This is a test 五级标题测试"></a>This is a test 五级标题测试</h5><h6 id="This-is-a-test-六级标题测试"><a href="#This-is-a-test-六级标题测试" class="headerlink" title="This is a test 六级标题测试"></a>This is a test 六级标题测试</h6>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/01/06/0102-0106学习总结/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2016/04/14/Markdown语法测试/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+         
           <!--/noindex-->
         
       
     </div>
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
+
+    
+       
+    
+    
+
+    
 
     <footer class="post-footer">
       
@@ -1516,310 +1345,10 @@ if __name__ == &apos;__main__&apos;:
         <div class="post-eof"></div>
       
     </footer>
-  </article>
-
-
-    
-      
-
-  
-
+  </div>
   
   
   
-
-  <article class="post post-type-normal " itemscope="" itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://anotherm.github.io/2016/12/30/1226-1230学习总结/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Another.M">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Another.M">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/30/1226-1230学习总结/" itemprop="url">
-                  1226-1230学习总结
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-12-30T15:08:36+08:00">
-                2016-12-30
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/学习相关/" itemprop="url" rel="index">
-                    <span itemprop="name">学习相关</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="12-26-12-30"><a href="#12-26-12-30" class="headerlink" title="12.26-12.30"></a>12.26-12.30</h1><h2 id="上周工作目标"><a href="#上周工作目标" class="headerlink" title="上周工作目标"></a>上周工作目标</h2><ul>
-<li>未完成：由于可能涉及不同版本Android之间API有差异，所以暂时考虑作为后续功能开发</li>
-<li>整个项目已经基本成型</li>
-</ul>
-<hr>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2016/12/30/1226-1230学习总结/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope="" itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://anotherm.github.io/2016/12/23/1219-1223学习总结/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Another.M">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Another.M">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/23/1219-1223学习总结/" itemprop="url">
-                  1219-1223学习总结
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-12-23T17:49:00+08:00">
-                2016-12-23
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/学习相关/" itemprop="url" rel="index">
-                    <span itemprop="name">学习相关</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="12-19-12-23学习总结"><a href="#12-19-12-23学习总结" class="headerlink" title="12.19-12.23学习总结"></a>12.19-12.23学习总结</h1><h2 id="上周工作目标"><a href="#上周工作目标" class="headerlink" title="上周工作目标"></a>上周工作目标</h2><ul>
-<li>继续完成应用管理<ul>
-<li>已经完成应用管理显示应用部分</li>
-</ul>
-</li>
-</ul>
-<hr>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2016/12/23/1219-1223学习总结/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </article>
 
 
@@ -1827,16 +1356,9 @@ if __name__ == &apos;__main__&apos;:
   </section>
 
   
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
-
 
 
           </div>
-          
-
-
           
 
         </div>
@@ -1852,90 +1374,100 @@ if __name__ == &apos;__main__&apos;:
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
     <div class="sidebar-inner">
 
       
 
       
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
-        <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="Another.M">
-          <p class="site-author-name" itemprop="name">Another.M</p>
-           
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Another.M</p>
               <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
           
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
         </div>
-        <nav class="site-state motion-element">
-
-          
-            <div class="site-state-item site-state-posts">
-              <a href="/archives">
-                <span class="site-state-item-count">16</span>
-                <span class="site-state-item-name">日志</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-categories">
-              <a href="/categories/index.html">
-                <span class="site-state-item-count">2</span>
-                <span class="site-state-item-name">分类</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-tags">
-              <a href="/tags/index.html">
-                <span class="site-state-item-count">5</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-            
-              <span class="links-of-author-item">
-                <a href="https://github.com/AnotherM" target="_blank" title="GitHub">
-                  
-                    <i class="fa fa-fw fa-github"></i>
-                  
-                  GitHub
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://steamcommunity.com/id/anotherm4" target="_blank" title="Steam">
-                  
-                    <i class="fa fa-fw fa-steam"></i>
-                  
-                  Steam
-                </a>
-              </span>
-            
-          
-        </div>
-
-        
-        
-
-        
-        
-
-        
-
-
       </section>
 
       
@@ -1952,30 +1484,39 @@ if __name__ == &apos;__main__&apos;:
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">
-  
-  &copy;  2016 - 
-  <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Another.M</span>
+
+  
+
+  
 </div>
 
 
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
 
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
-  </a>
-</div>
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v6.6.0</div>
+
+
 
 
         
+
+
+
+
+
+
+
 
         
       </div>
@@ -1988,6 +1529,11 @@ if __name__ == &apos;__main__&apos;:
       </div>
     
 
+    
+	
+    
+
+    
   </div>
 
   
@@ -2006,73 +1552,70 @@ if __name__ == &apos;__main__&apos;:
 
 
 
-  
-
-
-  
 
 
 
 
 
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-  
-  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
-
-
-
-  
-  
-
-  
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
-
-
-
-  
-
-
-  
 
 
 
 
-	
+
+
+
 
 
 
 
 
   
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.6.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.6.0"></script>
+
+
+
+  
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.6.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
 
 
 
@@ -2086,142 +1629,20 @@ if __name__ == &apos;__main__&apos;:
 
   
 
-
-
-
-
+  
 
   
 
-  <script type="text/javascript">
-    // Popup Window;
-    var isfetched = false;
-    // Search DB path;
-    var search_path = "search.xml";
-    if (search_path.length == 0) {
-      search_path = "search.xml";
-    }
-    var path = "/" + search_path;
-    // monitor main search box;
+  
 
-    function proceedsearch() {
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
-        .css('overflow', 'hidden');
-      $('.popup').toggle();
-    }
-    // search function;
-    var searchFunc = function(path, search_id, content_id) {
-      'use strict';
-      $.ajax({
-        url: path,
-        dataType: "xml",
-        async: true,
-        success: function( xmlResponse ) {
-          // get the contents from search data
-          isfetched = true;
-          $('.popup').detach().appendTo('.header-inner');
-          var datas = $( "entry", xmlResponse ).map(function() {
-            return {
-              title: $( "title", this ).text(),
-              content: $("content",this).text(),
-              url: $( "url" , this).text()
-            };
-          }).get();
-          var $input = document.getElementById(search_id);
-          var $resultContent = document.getElementById(content_id);
-          $input.addEventListener('input', function(){
-            var matchcounts = 0;
-            var str='<ul class=\"search-result-list\">';
-            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
-            $resultContent.innerHTML = "";
-            if (this.value.trim().length > 1) {
-              // perform local searching
-              datas.forEach(function(data) {
-                var isMatch = false;
-                var content_index = [];
-                var data_title = data.title.trim().toLowerCase();
-                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
-                var data_url = decodeURIComponent(data.url);
-                var index_title = -1;
-                var index_content = -1;
-                var first_occur = -1;
-                // only match artiles with not empty titles and contents
-                if(data_title != '') {
-                  keywords.forEach(function(keyword, i) {
-                    index_title = data_title.indexOf(keyword);
-                    index_content = data_content.indexOf(keyword);
-                    if( index_title >= 0 || index_content >= 0 ){
-                      isMatch = true;
-                      if (i == 0) {
-                        first_occur = index_content;
-                      }
-                    }
+  
 
-                  });
-                }
-                // show search results
-                if (isMatch) {
-                  matchcounts += 1;
-                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
-                  var content = data.content.trim().replace(/<[^>]+>/g,"");
-                  if (first_occur >= 0) {
-                    // cut out 100 characters
-                    var start = first_occur - 20;
-                    var end = first_occur + 80;
-                    if(start < 0){
-                      start = 0;
-                    }
-                    if(start == 0){
-                      end = 50;
-                    }
-                    if(end > content.length){
-                      end = content.length;
-                    }
-                    var match_content = content.substring(start, end);
-                    // highlight all keywords
-                    keywords.forEach(function(keyword){
-                      var regS = new RegExp(keyword, "gi");
-                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
-                    });
+  
+  
 
-                    str += "<p class=\"search-result\">" + match_content +"...</p>"
-                  }
-                  str += "</li>";
-                }
-              })};
-            str += "</ul>";
-            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
-            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
-            $resultContent.innerHTML = str;
-          });
-          proceedsearch();
-        }
-      });}
+  
 
-    // handle and trigger popup window;
-    $('.popup-trigger').click(function(e) {
-      e.stopPropagation();
-      if (isfetched == false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-    });
-
-    $('.popup-btn-close').click(function(e){
-      $('.popup').hide();
-      $(".local-search-pop-overlay").remove();
-      $('body').css('overflow', '');
-    });
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-  </script>
-
-
-
-
+  
 
   
 
