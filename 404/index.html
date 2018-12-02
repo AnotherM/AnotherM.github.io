@@ -30,13 +30,6 @@
 
 
 
-  
-  
-    
-    
-  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link href="/lib/pace/pace-theme-center-atom.min.css?v=1.0.2" rel="stylesheet">
-
 
 
 
@@ -99,12 +92,12 @@
     root: '/',
     scheme: 'Muse',
     version: '6.6.0',
-    sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true},
+    sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
     fancybox: true,
     fastclick: false,
-    lazyload: true,
+    lazyload: false,
     tabs: true,
-    motion: {"enable":true,"async":true,"transition":{"post_block":"flipYIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"flipYIn"}},
+    motion: {"enable":true,"async":false,"transition":{"post_block":"slideDownBigIn","post_header":"slideDownBigIn","post_body":"slideDownBigIn","coll_header":"slideDownBigIn","sidebar":"flipYIn"}},
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -498,8 +491,6 @@
 
   <aside id="sidebar" class="sidebar">
     
-      <div id="sidebar-dimmer"></div>
-    
     <div class="sidebar-inner">
 
       
@@ -707,23 +698,24 @@
 
 
 
-  
-
-
-
-
-
-
-  
-
-
 
 
 
 
 
   
+
+
+
   
+    
+      
+  
+  <script type="text/javascript" color="2,2,2" opacity="1" zindex="-1" count="24" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+
+
 
 
 
@@ -740,11 +732,6 @@
 
   
   
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
     <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   
 
@@ -756,16 +743,6 @@
   
   
     <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/three/three.min.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/three/canvas_lines.min.js"></script>
   
 
 
@@ -1183,15 +1160,6 @@
 
 
   
-  
-  
-  <script src="/lib/bookmark/bookmark.min.js?v=1.0"></script>
-  <script type="text/javascript">
-  
-    bookmark.loadBookmark();
-  
-  </script>
-
 
   
   <style>
