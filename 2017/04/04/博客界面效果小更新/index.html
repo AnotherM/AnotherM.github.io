@@ -30,12 +30,15 @@
 
 
 
-
-
-
   
   
-  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-center-atom.min.css?v=1.0.2" rel="stylesheet">
+
+
+
 
 
 
@@ -96,10 +99,10 @@
     root: '/',
     scheme: 'Muse',
     version: '6.6.0',
-    sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true},
     fancybox: true,
     fastclick: false,
-    lazyload: false,
+    lazyload: true,
     tabs: true,
     motion: {"enable":true,"async":true,"transition":{"post_block":"flipYIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"flipYIn"}},
     algolia: {
@@ -118,10 +121,10 @@
 
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script>
-(adsbygoogle = window.adsbygoogle || []).push({
-google_ad_client: "ca-pub-4522566152785892",
-enable_page_level_ads: true
-});
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-4522566152785892",
+          enable_page_level_ads: true
+     });
 </script>
 
   <meta name="description" content="因多说即将关闭，所以整了整网页，准备取消多说服务，顺便翻了翻我现在正在使用的NexT主题，发现主题作者更新了，尤其意外的发现添加了canvas nest这个动态背景效果，于是连带Hexo一起更新了一下 目前使用的背景为NexT的three_wave，具体可在作者主题文档找到 至于评论系统，反正也没人评论，所以干脆不弄了 2018.12.01更新：多说已经关闭，而且canvas_line这个特效好炫">
@@ -402,7 +405,7 @@ enable_page_level_ads: true
 
   
 
-    <a href="https://github.com/AnotherM" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewbox="0 0 250 250" style="fill: #222; color: #fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a>
+    <span class="exturl github-corner" data-url="aHR0cHM6Ly9naXRodWIuY29tL0Fub3RoZXJN" title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill: #222; color: #fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></span>
 
 
 
@@ -422,8 +425,6 @@ enable_page_level_ads: true
   
   
 
-  
-    <div class="reading-progress-bar"></div>
   
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
@@ -535,23 +536,19 @@ enable_page_level_ads: true
     
     
     
-    <div class="post-body han-init-context" itemprop="articleBody">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
-        <p>因<del><a href="http://dev.duoshuo.com/threads/58d1169ae293b89a20c57241" target="_blank" rel="noopener">多说即将关闭</a></del>，所以整了整网页，准备取消多说服务，顺便翻了翻我现在正在使用的<a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">NexT主题</a>，发现主题作者更新了，尤其意外的发现添加了<a href="https://github.com/hustcc/canvas-nest.js" target="_blank" rel="noopener">canvas nest</a>这个动态背景效果，于是连带Hexo一起更新了一下</p>
+        <p>因<del><span class="exturl" data-url="aHR0cDovL2Rldi5kdW9zaHVvLmNvbS90aHJlYWRzLzU4ZDExNjlhZTI5M2I4OWEyMGM1NzI0MQ==" title="http://dev.duoshuo.com/threads/58d1169ae293b89a20c57241">多说即将关闭<i class="fa fa-external-link"></i></span></del>，所以整了整网页，准备取消多说服务，顺便翻了翻我现在正在使用的<span class="exturl" data-url="aHR0cDovL3RoZW1lLW5leHQuaWlzc25hbi5jb20v" title="http://theme-next.iissnan.com/">NexT主题<i class="fa fa-external-link"></i></span>，发现主题作者更新了，尤其意外的发现添加了<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2h1c3RjYy9jYW52YXMtbmVzdC5qcw==" title="https://github.com/hustcc/canvas-nest.js">canvas nest<i class="fa fa-external-link"></i></span>这个动态背景效果，于是连带Hexo一起更新了一下</p>
 <p><del>目前使用的背景为NexT的three_wave，具体可在作者主题文档找到</del></p>
 <p>至于评论系统，反正也没人评论，所以干脆不弄了</p>
-<font color="green">2018.12.01更新：多说已经关闭，而且canvas_line这个特效好炫酷，至于评论系统，嗯，洗洗睡吧😂,然后<a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">NexT主题</a>已经交由<a href="https://github.com/theme-next" target="_blank" rel="noopener">NexT组织</a>更新，目前版本6.0</font>
+<font color="green">2018.12.01更新：多说已经关闭，而且canvas_line这个特效好炫酷，至于评论系统，嗯，洗洗睡吧😂,然后<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQvaGV4by10aGVtZS1uZXh0" title="https://github.com/theme-next/hexo-theme-next">NexT主题<i class="fa fa-external-link"></i></span>已经交由<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQ=" title="https://github.com/theme-next">NexT组织<i class="fa fa-external-link"></i></span>更新，目前版本6.0</font>
 
       
     </div>
-
-    
-      
-
 
     
 
@@ -614,7 +611,7 @@ enable_page_level_ads: true
     <a href="https://anotherm.github.io/2017/04/04/博客界面效果小更新/" title="博客界面效果小更新">https://anotherm.github.io/2017/04/04/博客界面效果小更新/</a>
   </li>
   <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！</li>
 </ul>
 
       </div>
@@ -630,26 +627,6 @@ enable_page_level_ads: true
       
 
       
-      
-        <div class="post-widgets">
-        
-
-        
-
-        
-          
-          <div class="social_share">
-            
-            
-               <div id="needsharebutton-postbottom">
-                 <span class="btn">
-                    <i class="fa fa-share-alt" aria-hidden="true"></i>
-                 </span>
-               </div>
-            
-          </div>
-        
-        </div>
       
       
 
@@ -708,6 +685,8 @@ enable_page_level_ads: true
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
     
     <div class="sidebar-inner">
 
@@ -779,6 +758,32 @@ enable_page_level_ads: true
           
 
           
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0Fub3RoZXJN" title="GitHub &rarr; https://github.com/AnotherM"><i class="fa fa-fw fa-github"></i>GitHub</span>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <span class="exturl" data-url="bWFpbHRvOnptNjE1MkBzaW5hLmNvbQ==" title="E-Mail &rarr; mailto:zm6152@sina.com"><i class="fa fa-fw fa-envelope"></i>E-Mail</span>
+                </span>
+              
+            </div>
+          
 
           
              <div class="cc-license motion-element" itemprop="license">
@@ -787,7 +792,7 @@ enable_page_level_ads: true
               
               
               
-              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+              <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></span>
              </div>
           
 
@@ -828,7 +833,7 @@ enable_page_level_ads: true
 </div>
 
 
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+  <div class="powered-by">由 <span class="exturl theme-link" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> 强力驱动 v3.8.0</div>
 
 
 
@@ -836,7 +841,7 @@ enable_page_level_ads: true
 
 
 
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v6.6.0</div>
+  <div class="theme-info">主题 – <span class="exturl theme-link" data-url="aHR0cHM6Ly90aGVtZS1uZXh0Lm9yZw==">NexT.Muse</span> v6.6.0</div>
 
 
 
@@ -890,6 +895,8 @@ enable_page_level_ads: true
 
 
 
+  
+
 
 
 
@@ -911,14 +918,17 @@ enable_page_level_ads: true
 
 
 
-
-  
 
 
 
   
   
     <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
   
 
   
@@ -944,11 +954,6 @@ enable_page_level_ads: true
   
   
     <script type="text/javascript" src="/lib/three/canvas_lines.min.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/reading_progress/reading_progress.js"></script>
   
 
 
@@ -1335,18 +1340,6 @@ enable_page_level_ads: true
 
   <script>
     
-      pbOptions = {};
-      
-          pbOptions.iconStyle = "box";
-      
-          pbOptions.boxForm = "horizontal";
-      
-          pbOptions.position = "bottomCenter";
-      
-          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
-      
-      new needShareButton('#needsharebutton-postbottom', pbOptions);
-    
     
       flOptions = {};
       
@@ -1356,7 +1349,7 @@ enable_page_level_ads: true
       
           flOptions.position = "middleRight";
       
-          flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+          flOptions.networks = "Weibo,Wechat,QQZone,Twitter,Facebook,Mailto";
       
       new needShareButton('#needsharebutton-float', flOptions);
     
@@ -1365,10 +1358,17 @@ enable_page_level_ads: true
   
 
   
+  
+  
+  <script src="/lib/pangu/dist/pangu.min.js?v=3.3"></script>
+  <script type="text/javascript">pangu.spacingPage();</script>
+
 
   
 
   
+  <script type="text/javascript" src="/js/src/exturl.js?v=6.6.0"></script>
+
 
   
   
