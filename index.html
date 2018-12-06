@@ -114,7 +114,13 @@
 
 
 
-
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-4522566152785892",
+          enable_page_level_ads: true
+     });
+</script>
 
   <meta property="og:type" content="website">
 <meta property="og:title" content="Another.M">
@@ -308,7 +314,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">2</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">3</span></a>
 
   </li>
         
@@ -327,7 +333,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">6</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">7</span></a>
 
   </li>
 
@@ -399,8 +405,187 @@
         <div class="content-wrap">
           
           <div id="content" class="content">
+          <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+          <!-- header -->
+          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4522566152785892" data-ad-slot="4253304154" data-ad-format="auto" data-full-width-responsive="true"></ins>
+          <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://anotherm.github.io/2018/12/06/Debian-Keyring/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Another.M">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Another.M">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2018/12/06/Debian-Keyring/" class="post-title-link" itemprop="https://anotherm.github.io/index.html">Debian-Keyring</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-12-06 15:07:03 / 修改时间：16:42:47" itemprop="dateCreated datePublished" datetime="2018-12-06T15:07:03+08:00">2018-12-06</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/faceplam/" itemprop="url" rel="index"><span itemprop="name">faceplam</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="这次的标题是"><a href="#这次的标题是" class="headerlink" title="这次的标题是"></a>这次的标题是</h1><p>登陆SSH，使用<code>apt update</code>更新一下软件包，然后提示<code>NO_PUBKEY XXXXXXXXXXXXXXXX</code><br><img src="/images/debian-gpg/d01.png" alt=""><br>随即各种搜索，提示都是一致的提示使用<code>gpg --keyserver keyring.debian.com --recv-keys</code></p>
+<p>输入之后，再次使用<code>apt update</code>报错依旧</p>
+<p>然后查了一下还需要<code>gpg --armor --export XXXXXXXX | apt-key add -</code></p>
+<p>使用之后，报错依旧</p>
+<p>然后找到了一个网页上说删除<code>debian-archive-keyring</code>这个包然后使用<code>apt --fix-broken install</code>就好了</p>
+<p>系统提示<strong>Please input the phrase: Yes, do as I say!</strong>，犹豫了一下<br>……<br><code>Ctrl + C</code><br>……<br>找了一会儿依然修不好</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">apt remove debian-archive-keyring</span><br><span class="line">Yes, do as I say!</span><br></pre></td></tr></table></figure>
+<p><font size="10em" color="red">然后……</font><br>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/12/06/Debian-Keyring/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+         
+          <!--/noindex-->
+        
+      
+    </p></div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+       
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -641,7 +826,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-12-03 21:48:16" itemprop="dateModified" datetime="2018-12-03T21:48:16+08:00">2018-12-03</time>
+                <time title="修改时间：2018-12-06 16:50:04" itemprop="dateModified" datetime="2018-12-06T16:50:04+08:00">2018-12-06</time>
               
             
           </span>
@@ -696,13 +881,12 @@
           <font style="font-size:24px;"><b>Python Learn Notes</b></font>
 
 <blockquote>
-<p>此文章为Python个人学习笔记，非Python教程或编程入门，仅供学习过程中的参考<br>Thanks to 《Beginning Python From Novice To Professional》</p>
+<p>此文章为Python个人学习笔记，非Python教程或编程入门，仅供学习过程中的参考<br><br>Thanks to 《Beginning Python From Novice To Professional》</p>
 </blockquote>
 <blockquote>
 <p>The faintest ink is better than the best memory.<br><br>好记性不如烂笔头。</p>
 </blockquote>
-<p><strong>注：此篇文章依旧在更新中，目前完成：Para 1-2</strong></p>
-<p><img src="https://img.shields.io/badge/progress-18%25-brightgreen.svg" alt=""></p>
+<p><strong>注：此篇文章依旧在更新中</strong><img src="https://img.shields.io/badge/progress-22%25-brightgreen.svg" alt=""></p>
           <!--noindex-->
           
             <div class="post-button text-center">
@@ -1530,7 +1714,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1547,7 +1731,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                      
+                    
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
