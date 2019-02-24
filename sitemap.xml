@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://anotherm.github.io/2019/02/24/LearnPython(Rework)/</loc>
+    
+    <lastmod>2019-02-24T14:00:19.158Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://anotherm.github.io/2019/01/29/WSL-Redis%E4%B8%8Eredis-py%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
     
     <lastmod>2019-01-29T11:48:37.900Z</lastmod>
@@ -26,13 +33,6 @@
     <loc>https://anotherm.github.io/2016/07/27/%E5%85%B3%E4%BA%8E%E6%88%91%E6%89%80%E7%94%A8%E8%BF%87%E7%9A%84%E5%90%84%E7%89%88%E6%9C%ACLinux%E7%9A%84%E6%B5%85%E8%B0%88/</loc>
     
     <lastmod>2018-12-18T07:08:45.274Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://anotherm.github.io/2018/12/01/LearnPython/</loc>
-    
-    <lastmod>2018-12-06T08:50:04.949Z</lastmod>
     
   </url>
   
