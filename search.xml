@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[桌面美化]]></title>
+    <url>%2F2019%2F04%2F12%2F%E6%A1%8C%E9%9D%A2%E7%BE%8E%E5%8C%96%2F</url>
+    <content type="text"><![CDATA[软件Wallpaper Engine TranslucentTB Rainmeter 腾讯桌面整理 主题Rainmeter－SimpleNova WallpaperEngine－「ー」/「しおん」 效果&lt;source src=/images/desktop.mp4&gt;]]></content>
+      <categories>
+        <category>Where Am I</category>
+      </categories>
+      <tags>
+        <tag>小世界</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[LearnPython(Rework)]]></title>
     <url>%2F2019%2F02%2F24%2FLearnPython(Rework)%2F</url>
     <content type="text"><![CDATA[Python学习笔记 坑了很长时间，2019/2/24，推翻重构This Article Is Not Python Tutorial，极大部分包含了个人的主观意见，知识仅供参考，本文目前使用Python版本为3.7.2 路都是自己走出来的 Python格式框架 严格缩进：有道是：让Python程序员最疯狂的是什么？那就是给他的代码随便加个空格 Python没有花括号和分号，所以对格式就是严格要求，正是因为格式，Python的代码显得干净整洁 单一程序内，缩进严格要求为N个空格或者N个Tab键，N为正整数并且单一程序内N的值不能改变（若缩进为4个空格，则单一程序内缩进需要全部使用4个空格） Python有两种注释：使用'''```作为多行注释## Python字符操作* Python字符拥有编号：**正向递增序号**：从左到右从0开始递增，**反向递减序号：**从右到左从-1开始递减* 使用```&lt;Str&gt;[M]```对字符串进行索引，如```&quot;Str[-1]&quot;```为字符串从右到左数第一个字符* 使用```&lt;Str&gt;[M:N]```对字符串进行切片，如```Str[1:3]```就是从左数第2个字符和第3个字符，但不到第4个字符（从左往右数从0开始），使用```Str[0:-2]```则为从左到右除了倒数第二个字符以外全部保留## Python列表* 列表使用```[]```表示，如```[&apos;A&apos;,&apos;a&apos;]```为一个包含两个元素的列表，使用```Str in [&apos;A&apos;,&apos;a&apos;]```来判断Str中是否有匹配元素```A```或```a Python判断 Python判断中的## Python输入输出* Python使用```input()```函数进行输入，如```Str = input(&quot;请输入&quot;) Python使用print()函数进行输出，其中字符串格式化如print(Str{:.2f}&quot;.format(A))其中format()方法用于将A的值填充到{}中，:.2f用于格式化字符串A为小数点后两位 eval()函数，用于去掉表达式外侧引号并执行余下的函数，如eval(&quot;1&quot;)输出结果为1而不是&quot;1&quot;，而eval(&quot;1+2&quot;)输出结果为3，若eval(&#39;&quot;1+2&quot;&#39;)则输出结果为&#39;1+2&#39;，其中eval(&quot;&#39;1+2&#39;&quot;)输出结果也为&#39;1+2&#39;，因为在Python中，单引号与双引号只是为了避免转义字符，即无需使用\进行转义，同理，若eval(&#39;print(&quot;hello&quot;)&#39;)输出为hello，也就是执行了print()函数]]></content>
