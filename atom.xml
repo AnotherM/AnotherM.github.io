@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://anotherm.github.io/"/>
-  <updated>2019-04-12T10:07:11.649Z</updated>
+  <updated>2019-04-14T07:02:36.312Z</updated>
   <id>https://anotherm.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>WSL服务启动脚本</title>
+    <link href="https://anotherm.github.io/2019/04/14/WSL%E6%9C%8D%E5%8A%A1%E5%90%AF%E5%8A%A8%E8%84%9A%E6%9C%AC/"/>
+    <id>https://anotherm.github.io/2019/04/14/WSL服务启动脚本/</id>
+    <published>2019-04-14T06:42:02.000Z</published>
+    <updated>2019-04-14T07:02:36.312Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><p>对于Linux来说，部署环境比Windows便利很多，比如安装mysql、nginx等只需如<code>apt install mysql &amp; apt install nginx</code>一条命令，但是个人又离不开Windows</p><p>对于WSL来说，很多人为了便利或者说偷懒，做了用PowerShell做了开机脚本和启动项，但是估计也有一部分人不算很愿意为了几个Linux服务，拖慢Windows的开机速度（虽然不一定有关系，除非你电脑真的很渣很渣😂）</p><p>所以呢，既然WSL是Linux（Windows是最好的Linux发行版！！！）</p><p>所以用shell脚本，启动服务也是可以的吧</p><a id="more"></a><blockquote><p>注：本文灵感来源于：<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLjUxY3RvLmNvbS9kZ2QyMDEwLzE2MTc4NDY=" title="https://blog.51cto.com/dgd2010/1617846">Linux手动启动、停止多个服务用的shell脚本<i class="fa fa-external-link"></i></span></p></blockquote><p>不多说，贴出自己修改后的脚本，用于启动WSL中的mysql + ssh + rabbitmq-server + redis-server</p><p>其中SERVICE等变量可以修改为自己所需要的服务，若有多个服务，需在start()、stop()、status()中写入变量</p><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span>!/bin/bash</span><br><span class="line">SERVICE_1=mysql</span><br><span class="line">SERVICE_2=ssh</span><br><span class="line">SERVICE_3=rabbitmq-server</span><br><span class="line">SERVICE_4=redis-server</span><br><span class="line"></span><br><span class="line">function help()&#123;</span><br><span class="line">echo "Usage: $0&#123;start|stop|status|help&#125;"</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function check_service_if_is_running()&#123;</span><br><span class="line">SERVICE=$1</span><br><span class="line">service $SERVICE status &gt; /dev/null</span><br><span class="line">REVAL=$?</span><br><span class="line">if [[ $REVAL -eq 0 ]]; then</span><br><span class="line">return 0</span><br><span class="line">else</span><br><span class="line">return 1</span><br><span class="line">fi</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function start_service_if_is_stoped()&#123;</span><br><span class="line">SERVICE=$1</span><br><span class="line">service $SERVICE start &gt; /dev/null</span><br><span class="line">check_service_if_is_running $SERVICE</span><br><span class="line">REVAL=$?</span><br><span class="line">if [[ $REVAL -eq 0 ]]; then</span><br><span class="line">echo $SERVICE is running...</span><br><span class="line">else</span><br><span class="line">echo $SERVICE is not running, error code is $REVAL.</span><br><span class="line">exit 1</span><br><span class="line">fi</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function stop_service_if_is_running()&#123;</span><br><span class="line">SERVICE=$1</span><br><span class="line">service $SERVICE stop &gt; /dev/null</span><br><span class="line">check_service_if_is_running $SERVICE</span><br><span class="line">REVAL=$?</span><br><span class="line">if [[ $REVAL -eq 1 ]]; then</span><br><span class="line">echo $SERVICE is stoped...</span><br><span class="line">fi</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function status_service()&#123;</span><br><span class="line">SERVICE=$1</span><br><span class="line">check_service_if_is_running $SERVICE</span><br><span class="line">REVAL=$?</span><br><span class="line">if [[ $REVAL -eq 0 ]]; then</span><br><span class="line">echo $SERVICE is running...</span><br><span class="line">else</span><br><span class="line">echo $SERVICE is not running, error code is $REVAL.</span><br><span class="line">exit 1</span><br><span class="line">fi</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function start()&#123;</span><br><span class="line">start_service_if_is_stoped $SERVICE_1</span><br><span class="line">start_service_if_is_stoped $SERVICE_2</span><br><span class="line">start_service_if_is_stoped $SERVICE_3</span><br><span class="line">start_service_if_is_stoped $SERVICE_4</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function stop()&#123;</span><br><span class="line">stop_service_if_is_running $SERVICE_4</span><br><span class="line">stop_service_if_is_running $SERVICE_3</span><br><span class="line">stop_service_if_is_running $SERVICE_2</span><br><span class="line">stop_service_if_is_running $SERVICE_1</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function status()&#123;</span><br><span class="line">status_service $SERVICE_1</span><br><span class="line">status_service $SERVICE_2</span><br><span class="line">status_service $SERVICE_3</span><br><span class="line">status_service $SERVICE_4</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">case "$1" in </span><br><span class="line">start)</span><br><span class="line">start</span><br><span class="line">;;</span><br><span class="line">stop)</span><br><span class="line">stop</span><br><span class="line">;;</span><br><span class="line">status)</span><br><span class="line">status</span><br><span class="line">;;</span><br><span class="line">*)</span><br><span class="line">help</span><br><span class="line">exit 1</span><br><span class="line">;;</span><br><span class="line">esac</span><br></pre></td></tr></table></figure><p>最后，贴上运行效果</p><p><img src="/images/wsl_service.png" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;摘要&quot;&gt;&lt;a href=&quot;#摘要&quot; class=&quot;headerlink&quot; title=&quot;摘要&quot;&gt;&lt;/a&gt;摘要&lt;/h1&gt;&lt;p&gt;对于Linux来说，部署环境比Windows便利很多，比如安装mysql、nginx等只需如&lt;code&gt;apt install mysql &amp;amp; apt install nginx&lt;/code&gt;一条命令，但是个人又离不开Windows&lt;/p&gt;
+&lt;p&gt;对于WSL来说，很多人为了便利或者说偷懒，做了用PowerShell做了开机脚本和启动项，但是估计也有一部分人不算很愿意为了几个Linux服务，拖慢Windows的开机速度（虽然不一定有关系，除非你电脑真的很渣很渣😂）&lt;/p&gt;
+&lt;p&gt;所以呢，既然WSL是Linux（Windows是最好的Linux发行版！！！）&lt;/p&gt;
+&lt;p&gt;所以用shell脚本，启动服务也是可以的吧&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="学习相关" scheme="https://anotherm.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%9B%B8%E5%85%B3/"/>
+    
+    
+      <category term="小世界" scheme="https://anotherm.github.io/tags/%E5%B0%8F%E4%B8%96%E7%95%8C/"/>
+    
+  </entry>
   
   <entry>
     <title>桌面美化</title>

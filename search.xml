@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[WSL服务启动脚本]]></title>
+    <url>%2F2019%2F04%2F14%2FWSL%E6%9C%8D%E5%8A%A1%E5%90%AF%E5%8A%A8%E8%84%9A%E6%9C%AC%2F</url>
+    <content type="text"><![CDATA[摘要对于Linux来说，部署环境比Windows便利很多，比如安装mysql、nginx等只需如apt install mysql &amp; apt install nginx一条命令，但是个人又离不开Windows 对于WSL来说，很多人为了便利或者说偷懒，做了用PowerShell做了开机脚本和启动项，但是估计也有一部分人不算很愿意为了几个Linux服务，拖慢Windows的开机速度（虽然不一定有关系，除非你电脑真的很渣很渣😂） 所以呢，既然WSL是Linux（Windows是最好的Linux发行版！！！） 所以用shell脚本，启动服务也是可以的吧 注：本文灵感来源于：Linux手动启动、停止多个服务用的shell脚本 不多说，贴出自己修改后的脚本，用于启动WSL中的mysql + ssh + rabbitmq-server + redis-server 其中SERVICE等变量可以修改为自己所需要的服务，若有多个服务，需在start()、stop()、status()中写入变量 #!/bin/bashSERVICE_1=mysqlSERVICE_2=sshSERVICE_3=rabbitmq-serverSERVICE_4=redis-serverfunction help()&#123; echo "Usage: $0&#123;start|stop|status|help&#125;"&#125;function check_service_if_is_running()&#123; SERVICE=$1 service $SERVICE status &gt; /dev/null REVAL=$? if [[ $REVAL -eq 0 ]]; then return 0 else return 1 fi&#125;function start_service_if_is_stoped()&#123; SERVICE=$1 service $SERVICE start &gt; /dev/null check_service_if_is_running $SERVICE REVAL=$? if [[ $REVAL -eq 0 ]]; then echo $SERVICE is running... else echo $SERVICE is not running, error code is $REVAL. exit 1 fi&#125;function stop_service_if_is_running()&#123; SERVICE=$1 service $SERVICE stop &gt; /dev/null check_service_if_is_running $SERVICE REVAL=$? if [[ $REVAL -eq 1 ]]; then echo $SERVICE is stoped... fi&#125;function status_service()&#123; SERVICE=$1 check_service_if_is_running $SERVICE REVAL=$? if [[ $REVAL -eq 0 ]]; then echo $SERVICE is running... else echo $SERVICE is not running, error code is $REVAL. exit 1 fi&#125;function start()&#123; start_service_if_is_stoped $SERVICE_1 start_service_if_is_stoped $SERVICE_2 start_service_if_is_stoped $SERVICE_3 start_service_if_is_stoped $SERVICE_4&#125;function stop()&#123; stop_service_if_is_running $SERVICE_4 stop_service_if_is_running $SERVICE_3 stop_service_if_is_running $SERVICE_2 stop_service_if_is_running $SERVICE_1&#125;function status()&#123; status_service $SERVICE_1 status_service $SERVICE_2 status_service $SERVICE_3 status_service $SERVICE_4&#125;case "$1" in start) start ;; stop) stop ;; status) status ;; *) help exit 1 ;;esac 最后，贴上运行效果]]></content>
+      <categories>
+        <category>学习相关</category>
+      </categories>
+      <tags>
+        <tag>小世界</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[桌面美化]]></title>
     <url>%2F2019%2F04%2F12%2F%E6%A1%8C%E9%9D%A2%E7%BE%8E%E5%8C%96%2F</url>
     <content type="text"><![CDATA[软件Wallpaper Engine TranslucentTB Rainmeter 腾讯桌面整理 主题Rainmeter－SimpleNova WallpaperEngine－「ー」/「しおん」 效果Your browser does not support the video tag.]]></content>
