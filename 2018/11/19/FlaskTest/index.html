@@ -11,11 +11,9 @@
 
 
 
-  
 
-
-<html class="theme-next muse use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<html class="theme-next muse" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -25,8 +23,6 @@
   
   
   <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
-
-
 
 
 
@@ -50,21 +46,21 @@
 
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
 
-<link rel="stylesheet" href="/css/main.css?v=7.1.0">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon-152x152.png?v=7.1.0">
+<link rel="stylesheet" href="/css/main.css?v=7.1.2">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png?v=7.1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon-152x152.png?v=7.1.2">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png?v=7.1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png?v=7.1.2">
 
 
-  <link rel="mask-icon" href="/images/safari-pinned-tab.svg?v=7.1.0" color="#222">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png?v=7.1.2">
+
+
+  <link rel="mask-icon" href="/images/safari-pinned-tab.svg?v=7.1.2" color="#222">
 
 
   <link rel="manifest" href="/images/site.webmanifest">
@@ -81,7 +77,7 @@
   var CONFIG = {
     root: '/',
     scheme: 'Muse',
-    version: '7.1.0',
+    version: '7.1.2',
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
     back2top: true,
     back2top_sidebar: false,
@@ -89,7 +85,7 @@
     fastclick: false,
     lazyload: false,
     tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"swoopIn","post_header":"slideDownBigIn","post_body":"slideDownBigIn","coll_header":"slideDownBigIn","sidebar":"slideUpBigIn"}},
+    motion: {"enable":false,"async":false,"transition":{"post_block":"swoopIn","post_header":"slideDownBigIn","post_body":"slideDownBigIn","coll_header":"slideDownBigIn","sidebar":"slideUpBigIn"}},
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -114,28 +110,24 @@
      });
 </script>
 
-  <meta name="description" content="Flask初探昨天花时间研究了一下Spring与SpringBoot相关的知识，然后过了一天，整个人就是这种感觉: 你脑袋有毛病我不想和你玩   今天看了看Flask 然后就有了这篇文章的标题—-Flask初探 关于这篇文章的内容呢，就是教你用9行写出一个网站">
-<meta name="keywords" content="小世界">
+  <meta name="description" content="Flask初探昨天花时间研究了一下Spring与SpringBoot相关的知识，然后过了一天，整个人就是这种感觉: 你脑袋有毛病我不想和你玩 今天看了看Flask 然后就有了这篇文章的标题—-Flask初探 关于这篇文章的内容呢，就是教你用9行写出一个网站">
+<meta name="keywords" content="Flask">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Flask初探">
 <meta property="og:url" content="https://anotherm.github.io/2018/11/19/FlaskTest/index.html">
 <meta property="og:site_name" content="Another.M">
-<meta property="og:description" content="Flask初探昨天花时间研究了一下Spring与SpringBoot相关的知识，然后过了一天，整个人就是这种感觉: 你脑袋有毛病我不想和你玩   今天看了看Flask 然后就有了这篇文章的标题—-Flask初探 关于这篇文章的内容呢，就是教你用9行写出一个网站">
+<meta property="og:description" content="Flask初探昨天花时间研究了一下Spring与SpringBoot相关的知识，然后过了一天，整个人就是这种感觉: 你脑袋有毛病我不想和你玩 今天看了看Flask 然后就有了这篇文章的标题—-Flask初探 关于这篇文章的内容呢，就是教你用9行写出一个网站">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://anotherm.github.io/images/flask.png">
-<meta property="og:updated_time" content="2018-12-01T16:53:18.000Z">
+<meta property="og:updated_time" content="2019-06-19T06:27:46.113Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Flask初探">
-<meta name="twitter:description" content="Flask初探昨天花时间研究了一下Spring与SpringBoot相关的知识，然后过了一天，整个人就是这种感觉: 你脑袋有毛病我不想和你玩   今天看了看Flask 然后就有了这篇文章的标题—-Flask初探 关于这篇文章的内容呢，就是教你用9行写出一个网站">
+<meta name="twitter:description" content="Flask初探昨天花时间研究了一下Spring与SpringBoot相关的知识，然后过了一天，整个人就是这种感觉: 你脑袋有毛病我不想和你玩 今天看了看Flask 然后就有了这篇文章的标题—-Flask初探 关于这篇文章的内容呢，就是教你用9行写出一个网站">
 <meta name="twitter:image" content="https://anotherm.github.io/images/flask.png">
 
 
 
 
-
-  
-  
-  <link rel="canonical" href="https://anotherm.github.io/2018/11/19/FlaskTest/">
 
 
 
@@ -151,7 +143,7 @@
 
 
 
-  <script async src="//www.googletagmanager.com/gtag/js?id=UA-89085652-1"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-89085652-1"></script>
   <script>
     var host = window.location.hostname;
     if (host !== "localhost" || !true) {
@@ -197,7 +189,7 @@
 
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -207,7 +199,7 @@
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta">
     
@@ -296,7 +288,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">4</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">7</span></a>
 
   </li>
         
@@ -315,7 +307,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">3</span></a>
 
   </li>
         
@@ -334,7 +326,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">11</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">17</span></a>
 
   </li>
         
@@ -435,20 +427,20 @@
 
   
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://anotherm.github.io/2018/11/19/FlaskTest/">
 
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Another.M">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content>
       <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Another.M">
     </span>
 
@@ -500,7 +492,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-12-02 00:53:18" itemprop="dateModified" datetime="2018-12-02T00:53:18+08:00">2018-12-02</time>
+                <time title="修改时间：2019-06-19 14:27:46" itemprop="dateModified" datetime="2019-06-19T14:27:46+08:00">2019-06-19</time>
               
             
           </span>
@@ -517,7 +509,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/学习相关/" itemprop="url" rel="index"><span itemprop="name">学习相关</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/小世界/" itemprop="url" rel="index"><span itemprop="name">小世界</span></a></span>
 
                 
                 
@@ -566,39 +558,40 @@
 
       
         <h1 id="Flask初探"><a href="#Flask初探" class="headerlink" title="Flask初探"></a><b>Flask初探</b></h1><p>昨天花时间研究了一下Spring与SpringBoot相关的知识，然后过了一天，整个人就是这种感觉:</p>
-<font color="red"><strong>你脑袋有毛病我不想和你玩</strong></font>
-
-
+<p><font color="red"><strong>你脑袋有毛病我不想和你玩</strong></font></p>
 <p>今天看了看Flask</p>
 <p>然后就有了这篇文章的标题—-<b>Flask初探</b></p>
 <p>关于这篇文章的内容呢，就是教你用9行写出一个网站</p>
 <a id="more"></a>
-<font style="font-size:32px;font-family:幼圆">所以：</font>
 
-
+<p><font style="font-size:32px;font-family:幼圆">所以：</font></p>
 <h2 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h2><ul>
 <li>First: 你会用电脑</li>
 <li>Second: 你会装Python并且会添加环境变量</li>
 <li>Third: 你会用cmd</li>
 </ul>
-<font style="font-size:32px;font-family:幼圆;">如果这些你都不具备的话那还是洗洗睡吧</font>
-
+<p><font style="font-size:32px;font-family:幼圆;">如果这些你都不具备的话那还是洗洗睡吧</font></p>
 <hr>
 <h3 id="接下来是正文"><a href="#接下来是正文" class="headerlink" title="接下来是正文"></a>接下来是正文</h3><ol>
 <li>在以上条件都具备之后，打开cmd，执行pip install flask</li>
 <li>新建一个后缀名为.py的文件</li>
 <li>打开.py这个文件</li>
-<li>写入<br><br></li>
+<li>写入<br>
+
+</li>
 </ol>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask</span><br><span class="line"></span><br><span class="line">app = Flask(__name__)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@app.route('/')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">'fxckUJava'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    app.run()</span><br></pre></td></tr></table></figure>
+
 <ol start="5">
 <li>用cmd找到这个文件（cd命令）</li>
 <li>使用python xxx .py(xxx为你的文件名)，出现下图后，打开浏览器，访问127.0.0.1:5000<ul>
-<li>如果看不到任何东西或者页面没反应的话，恩，从头看看哪里搞错了吧<br><img src="/images/flask.png" witdh="auto" height="auto"></li>
+<li>如果看不到任何东西或者页面没反应的话，恩，从头看看哪里搞错了吧<img src="/images/flask.png" witdh="auto" height="auto">
+
+</li>
 </ul>
 </li>
 </ol>
-<p>附：<span class="exturl" data-url="aHR0cDovL2ZsYXNrLnBvY29vLm9yZw==" title="http://flask.pocoo.org">Flask官网<i class="fa fa-external-link"></i></span> <span class="exturl" data-url="aHR0cHM6Ly93d3cucHl0aG9uLm9yZy8=" title="https://www.python.org/">Python官网<i class="fa fa-external-link"></i></span></p>
+<p>附：<a href="http://flask.pocoo.org" target="_blank" rel="noopener">Flask官网</a> <a href="https://www.python.org/" target="_blank" rel="noopener">Python官网</a></p>
 
       
     </div>
@@ -638,7 +631,7 @@
         
       
       <div style="display: inline-block">
-        <img src="/images/payali.jpg" alt="Another.M 支付宝">
+        <img src="/images/payal.jpg" alt="Another.M 支付宝">
         <p>支付宝</p>
       </div>
     
@@ -669,7 +662,7 @@
     <a href="https://anotherm.github.io/2018/11/19/FlaskTest/" title="Flask初探">https://anotherm.github.io/2018/11/19/FlaskTest/</a>
   </li>
   <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！</li>
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
 </ul>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- anotherm4.github.io -->
@@ -682,9 +675,12 @@
 
     <footer class="post-footer">
       
+        
+          
+        
         <div class="post-tags">
           
-            <a href="/tags/小世界/" rel="tag"># 小世界</a>
+            <a href="/tags/Flask/" rel="tag"># Flask</a>
           
         </div>
       
@@ -772,7 +768,7 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="Another.M">
             
@@ -787,7 +783,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-count">17</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -810,9 +806,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -837,7 +831,13 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -860,7 +860,7 @@
                   
                     
                   
-                  <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0Fub3RoZXJN" title="GitHub &rarr; https://github.com/AnotherM"><i class="fa fa-fw fa-github"></i>GitHub</span>
+                  <a href="https://github.com/AnotherM" title="GitHub &rarr; https://github.com/AnotherM" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
                 </span>
               
                 <span class="links-of-author-item">
@@ -871,7 +871,7 @@
                   
                     
                   
-                  <span class="exturl" data-url="bWFpbHRvOmFub3RoZXJtNEBxcS5jb20=" title="E-Mail &rarr; mailto:anotherm4@qq.com"><i class="fa fa-fw fa-envelope"></i>E-Mail</span>
+                  <a href="mailto:anotherm4@qq.com" title="E-Mail &rarr; mailto:anotherm4@qq.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
                 </span>
               
             </div>
@@ -885,7 +885,7 @@
               
               
               
-              <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></span>
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
              </div>
           
 
@@ -944,7 +944,7 @@
 </div>
 
 
-  <div class="powered-by">由 <span class="exturl theme-link" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> 强力驱动 v3.8.0</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
 
 
 
@@ -952,7 +952,7 @@
 
 
 
-  <div class="theme-info">主题 – <span class="exturl theme-link" data-url="aHR0cHM6Ly90aGVtZS1uZXh0Lm9yZw==">NexT.Muse</span> v7.1.0</div>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.1.2</div>
 
 
 
@@ -1026,7 +1026,7 @@
 
 
   
-  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
 
   
   <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
@@ -1038,37 +1038,35 @@
   
 
 
-  <script src="/js/utils.js?v=7.1.0"></script>
+  <script src="/js/utils.js?v=7.1.2"></script>
 
-  <script src="/js/motion.js?v=7.1.0"></script>
-
-
-
-  
-  
-
-
-  <script src="/js/schemes/muse.js?v=7.1.0"></script>
+  <script src="/js/motion.js?v=7.1.2"></script>
 
 
 
   
-  <script src="/js/scrollspy.js?v=7.1.0"></script>
-<script src="/js/post-details.js?v=7.1.0"></script>
+  
+
+
+  <script src="/js/schemes/muse.js?v=7.1.2"></script>
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.2"></script>
+<script src="/js/post-details.js?v=7.1.2"></script>
 
 
 
   
 
 
-  <script src="/js/next-boot.js?v=7.1.0"></script>
+  <script src="/js/next-boot.js?v=7.1.2"></script>
 
 
   
 
   
-  <script src="/js/exturl.js?v=7.1.0"></script>
-
 
   
 
@@ -1479,7 +1477,7 @@
 
   
 <script>
-  $('.highlight').each(function(i, e) {
+  $('.highlight').not('.gist .highlight').each(function(i, e) {
     var $wrap = $('<div>').addClass('highlight-wrap');
     $(e).after($wrap);
     $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
@@ -1494,6 +1492,8 @@
       ta.readOnly = true;
       ta.value = code;
       document.body.appendChild(ta);
+      const selection = document.getSelection();
+      const selected = selection.rangeCount > 0 ? selection.getRangeAt(0) : false;
       ta.select();
       ta.setSelectionRange(0, code.length);
       ta.readOnly = false;
@@ -1504,6 +1504,10 @@
       
       ta.blur(); // For iOS
       $(this).blur();
+      if (selected) {
+        selection.removeAllRanges();
+        selection.addRange(selected);
+      }
     })).on('mouseleave', function(e) {
       var $b = $(this).find('.copy-btn');
       setTimeout(function() {

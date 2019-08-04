@@ -11,11 +11,9 @@
 
 
 
-  
 
-
-<html class="theme-next muse use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<html class="theme-next muse" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -25,8 +23,6 @@
   
   
   <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
-
-
 
 
 
@@ -50,21 +46,21 @@
 
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
 
-<link rel="stylesheet" href="/css/main.css?v=7.1.0">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon-152x152.png?v=7.1.0">
+<link rel="stylesheet" href="/css/main.css?v=7.1.2">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png?v=7.1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon-152x152.png?v=7.1.2">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png?v=7.1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png?v=7.1.2">
 
 
-  <link rel="mask-icon" href="/images/safari-pinned-tab.svg?v=7.1.0" color="#222">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png?v=7.1.2">
+
+
+  <link rel="mask-icon" href="/images/safari-pinned-tab.svg?v=7.1.2" color="#222">
 
 
   <link rel="manifest" href="/images/site.webmanifest">
@@ -81,7 +77,7 @@
   var CONFIG = {
     root: '/',
     scheme: 'Muse',
-    version: '7.1.0',
+    version: '7.1.2',
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
     back2top: true,
     back2top_sidebar: false,
@@ -89,7 +85,7 @@
     fastclick: false,
     lazyload: false,
     tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"swoopIn","post_header":"slideDownBigIn","post_body":"slideDownBigIn","coll_header":"slideDownBigIn","sidebar":"slideUpBigIn"}},
+    motion: {"enable":false,"async":false,"transition":{"post_block":"swoopIn","post_header":"slideDownBigIn","post_body":"slideDownBigIn","coll_header":"slideDownBigIn","sidebar":"slideUpBigIn"}},
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -114,30 +110,26 @@
      });
 </script>
 
-  <meta name="description" content="这次的标题是登陆SSH，使用apt update更新一下软件包，然后提示NO_PUBKEY XXXXXXXXXXXXXXXX随即各种搜索，提示都是一致的提示使用gpg --keyserver keyring.debian.com --recv-keys 输入之后，再次使用apt update报错依旧 然后查了一下还需要gpg --armor --export XXXXXXXX | apt-key">
-<meta name="keywords" content="Something">
+  <meta name="description" content="这次的标题是 🤦‍登陆SSH，使用apt update更新一下软件包，然后提示NO_PUBKEY XXXXXXXXXXXXXXXX随即各种搜索，提示都是一致的提示使用gpg --keyserver keyring.debian.com --recv-keys 输入之后，再次使用apt update报错依旧 然后查了一下还需要gpg --armor --export XXXXXXXX | apt-">
+<meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Debian-Keyring">
 <meta property="og:url" content="https://anotherm.github.io/2018/12/06/Debian-Keyring/index.html">
 <meta property="og:site_name" content="Another.M">
-<meta property="og:description" content="这次的标题是登陆SSH，使用apt update更新一下软件包，然后提示NO_PUBKEY XXXXXXXXXXXXXXXX随即各种搜索，提示都是一致的提示使用gpg --keyserver keyring.debian.com --recv-keys 输入之后，再次使用apt update报错依旧 然后查了一下还需要gpg --armor --export XXXXXXXX | apt-key">
+<meta property="og:description" content="这次的标题是 🤦‍登陆SSH，使用apt update更新一下软件包，然后提示NO_PUBKEY XXXXXXXXXXXXXXXX随即各种搜索，提示都是一致的提示使用gpg --keyserver keyring.debian.com --recv-keys 输入之后，再次使用apt update报错依旧 然后查了一下还需要gpg --armor --export XXXXXXXX | apt-">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://anotherm.github.io/images/debian-gpg/d01.png">
 <meta property="og:image" content="https://anotherm.github.io/images/debian-gpg/d02.png">
 <meta property="og:image" content="https://anotherm.github.io/images/debian-gpg/d03.png">
-<meta property="og:updated_time" content="2018-12-06T08:42:48.000Z">
+<meta property="og:updated_time" content="2019-06-19T06:26:54.226Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Debian-Keyring">
-<meta name="twitter:description" content="这次的标题是登陆SSH，使用apt update更新一下软件包，然后提示NO_PUBKEY XXXXXXXXXXXXXXXX随即各种搜索，提示都是一致的提示使用gpg --keyserver keyring.debian.com --recv-keys 输入之后，再次使用apt update报错依旧 然后查了一下还需要gpg --armor --export XXXXXXXX | apt-key">
+<meta name="twitter:description" content="这次的标题是 🤦‍登陆SSH，使用apt update更新一下软件包，然后提示NO_PUBKEY XXXXXXXXXXXXXXXX随即各种搜索，提示都是一致的提示使用gpg --keyserver keyring.debian.com --recv-keys 输入之后，再次使用apt update报错依旧 然后查了一下还需要gpg --armor --export XXXXXXXX | apt-">
 <meta name="twitter:image" content="https://anotherm.github.io/images/debian-gpg/d01.png">
 
 
 
 
-
-  
-  
-  <link rel="canonical" href="https://anotherm.github.io/2018/12/06/Debian-Keyring/">
 
 
 
@@ -153,7 +145,7 @@
 
 
 
-  <script async src="//www.googletagmanager.com/gtag/js?id=UA-89085652-1"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-89085652-1"></script>
   <script>
     var host = window.location.hostname;
     if (host !== "localhost" || !true) {
@@ -199,7 +191,7 @@
 
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -209,7 +201,7 @@
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta">
     
@@ -298,7 +290,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">4</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">7</span></a>
 
   </li>
         
@@ -317,7 +309,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">3</span></a>
 
   </li>
         
@@ -336,7 +328,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">11</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">17</span></a>
 
   </li>
         
@@ -437,20 +429,20 @@
 
   
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://anotherm.github.io/2018/12/06/Debian-Keyring/">
 
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Another.M">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content>
       <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Another.M">
     </span>
 
@@ -485,12 +477,24 @@
                 
               
 
-              <time title="创建时间：2018-12-06 15:07:03 / 修改时间：16:42:48" itemprop="dateCreated datePublished" datetime="2018-12-06T15:07:03+08:00">2018-12-06</time>
+              <time title="创建时间：2018-12-06 15:07:03" itemprop="dateCreated datePublished" datetime="2018-12-06T15:07:03+08:00">2018-12-06</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-06-19 14:26:54" itemprop="dateModified" datetime="2019-06-19T14:26:54+08:00">2019-06-19</time>
               
             
           </span>
@@ -507,7 +511,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/faceplam/" itemprop="url" rel="index"><span itemprop="name">faceplam</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/学习中遇到的坑/" itemprop="url" rel="index"><span itemprop="name">学习中遇到的坑</span></a></span>
 
                 
                 
@@ -555,32 +559,41 @@
       
 
       
-        <h1 id="这次的标题是"><a href="#这次的标题是" class="headerlink" title="这次的标题是"></a>这次的标题是</h1><p>登陆SSH，使用<code>apt update</code>更新一下软件包，然后提示<code>NO_PUBKEY XXXXXXXXXXXXXXXX</code><br><img src="/images/debian-gpg/d01.png" alt=""><br>随即各种搜索，提示都是一致的提示使用<code>gpg --keyserver keyring.debian.com --recv-keys</code></p>
+        <h1 id="这次的标题是-🤦‍"><a href="#这次的标题是-🤦‍" class="headerlink" title="这次的标题是 🤦‍"></a>这次的标题是 🤦‍</h1><p>登陆SSH，使用<code>apt update</code>更新一下软件包，然后提示<code>NO_PUBKEY XXXXXXXXXXXXXXXX</code><br><img src="/images/debian-gpg/d01.png" alt><br>随即各种搜索，提示都是一致的提示使用<code>gpg --keyserver keyring.debian.com --recv-keys</code></p>
 <p>输入之后，再次使用<code>apt update</code>报错依旧</p>
 <p>然后查了一下还需要<code>gpg --armor --export XXXXXXXX | apt-key add -</code></p>
 <p>使用之后，报错依旧</p>
 <p>然后找到了一个网页上说删除<code>debian-archive-keyring</code>这个包然后使用<code>apt --fix-broken install</code>就好了</p>
 <p>系统提示<strong>Please input the phrase: Yes, do as I say!</strong>，犹豫了一下<br>……<br><code>Ctrl + C</code><br>……<br>找了一会儿依然修不好</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">apt remove debian-archive-keyring</span><br><span class="line">Yes, do as I say!</span><br></pre></td></tr></table></figure>
-<p><font size="10em" color="red">然后……</font><br><a id="more"></a><br><img src="/images/debian-gpg/d02.png" alt=""></p>
+
+<p><font size="10em" color="red">然后……</font></p>
+<a id="more"></a>
+<p><img src="/images/debian-gpg/d02.png" alt></p>
 <p style="font-size:5em;text-align:center">我就这个表情：</p>
 
 <p style="font-size:10em;text-align:center">😐</p>
 
 <p>看了一下<code>dpkg --help</code>，有输出</p>
-<p>随即<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">wget http://ftp.debian.org/debian/pool/main/a/apt/apt_1.4.8_amd64.deb`</span><br><span class="line">dpkg -i apt_1.4.8_amd64.deb</span><br></pre></td></tr></table></figure></p>
+<p>随即</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">wget http://ftp.debian.org/debian/pool/main/a/apt/apt_1.4.8_amd64.deb`</span><br><span class="line">dpkg -i apt_1.4.8_amd64.deb</span><br></pre></td></tr></table></figure>
+
 <p>提示</p>
 <blockquote>
 <p>dpkg: dependency problems prevent configuration of apt:<br>apt depends on debian-archive-keyring; however:<br>Package debian-archive-keyring is not installed.`</p>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">wget http://ftp.debian.org/debian/pool/main/d/debian-archive-keyring/debian-archive-keyring_2017.5_all.deb</span><br><span class="line">dpkg -i debian-archive-keyring_2017.5_all.deb</span><br><span class="line">dpkg -i dpkg -i apt_1.4.8_amd64.deb</span><br><span class="line">apt update</span><br></pre></td></tr></table></figure>
+
 <p>依然报错<code>NO_PUBKEY XXXXXXXXXXXXXXXX</code></p>
 <p>然后想起来彻底删除一下<br><code>apt purge debian-archive-keyring</code><br>提示</p>
 <blockquote>
-<p>while removing debian-archive-keyring, directory &gt;’/etc/apt/trusted.gpg.d’ not empty so not removed<br>执行<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">rm -r /etc/apt/trusted.gpg.d</span><br><span class="line">dpkg -i debian-archive-keyring_2017.5_all.deb</span><br><span class="line">dpkg -i dpkg -i apt_1.4.8_amd64.deb</span><br><span class="line">apt update</span><br></pre></td></tr></table></figure></p>
+<p>while removing debian-archive-keyring, directory &gt;’/etc/apt/trusted.gpg.d’ not empty so not removed<br>执行</p>
 </blockquote>
-<p><img src="/images/debian-gpg/d03.png" alt=""></p>
-<p style="font-size:10em;text-align:center">🙃</p><br><p style="font-size:5em;text-align:center">希望帮到有用的人</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">rm -r /etc/apt/trusted.gpg.d</span><br><span class="line">dpkg -i debian-archive-keyring_2017.5_all.deb</span><br><span class="line">dpkg -i dpkg -i apt_1.4.8_amd64.deb</span><br><span class="line">apt update</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/debian-gpg/d03.png" alt></p>
+<p style="font-size:10em;text-align:center">🙃</p>
+<p style="font-size:5em;text-align:center">希望帮到有用的人</p>
       
     </div>
 
@@ -619,7 +632,7 @@
         
       
       <div style="display: inline-block">
-        <img src="/images/payali.jpg" alt="Another.M 支付宝">
+        <img src="/images/payal.jpg" alt="Another.M 支付宝">
         <p>支付宝</p>
       </div>
     
@@ -650,7 +663,7 @@
     <a href="https://anotherm.github.io/2018/12/06/Debian-Keyring/" title="Debian-Keyring">https://anotherm.github.io/2018/12/06/Debian-Keyring/</a>
   </li>
   <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！</li>
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
 </ul>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- anotherm4.github.io -->
@@ -663,9 +676,12 @@
 
     <footer class="post-footer">
       
+        
+          
+        
         <div class="post-tags">
           
-            <a href="/tags/Something/" rel="tag"># Something</a>
+            <a href="/tags/Linux/" rel="tag"># Linux</a>
           
         </div>
       
@@ -753,7 +769,7 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="Another.M">
             
@@ -768,7 +784,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-count">17</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -791,9 +807,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -818,7 +832,13 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -841,7 +861,7 @@
                   
                     
                   
-                  <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0Fub3RoZXJN" title="GitHub &rarr; https://github.com/AnotherM"><i class="fa fa-fw fa-github"></i>GitHub</span>
+                  <a href="https://github.com/AnotherM" title="GitHub &rarr; https://github.com/AnotherM" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
                 </span>
               
                 <span class="links-of-author-item">
@@ -852,7 +872,7 @@
                   
                     
                   
-                  <span class="exturl" data-url="bWFpbHRvOmFub3RoZXJtNEBxcS5jb20=" title="E-Mail &rarr; mailto:anotherm4@qq.com"><i class="fa fa-fw fa-envelope"></i>E-Mail</span>
+                  <a href="mailto:anotherm4@qq.com" title="E-Mail &rarr; mailto:anotherm4@qq.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
                 </span>
               
             </div>
@@ -866,7 +886,7 @@
               
               
               
-              <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></span>
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
              </div>
           
 
@@ -892,7 +912,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#这次的标题是"><span class="nav-number">1.</span> <span class="nav-text">这次的标题是</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#这次的标题是-🤦‍"><span class="nav-number">1.</span> <span class="nav-text">这次的标题是 🤦‍</span></a></li></ol></div>
             
 
           </div>
@@ -925,7 +945,7 @@
 </div>
 
 
-  <div class="powered-by">由 <span class="exturl theme-link" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> 强力驱动 v3.8.0</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
 
 
 
@@ -933,7 +953,7 @@
 
 
 
-  <div class="theme-info">主题 – <span class="exturl theme-link" data-url="aHR0cHM6Ly90aGVtZS1uZXh0Lm9yZw==">NexT.Muse</span> v7.1.0</div>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.1.2</div>
 
 
 
@@ -1007,7 +1027,7 @@
 
 
   
-  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
 
   
   <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
@@ -1019,37 +1039,35 @@
   
 
 
-  <script src="/js/utils.js?v=7.1.0"></script>
+  <script src="/js/utils.js?v=7.1.2"></script>
 
-  <script src="/js/motion.js?v=7.1.0"></script>
-
-
-
-  
-  
-
-
-  <script src="/js/schemes/muse.js?v=7.1.0"></script>
+  <script src="/js/motion.js?v=7.1.2"></script>
 
 
 
   
-  <script src="/js/scrollspy.js?v=7.1.0"></script>
-<script src="/js/post-details.js?v=7.1.0"></script>
+  
+
+
+  <script src="/js/schemes/muse.js?v=7.1.2"></script>
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.2"></script>
+<script src="/js/post-details.js?v=7.1.2"></script>
 
 
 
   
 
 
-  <script src="/js/next-boot.js?v=7.1.0"></script>
+  <script src="/js/next-boot.js?v=7.1.2"></script>
 
 
   
 
   
-  <script src="/js/exturl.js?v=7.1.0"></script>
-
 
   
 
@@ -1460,7 +1478,7 @@
 
   
 <script>
-  $('.highlight').each(function(i, e) {
+  $('.highlight').not('.gist .highlight').each(function(i, e) {
     var $wrap = $('<div>').addClass('highlight-wrap');
     $(e).after($wrap);
     $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
@@ -1475,6 +1493,8 @@
       ta.readOnly = true;
       ta.value = code;
       document.body.appendChild(ta);
+      const selection = document.getSelection();
+      const selected = selection.rangeCount > 0 ? selection.getRangeAt(0) : false;
       ta.select();
       ta.setSelectionRange(0, code.length);
       ta.readOnly = false;
@@ -1485,6 +1505,10 @@
       
       ta.blur(); // For iOS
       $(this).blur();
+      if (selected) {
+        selection.removeAllRanges();
+        selection.addRange(selected);
+      }
     })).on('mouseleave', function(e) {
       var $b = $(this).find('.copy-btn');
       setTimeout(function() {

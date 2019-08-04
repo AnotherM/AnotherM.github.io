@@ -2,44 +2,107 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://anotherm.github.io/2019/04/14/BlogUpdateB/</loc>
+    <loc>https://anotherm.github.io/2019/08/04/LearnPython-7/</loc>
     
-    <lastmod>2019-04-14T09:18:31.343Z</lastmod>
+    <lastmod>2019-08-04T01:52:10.508Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://anotherm.github.io/2019/07/25/LearnPython-6/</loc>
+    
+    <lastmod>2019-08-04T01:52:04.313Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://anotherm.github.io/2019/07/17/LearnPython-5/</loc>
+    
+    <lastmod>2019-08-04T01:13:49.032Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://anotherm.github.io/2019/06/27/LearnPython-4/</loc>
+    
+    <lastmod>2019-08-04T00:58:16.566Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://anotherm.github.io/2019/06/21/LearnPython-3/</loc>
+    
+    <lastmod>2019-08-04T00:38:51.313Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://anotherm.github.io/2019/02/24/LearnPython-1/</loc>
+    
+    <lastmod>2019-06-27T01:45:05.609Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://anotherm.github.io/2019/06/19/LearnPython-2/</loc>
+    
+    <lastmod>2019-06-21T07:03:28.068Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://anotherm.github.io/2019/04/14/WSLServiceScript/</loc>
     
-    <lastmod>2019-04-14T07:02:36.312Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://anotherm.github.io/2019/04/12/DesktopEffect/</loc>
-    
-    <lastmod>2019-04-12T10:07:11.649Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://anotherm.github.io/2019/02/24/LearnPython(Rework)/</loc>
-    
-    <lastmod>2019-02-24T14:08:30.000Z</lastmod>
+    <lastmod>2019-06-19T06:28:49.242Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://anotherm.github.io/2019/01/29/WSL-RedisAndRedis-py/</loc>
     
-    <lastmod>2019-01-29T11:48:38.000Z</lastmod>
+    <lastmod>2019-06-19T06:28:32.316Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://anotherm.github.io/2016/04/14/MarkdownTest/</loc>
     
-    <lastmod>2018-12-18T07:22:26.000Z</lastmod>
+    <lastmod>2019-06-19T06:28:23.060Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://anotherm.github.io/2016/07/27/LinuxExperience/</loc>
+    
+    <lastmod>2019-06-19T06:28:06.158Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://anotherm.github.io/2018/11/19/FlaskTest/</loc>
+    
+    <lastmod>2019-06-19T06:27:46.113Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://anotherm.github.io/2019/04/12/DesktopEffect/</loc>
+    
+    <lastmod>2019-06-19T06:27:23.443Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://anotherm.github.io/2018/12/06/Debian-Keyring/</loc>
+    
+    <lastmod>2019-06-19T06:26:54.226Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://anotherm.github.io/2019/04/14/BlogUpdateB/</loc>
+    
+    <lastmod>2019-06-19T06:23:12.961Z</lastmod>
     
   </url>
   
@@ -47,27 +110,6 @@
     <loc>https://anotherm.github.io/2017/04/04/BlogUpdateA/</loc>
     
     <lastmod>2018-12-18T07:11:34.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://anotherm.github.io/2016/07/27/LinuxExperience/</loc>
-    
-    <lastmod>2018-12-18T07:08:46.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://anotherm.github.io/2018/12/06/Debian-Keyring/</loc>
-    
-    <lastmod>2018-12-06T08:42:48.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://anotherm.github.io/2018/11/19/FlaskTest/</loc>
-    
-    <lastmod>2018-12-01T16:53:18.000Z</lastmod>
     
   </url>
   
