@@ -4,110 +4,59 @@
 
 
 
-
-
-
-
-
-
-
-
 <html class="theme-next muse" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
   <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hexo 3.9.0">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-
-
-  
-  
-  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
-
-
-
-
-
-
-
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon-152x152.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png?v=7.3.0">
+  <link rel="mask-icon" href="/images/safari-pinned-tab.svg?v=7.3.0" color="#222">
+  <link rel="manifest" href="/images/site.webmanifest">
+  <meta name="msapplication-config" content="/images/browserconfig.xml">
   <meta name="google-site-verification" content="jUUdocSBh6d2R49_g5JqK7uqZn8KgTmCgSwPzCPtZE0">
 
-
-
-
-
-
-
-
-
-
-
-
-
+<link rel="stylesheet" href="/css/main.css?v=7.3.0">
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
-
-<link rel="stylesheet" href="/css/main.css?v=7.1.2">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon-152x152.png?v=7.1.2">
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png?v=7.1.2">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png?v=7.1.2">
-
-
-  <link rel="mask-icon" href="/images/safari-pinned-tab.svg?v=7.1.2" color="#222">
-
-
-  <link rel="manifest" href="/images/site.webmanifest">
-
-
-  <meta name="msapplication-config" content="/images/browserconfig.xml">
-
-
-
-
-
-<script id="hexo.configurations">
+<script id="hexo-configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
     scheme: 'Muse',
-    version: '7.1.2',
-    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
-    back2top: true,
-    back2top_sidebar: false,
+    version: '7.3.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
+    save_scroll: false,
+    copycode: {"enable":false,"show_result":false,"style":null},
     fancybox: false,
-    fastclick: false,
+    mediumzoom: false,
     lazyload: false,
-    tabs: true,
-    motion: {"enable":false,"async":false,"transition":{"post_block":"swoopIn","post_header":"slideDownBigIn","post_body":"slideDownBigIn","coll_header":"slideDownBigIn","sidebar":"slideUpBigIn"}},
+    pangu: false,
     algolia: {
       applicationID: '',
       apiKey: '',
       indexName: '',
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"swoopIn","post_header":"slideDownBigIn","post_body":"slideDownBigIn","coll_header":"slideDownBigIn","sidebar":"slideUpBigIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
     }
   };
-</script>
-
-
-  
-
-
-
-
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({
-          google_ad_client: "ca-pub-4522566152785892",
-          enable_page_level_ads: true
-     });
 </script>
 
   <meta property="og:type" content="website">
@@ -117,25 +66,33 @@
 <meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Another.M">
+  <link rel="alternate" href="/atom.xml" title="Another.M" type="application/atom+xml">
+  <link rel="canonical" href="https://anotherm.github.io/page/2/">
 
 
-
-
-
-
-
-<script id="page.configurations">
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
+    isHome: true,
+    isPost: false,
+    isPage: false,
+    isArchive: false
   };
 </script>
 
-  <title>Another.M – anotherm4</title>
+    
+
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-4522566152785892",
+          enable_page_level_ads: true
+     });
+</script>
+  <title>Another.M - anotherm4</title>
   
-
-
-
-
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-89085652-1"></script>
   <script>
     var host = window.location.hostname;
@@ -146,7 +103,6 @@
       gtag('config', 'UA-89085652-1');
     }
   </script>
-
 
 
 
@@ -184,19 +140,12 @@
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta">
-    
 
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
@@ -205,12 +154,8 @@
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-    
-      
         <h1 class="site-subtitle" itemprop="description">anotherm4</h1>
       
-    
-    
   </div>
 
   <div class="site-nav-toggle">
@@ -223,23 +168,15 @@
 </div>
 
 
-
 <nav class="site-nav">
   
-    <ul id="menu" class="menu">
+  <ul id="menu" class="menu">
+      
+      
       
         
-        
-        
-          
-          <li class="menu-item menu-item-home">
-
-    
-    
-    
+        <li class="menu-item menu-item-home">
       
-    
-
     
       
     
@@ -247,18 +184,12 @@
     <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-about">
-
-    
-    
-    
       
-    
-
+      
+      
+        
+        <li class="menu-item menu-item-about">
+      
     
       
     
@@ -266,18 +197,12 @@
     <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-tags">
-
-    
-    
-    
       
-    
-
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
     
       
     
@@ -285,18 +210,12 @@
     <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">7</span></a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-categories">
-
-    
-    
-    
       
-    
-
+      
+      
+        
+        <li class="menu-item menu-item-categories">
+      
     
       
     
@@ -304,18 +223,12 @@
     <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">3</span></a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-archives">
-
-    
-    
-    
       
-    
-
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
     
       
     
@@ -323,18 +236,12 @@
     <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">17</span></a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-sitemap">
-
-    
-    
-    
       
-    
-
+      
+      
+        
+        <li class="menu-item menu-item-sitemap">
+      
     
       
     
@@ -342,26 +249,16 @@
     <a href="/sitemap.xml" rel="section"><i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>站点地图</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+      </li>
+    
+  </ul>
 
-      
-      
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
-        </li>
-      
-    </ul>
-  
-
-  
     
 
-  
-
-  
     <div class="site-search">
       
   <div class="popup search-popup local-search-popup">
@@ -373,24 +270,17 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
 </div>
 
 
-
     </div>
-  
 </nav>
-
-
-
-  
-
-
-
 </div>
     </header>
 
@@ -400,26 +290,21 @@
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
-          
           <div id="content" class="content">
           <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
           <!-- header -->
-          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4522566152785892" data-ad-slot="4253304154" data-ad-format="auto" data-full-width-responsive="true"></ins>
+          <ins class="adsbygoogle"
+              style="display:block"
+              data-ad-client="ca-pub-4522566152785892"
+              data-ad-slot="4253304154"
+              data-ad-format="auto"
+              data-full-width-responsive="true"></ins>
           <script>
           (adsbygoogle = window.adsbygoogle || []).push({});
           </script>
             
   <section id="posts" class="posts-expand">
-    
       
-
-  
-
-  
-  
-  
-
-  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
@@ -430,18 +315,15 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Another.M">
-      <meta itemprop="description" content>
+      <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Another.M">
     </span>
-
-    
       <header class="post-header">
 
-        
         
           <h2 class="post-title" itemprop="name headline">
                 
@@ -453,13 +335,7 @@
         
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
@@ -472,16 +348,12 @@
               
 
               <time title="创建时间：2019-01-29 18:12:09" itemprop="dateCreated datePublished" datetime="2019-01-29T18:12:09+08:00">2019-01-29</time>
+            </span>
+          
             
 
             
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
@@ -489,15 +361,10 @@
                   <span class="post-meta-item-text">更新于</span>
                 
                 <time title="修改时间：2019-06-19 14:28:32" itemprop="dateModified" datetime="2019-06-19T14:28:32+08:00">2019-06-19</time>
-              
+              </span>
             
-          </span>
-
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
@@ -514,22 +381,9 @@
           
 
           
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
 
         </div>
       </header>
-    
 
     
     
@@ -537,16 +391,12 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
           <h1 id="WSL-Redis与redis-py的使用"><a href="#WSL-Redis与redis-py的使用" class="headerlink" title="WSL + Redis与redis-py的使用"></a>WSL + Redis与redis-py的使用</h1><p><em>本文章适用于有一定Linux基础的朋友，如果对Linux不熟悉的话，慢慢来，先学Linux命令-</em></p>
 <h2 id="事情梗概"><a href="#事情梗概" class="headerlink" title="事情梗概"></a>事情梗概</h2><p>最近无事，整理电脑时候看见一个redis-5.0.2.tar.gz静静的躺在某个角落</p>
 <p>想起本来要再Windows上试验一下Redis</p>
 <p>解压缩之后，看到了<em>installserver. sh</em>，嗯，这货看来是Linux版本的</p>
 <p>去官网看了一下，只有一个Download按钮，去查了查，作者觉得Windows太麻烦所以不打算开发</p>
-<p>找了找，发现了<a href="https://github.com/MicrosoftArchive" target="_blank" rel="noopener">Microsoft Archive</a>，竟然有<a href="https://github.com/MicrosoftArchive/redis" target="_blank" rel="noopener">Windows版本的Redis</a>，看一下Release，嗯，Lastest Release是3.0.504,刚接触，啥也不知道，点了下载，然后一看发布的日期<strong>1 Jul 2016</strong>，玩个鬼头啊</p>
+<p>找了找，发现了<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL01pY3Jvc29mdEFyY2hpdmU=" title="https://github.com/MicrosoftArchive">Microsoft Archive<i class="fa fa-external-link"></i></span>，竟然有<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL01pY3Jvc29mdEFyY2hpdmUvcmVkaXM=" title="https://github.com/MicrosoftArchive/redis">Windows版本的Redis<i class="fa fa-external-link"></i></span>，看一下Release，嗯，Lastest Release是3.0.504,刚接触，啥也不知道，点了下载，然后一看发布的日期<strong>1 Jul 2016</strong>，玩个鬼头啊</p>
 <p>整双系统吧，Rufus刻录完了Fedora，进BIOS关Secure Boot，安装时发现没分区，分区完了再装发现Fedora这货<code>***哔***</code>把EFI给我装硬盘没挂载到固态上，格式化分区重装，<strong>您所使用的分区无法挂载EFI<b style="color:red">（掀桌）</b></strong></p>
 <p>折腾了两个小时，放弃了，想起了WSL，删除了msys2（为啥删我也不知道）</p>
 <hr>
@@ -565,31 +415,12 @@
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
     
 
     <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
         <div class="post-eof"></div>
-      
     </footer>
   </div>
   
@@ -597,17 +428,8 @@
   
   </article>
 
-
     
       
-
-  
-
-  
-  
-  
-
-  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
@@ -618,18 +440,15 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Another.M">
-      <meta itemprop="description" content>
+      <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Another.M">
     </span>
-
-    
       <header class="post-header">
 
-        
         
           <h2 class="post-title" itemprop="name headline">
                 
@@ -641,13 +460,7 @@
         
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
@@ -660,16 +473,12 @@
               
 
               <time title="创建时间：2018-12-06 15:07:03" itemprop="dateCreated datePublished" datetime="2018-12-06T15:07:03+08:00">2018-12-06</time>
+            </span>
+          
             
 
             
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
@@ -677,15 +486,10 @@
                   <span class="post-meta-item-text">更新于</span>
                 
                 <time title="修改时间：2019-06-19 14:26:54" itemprop="dateModified" datetime="2019-06-19T14:26:54+08:00">2019-06-19</time>
-              
+              </span>
             
-          </span>
-
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
@@ -702,22 +506,9 @@
           
 
           
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
 
         </div>
       </header>
-    
 
     
     
@@ -725,10 +516,6 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
           <h1 id="这次的标题是-🤦‍"><a href="#这次的标题是-🤦‍" class="headerlink" title="这次的标题是 🤦‍"></a>这次的标题是 🤦‍</h1><p>登陆SSH，使用<code>apt update</code>更新一下软件包，然后提示<code>NO_PUBKEY XXXXXXXXXXXXXXXX</code><br><img src="/images/debian-gpg/d01.png" alt><br>随即各种搜索，提示都是一致的提示使用<code>gpg --keyserver keyring.debian.com --recv-keys</code></p>
 <p>输入之后，再次使用<code>apt update</code>报错依旧</p>
 <p>然后查了一下还需要<code>gpg --armor --export XXXXXXXX | apt-key add -</code></p>
@@ -752,31 +539,12 @@
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
     
 
     <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
         <div class="post-eof"></div>
-      
     </footer>
   </div>
   
@@ -784,17 +552,8 @@
   
   </article>
 
-
     
       
-
-  
-
-  
-  
-  
-
-  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
@@ -805,18 +564,15 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Another.M">
-      <meta itemprop="description" content>
+      <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Another.M">
     </span>
-
-    
       <header class="post-header">
 
-        
         
           <h2 class="post-title" itemprop="name headline">
                 
@@ -828,13 +584,7 @@
         
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
@@ -847,20 +597,13 @@
               
 
               <time title="创建时间：2018-12-01 12:59:25 / 修改时间：22:48:18" itemprop="dateCreated datePublished" datetime="2018-12-01T12:59:25+08:00">2018-12-01</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
+            </span>
           
-            <span class="post-category">
             
-              <span class="post-meta-divider">|</span>
+
             
+          
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
@@ -877,22 +620,9 @@
           
 
           
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
 
         </div>
       </header>
-    
 
     
     
@@ -900,10 +630,6 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
           
             <blockquote>
 <p>2016/11/21-2017/04/07 期间学习总结已经归档不可访问<br><br>此博客内容已经接近全面更新</p>
@@ -915,31 +641,12 @@
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
     
 
     <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
         <div class="post-eof"></div>
-      
     </footer>
   </div>
   
@@ -947,17 +654,8 @@
   
   </article>
 
-
     
       
-
-  
-
-  
-  
-  
-
-  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
@@ -968,18 +666,15 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Another.M">
-      <meta itemprop="description" content>
+      <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Another.M">
     </span>
-
-    
       <header class="post-header">
 
-        
         
           <h2 class="post-title" itemprop="name headline">
                 
@@ -991,13 +686,7 @@
         
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
@@ -1010,16 +699,12 @@
               
 
               <time title="创建时间：2018-11-19 22:10:16" itemprop="dateCreated datePublished" datetime="2018-11-19T22:10:16+08:00">2018-11-19</time>
+            </span>
+          
             
 
             
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
@@ -1027,15 +712,10 @@
                   <span class="post-meta-item-text">更新于</span>
                 
                 <time title="修改时间：2019-06-19 14:27:46" itemprop="dateModified" datetime="2019-06-19T14:27:46+08:00">2019-06-19</time>
-              
+              </span>
             
-          </span>
-
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
@@ -1052,22 +732,9 @@
           
 
           
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
 
         </div>
       </header>
-    
 
     
     
@@ -1075,10 +742,6 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
           <h1 id="Flask初探"><a href="#Flask初探" class="headerlink" title="Flask初探"></a><b>Flask初探</b></h1><p>昨天花时间研究了一下Spring与SpringBoot相关的知识，然后过了一天，整个人就是这种感觉:</p>
 <p><font color="red"><strong>你脑袋有毛病我不想和你玩</strong></font></p>
 <p>今天看了看Flask</p>
@@ -1098,31 +761,12 @@
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
     
 
     <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
         <div class="post-eof"></div>
-      
     </footer>
   </div>
   
@@ -1130,17 +774,8 @@
   
   </article>
 
-
     
       
-
-  
-
-  
-  
-  
-
-  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
@@ -1151,18 +786,15 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Another.M">
-      <meta itemprop="description" content>
+      <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Another.M">
     </span>
-
-    
       <header class="post-header">
 
-        
         
           <h2 class="post-title" itemprop="name headline">
                 
@@ -1174,13 +806,7 @@
         
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
@@ -1193,16 +819,12 @@
               
 
               <time title="创建时间：2017-04-04 12:43:04" itemprop="dateCreated datePublished" datetime="2017-04-04T12:43:04+08:00">2017-04-04</time>
+            </span>
+          
             
 
             
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
@@ -1210,15 +832,10 @@
                   <span class="post-meta-item-text">更新于</span>
                 
                 <time title="修改时间：2018-12-18 15:11:34" itemprop="dateModified" datetime="2018-12-18T15:11:34+08:00">2018-12-18</time>
-              
+              </span>
             
-          </span>
-
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
@@ -1235,22 +852,9 @@
           
 
           
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
 
         </div>
       </header>
-    
 
     
     
@@ -1258,15 +862,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
           
-            <p>因<del><a href="http://dev.duoshuo.com/threads/58d1169ae293b89a20c57241" target="_blank" rel="noopener">多说评论系统关闭</a></del>，所以整了整网页，准备取消多说服务，顺便翻了翻我现在正在使用的<a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">NexT主题</a>，发现主题作者更新了，尤其意外的发现添加了<a href="https://github.com/hustcc/canvas-nest.js" target="_blank" rel="noopener">canvas nest</a>这个动态背景效果，于是连带Hexo一起更新了一下</p>
+            <p>因<del><span class="exturl" data-url="aHR0cDovL2Rldi5kdW9zaHVvLmNvbS90aHJlYWRzLzU4ZDExNjlhZTI5M2I4OWEyMGM1NzI0MQ==" title="http://dev.duoshuo.com/threads/58d1169ae293b89a20c57241">多说评论系统关闭<i class="fa fa-external-link"></i></span></del>，所以整了整网页，准备取消多说服务，顺便翻了翻我现在正在使用的<span class="exturl" data-url="aHR0cDovL3RoZW1lLW5leHQuaWlzc25hbi5jb20v" title="http://theme-next.iissnan.com/">NexT主题<i class="fa fa-external-link"></i></span>，发现主题作者更新了，尤其意外的发现添加了<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2h1c3RjYy9jYW52YXMtbmVzdC5qcw==" title="https://github.com/hustcc/canvas-nest.js">canvas nest<i class="fa fa-external-link"></i></span>这个动态背景效果，于是连带Hexo一起更新了一下</p>
 <p><del>目前使用的背景为NexT的three_wave，具体可在作者主题文档找到</del></p>
 <p>至于评论系统，反正也没人评论，所以干脆不弄了</p>
-<p><font color="green">2018.12.01更新：多说已经关闭，而且canvas_line这个特效好炫酷，至于评论系统，嗯，洗洗睡吧😂,然后<a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">NexT主题</a>已经交由<a href="https://github.com/theme-next" target="_blank" rel="noopener">NexT组织</a>更新，目前版本6.0</font></p>
+<p><font color="green">2018.12.01更新：多说已经关闭，而且canvas_line这个特效好炫酷，至于评论系统，嗯，洗洗睡吧😂,然后<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQvaGV4by10aGVtZS1uZXh0" title="https://github.com/theme-next/hexo-theme-next">NexT主题<i class="fa fa-external-link"></i></span>已经交由<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQ=" title="https://github.com/theme-next">NexT组织<i class="fa fa-external-link"></i></span>更新，目前版本6.0</font></p>
 
           
         
@@ -1274,31 +874,12 @@
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
     
 
     <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
         <div class="post-eof"></div>
-      
     </footer>
   </div>
   
@@ -1306,17 +887,8 @@
   
   </article>
 
-
     
       
-
-  
-
-  
-  
-  
-
-  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
@@ -1327,18 +899,15 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Another.M">
-      <meta itemprop="description" content>
+      <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Another.M">
     </span>
-
-    
       <header class="post-header">
 
-        
         
           <h2 class="post-title" itemprop="name headline">
                 
@@ -1350,13 +919,7 @@
         
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
@@ -1369,16 +932,12 @@
               
 
               <time title="创建时间：2016-07-27 15:57:39" itemprop="dateCreated datePublished" datetime="2016-07-27T15:57:39+08:00">2016-07-27</time>
+            </span>
+          
             
 
             
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
@@ -1386,15 +945,10 @@
                   <span class="post-meta-item-text">更新于</span>
                 
                 <time title="修改时间：2019-06-19 14:28:06" itemprop="dateModified" datetime="2019-06-19T14:28:06+08:00">2019-06-19</time>
-              
+              </span>
             
-          </span>
-
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
@@ -1411,22 +965,9 @@
           
 
           
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
 
         </div>
       </header>
-    
 
     
     
@@ -1434,33 +975,29 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
           <!--<img src="https://upload.wikimedia.org/wikipedia/commons/b/b0/NewTux.svg" width="200" align="right"/>-->
 
 
 <h3 id="以下所写仅为个人观点，真实感受请自己体验，如有雷同，那就让它雷同吧"><a href="#以下所写仅为个人观点，真实感受请自己体验，如有雷同，那就让它雷同吧" class="headerlink" title="以下所写仅为个人观点，真实感受请自己体验，如有雷同，那就让它雷同吧"></a><del>以下所写仅为个人观点，真实感受请自己体验，如有雷同，那就让它雷同吧</del></h3><p><font color="green">2018.12.01更新:拥有VPS管理经验大概2年左右了，期间主要使用CentOS 6，最近更换了Debian 9，所以更新了一下大部分内容</font></p>
-<p>文中部分文字、简介等来源于<a href="https://zh.wikipedia.org/wiki/Linux发行版列表" target="_blank" rel="noopener">维基百科-Linux发行版列表</a></p>
+<p>文中部分文字、简介等来源于<span class="exturl" data-url="aHR0cHM6Ly96aC53aWtpcGVkaWEub3JnL3dpa2kvTGludXjlj5HooYzniYjliJfooag=" title="https://zh.wikipedia.org/wiki/Linux发行版列表">维基百科-Linux发行版列表<i class="fa fa-external-link"></i></span></p>
 <p><del><!--图片来源于[Google](https://www.google.com.hk/imgres?imgurl=https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/NewTux.svg/2000px-NewTux.svg.png&imgrefurl=https://zh.wikipedia.org/wiki/Linux&h=2400&w=2000&tbnid=NWUz_uyHoU1KUM:&tbnh=160&tbnw=133&docid=cGRBAcKAJbrXXM&usg=__4boGWOohNRnKuVnlkVaLWmuv6kw=&sa=X&ved=0ahUKEwjM16jQsZPOAhXCRY8KHarjAygQ9QEIHjAA)--></del></p>
 <hr>
 <h2 id="先列出我所用过的Linux，按使用先后排序"><a href="#先列出我所用过的Linux，按使用先后排序" class="headerlink" title="先列出我所用过的Linux，按使用先后排序"></a>先列出我所用过的Linux，按使用先后排序</h2><ul>
-<li><p><a href="http://cn.ubuntu.com/" target="_blank" rel="noopener">Ubuntu</a></p>
+<li><p><span class="exturl" data-url="aHR0cDovL2NuLnVidW50dS5jb20v" title="http://cn.ubuntu.com/">Ubuntu<i class="fa fa-external-link"></i></span></p>
 </li>
-<li><p><del><a href="http://www.ubuntukylin.com/" target="_blank" rel="noopener">Ubuntu Kylin</a></del></p>
+<li><p><del><span class="exturl" data-url="aHR0cDovL3d3dy51YnVudHVreWxpbi5jb20v" title="http://www.ubuntukylin.com/">Ubuntu Kylin<i class="fa fa-external-link"></i></span></del></p>
 </li>
-<li><p><del><a href="https://www.kali.org/" target="_blank" rel="noopener">Kali Linux</a></del></p>
+<li><p><del><span class="exturl" data-url="aHR0cHM6Ly93d3cua2FsaS5vcmcv" title="https://www.kali.org/">Kali Linux<i class="fa fa-external-link"></i></span></del></p>
 </li>
-<li><p><del><a href="https://www.deepin.org/" target="_blank" rel="noopener">Deepin</a></del></p>
+<li><p><del><span class="exturl" data-url="aHR0cHM6Ly93d3cuZGVlcGluLm9yZy8=" title="https://www.deepin.org/">Deepin<i class="fa fa-external-link"></i></span></del></p>
 </li>
-<li><p><del><a href="https://elementary.io/" target="_blank" rel="noopener">elementary OS</a></del></p>
+<li><p><del><span class="exturl" data-url="aHR0cHM6Ly9lbGVtZW50YXJ5LmlvLw==" title="https://elementary.io/">elementary OS<i class="fa fa-external-link"></i></span></del></p>
 </li>
-<li><p><a href="https://www.centos.org/" target="_blank" rel="noopener">CentOS</a></p>
+<li><p><span class="exturl" data-url="aHR0cHM6Ly93d3cuY2VudG9zLm9yZy8=" title="https://www.centos.org/">CentOS<i class="fa fa-external-link"></i></span></p>
 </li>
-<li><p><a href="https://www.debian.org" target="_blank" rel="noopener">Debian</a></p>
+<li><p><span class="exturl" data-url="aHR0cHM6Ly93d3cuZGViaWFuLm9yZw==" title="https://www.debian.org">Debian<i class="fa fa-external-link"></i></span></p>
 </li>
-<li><p><del><a href="https://www.archlinux.org/" target="_blank" rel="noopener">Arch Linux</a></del></p>
+<li><p><del><span class="exturl" data-url="aHR0cHM6Ly93d3cuYXJjaGxpbnV4Lm9yZy8=" title="https://www.archlinux.org/">Arch Linux<i class="fa fa-external-link"></i></span></del></p>
 <p><font color="green">添加Fedora，Manjaro的部分简述，删除和修改了一些无用的描述，把 “★(\u2605)” 更换成为了 “⭐(\u2B50)” ，算是为了网页添加了一丝色彩，虽然不知道能不能被识别</font></p>
 </li>
 </ul>
@@ -1479,31 +1016,12 @@
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
     
 
     <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
         <div class="post-eof"></div>
-      
     </footer>
   </div>
   
@@ -1511,17 +1029,8 @@
   
   </article>
 
-
     
       
-
-  
-
-  
-  
-  
-
-  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
@@ -1532,18 +1041,15 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Another.M">
-      <meta itemprop="description" content>
+      <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Another.M">
     </span>
-
-    
       <header class="post-header">
 
-        
         
           <h2 class="post-title" itemprop="name headline">
                 
@@ -1555,13 +1061,7 @@
         
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
@@ -1574,16 +1074,12 @@
               
 
               <time title="创建时间：2016-04-14 17:50:07" itemprop="dateCreated datePublished" datetime="2016-04-14T17:50:07+08:00">2016-04-14</time>
+            </span>
+          
             
 
             
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
@@ -1591,15 +1087,10 @@
                   <span class="post-meta-item-text">更新于</span>
                 
                 <time title="修改时间：2019-06-19 14:28:23" itemprop="dateModified" datetime="2019-06-19T14:28:23+08:00">2019-06-19</time>
-              
+              </span>
             
-          </span>
-
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
@@ -1616,22 +1107,9 @@
           
 
           
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
 
         </div>
       </header>
-    
 
     
     
@@ -1639,10 +1117,6 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
           <p><img src="/images/avatar.jpg" alt>图片测试</p>
 <hr>
 <h1 id="This-is-a-test-一级标题测试"><a href="#This-is-a-test-一级标题测试" class="headerlink" title="This is a test 一级标题测试"></a>This is a test 一级标题测试</h1><h2 id="This-is-a-test-二级标题测试"><a href="#This-is-a-test-二级标题测试" class="headerlink" title="This is a test 二级标题测试"></a>This is a test 二级标题测试</h2><h3 id="This-is-a-test-三级标题测试"><a href="#This-is-a-test-三级标题测试" class="headerlink" title="This is a test 三级标题测试"></a>This is a test 三级标题测试</h3><h4 id="This-is-a-test-四级标题测试"><a href="#This-is-a-test-四级标题测试" class="headerlink" title="This is a test 四级标题测试"></a>This is a test 四级标题测试</h4><h5 id="This-is-a-test-五级标题测试"><a href="#This-is-a-test-五级标题测试" class="headerlink" title="This is a test 五级标题测试"></a>This is a test 五级标题测试</h5><h6 id="This-is-a-test-六级标题测试"><a href="#This-is-a-test-六级标题测试" class="headerlink" title="This is a test 六级标题测试"></a>This is a test 六级标题测试</h6>
@@ -1660,38 +1134,18 @@
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
     
 
     <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
         <div class="post-eof"></div>
-      
     </footer>
   </div>
   
   
   
   </article>
-
 
     
   </section>
@@ -1702,12 +1156,10 @@
   </nav>
 
 
-
           </div>
           
 
         </div>
-        
           
   
   <div class="sidebar-toggle">
@@ -1721,154 +1173,122 @@
   <aside id="sidebar" class="sidebar">
     <div class="sidebar-inner">
 
-      
-
-      
-
       <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
+
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="Another.M">
-            
-              <p class="site-author-name" itemprop="name">Another.M</p>
-              <div class="site-description motion-element" itemprop="description"></div>
-          </div>
+    <img class="site-author-image" itemprop="image"
+      src="/images/avatar.jpg"
+      alt="Another.M">
+  <p class="site-author-name" itemprop="name">Another.M</p>
+  <div class="site-description motion-element" itemprop="description"></div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+  <div class="feed-link motion-element">
+    <a href="/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0Fub3RoZXJN" title="GitHub &rarr; https://github.com/AnotherM"><i class="fa fa-fw fa-github"></i>GitHub</span>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <span class="exturl" data-url="bWFpbHRvOmFub3RoZXJtNEBxcS5jb20=" title="E-Mail &rarr; mailto:anotherm4@qq.com"><i class="fa fa-fw fa-envelope"></i>E-Mail</span>
+      </span>
+    
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    
+  
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></span>
+  </div>
 
-          
-            <nav class="site-state motion-element">
-              
-                <div class="site-state-item site-state-posts">
-                
-                  <a href="/archives/">
-                
-                    <span class="site-state-item-count">17</span>
-                    <span class="site-state-item-name">日志</span>
-                  </a>
-                </div>
-              
 
-              
-                
-                
-                <div class="site-state-item site-state-categories">
-                  
-                    
-                      <a href="/categories/">
-                    
-                  
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">3</span>
-                    <span class="site-state-item-name">分类</span>
-                  </a>
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-tags">
-                  
-                    
-                      <a href="/tags/">
-                    
-                  
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">7</span>
-                    <span class="site-state-item-name">标签</span>
-                  </a>
-                </div>
-              
-            </nav>
-          
-
-          
-
-          
-
-          
-            <div class="links-of-author motion-element">
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="https://github.com/AnotherM" title="GitHub &rarr; https://github.com/AnotherM" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
-                </span>
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="mailto:anotherm4@qq.com" title="E-Mail &rarr; mailto:anotherm4@qq.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-                </span>
-              
-            </div>
-          
-
-          
-             <div class="cc-license motion-element" itemprop="license">
-              
-              
-                
-              
-              
-              
-              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
-             </div>
-          
-
-          
-          
-
-          
-            
-          
-          
 
         </div>
       </div>
 
-      
-
-      
-
     </div>
   </aside>
-  
+  <div id="sidebar-dimmer"></div>
 
 
-        
       </div>
     </main>
 
@@ -1879,25 +1299,10 @@
     <i class="fa fa-music"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Another.M</span>
-
-  
-
-  
 </div>
-
-
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
-
-
-
+  <div class="powered-by">由 <span class="exturl theme-link" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> 强力驱动 v3.9.0</div>
   <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.1.2</div>
-
-
-
+  <div class="theme-info">主题 – <span class="exturl theme-link" data-url="aHR0cHM6Ly90aGVtZS1uZXh0Lm9yZw==">NexT.Muse</span> v7.3.0</div>
 
         
 
@@ -1911,441 +1316,41 @@
         
       </div>
     </footer>
-
-    
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
-        
           <span id="scrollpercent"><span>0</span>%</span>
         
       </div>
-    
 
     
-
-    
-
-    
-  </div>
-
   
-
+<script src="/lib/needsharebutton/needsharebutton.js"></script>
 <script>
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
 </script>
 
 
-
-
-
-
-
-
-
-
-
-
-
+  </div>
 
   
     
     
   
-  <script color="0,0,0" opacity="1" zindex="-1" count="32" src="/lib/canvas-nest/canvas-nest.min.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
+  <script color='0,0,0' opacity='1' zIndex='-1' count='32' src="/lib/canvas-nest/canvas-nest.min.js"></script>
   <script src="/lib/jquery/index.js?v=3.4.1"></script>
 
-  
-  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+<script src="/js/utils.js?v=7.3.0"></script>
 
-  
-  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
+  <script src="/js/schemes/muse.js?v=7.3.0"></script>
 
-  
 
+<script src="/js/next-boot.js?v=7.3.0"></script>
 
-  <script src="/js/utils.js?v=7.1.2"></script>
 
-  <script src="/js/motion.js?v=7.1.2"></script>
+  <script src="/js/exturl.js?v=7.3.0"></script>
 
 
 
-  
-  
-
-
-  <script src="/js/schemes/muse.js?v=7.1.2"></script>
-
-
-
-  
-
-  
-
-
-  <script src="/js/next-boot.js?v=7.1.2"></script>
-
-
-  
-
-  
-
-  
-
-  
-
-
-
-  
-  <script>
-    // Popup Window;
-    var isfetched = false;
-    var isXml = true;
-    // Search DB path;
-    var search_path = "search.xml";
-    if (search_path.length === 0) {
-      search_path = "search.xml";
-    } else if (/json$/i.test(search_path)) {
-      isXml = false;
-    }
-    var path = "/" + search_path;
-    // monitor main search box;
-
-    var onPopupClose = function (e) {
-      $('.popup').hide();
-      $('#local-search-input').val('');
-      $('.search-result-list').remove();
-      $('#no-result').remove();
-      $(".local-search-pop-overlay").remove();
-      $('body').css('overflow', '');
-    }
-
-    function proceedsearch() {
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
-        .css('overflow', 'hidden');
-      $('.search-popup-overlay').click(onPopupClose);
-      $('.popup').toggle();
-      var $localSearchInput = $('#local-search-input');
-      $localSearchInput.attr("autocapitalize", "none");
-      $localSearchInput.attr("autocorrect", "off");
-      $localSearchInput.focus();
-    }
-
-    // search function;
-    var searchFunc = function(path, search_id, content_id) {
-      'use strict';
-
-      // start loading animation
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
-          '<div id="search-loading-icon">' +
-          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
-          '</div>' +
-          '</div>')
-        .css('overflow', 'hidden');
-      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
-
-      
-
-      $.ajax({
-        url: path,
-        dataType: isXml ? "xml" : "json",
-        async: true,
-        success: function(res) {
-          // get the contents from search data
-          isfetched = true;
-          $('.popup').detach().appendTo('.header-inner');
-          var datas = isXml ? $("entry", res).map(function() {
-            return {
-              title: $("title", this).text(),
-              content: $("content",this).text(),
-              url: $("url" , this).text()
-            };
-          }).get() : res;
-          var input = document.getElementById(search_id);
-          var resultContent = document.getElementById(content_id);
-          var inputEventFunction = function() {
-            var searchText = input.value.trim().toLowerCase();
-            var keywords = searchText.split(/[\s\-]+/);
-            if (keywords.length > 1) {
-              keywords.push(searchText);
-            }
-            var resultItems = [];
-            if (searchText.length > 0) {
-              // perform local searching
-              datas.forEach(function(data) {
-                var isMatch = false;
-                var hitCount = 0;
-                var searchTextCount = 0;
-                var title = data.title.trim();
-                var titleInLowerCase = title.toLowerCase();
-                var content = data.content.trim().replace(/<[^>]+>/g,"");
-                
-                var contentInLowerCase = content.toLowerCase();
-                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
-                var indexOfTitle = [];
-                var indexOfContent = [];
-                // only match articles with not empty titles
-                if(title != '') {
-                  keywords.forEach(function(keyword) {
-                    function getIndexByWord(word, text, caseSensitive) {
-                      var wordLen = word.length;
-                      if (wordLen === 0) {
-                        return [];
-                      }
-                      var startPosition = 0, position = [], index = [];
-                      if (!caseSensitive) {
-                        text = text.toLowerCase();
-                        word = word.toLowerCase();
-                      }
-                      while ((position = text.indexOf(word, startPosition)) > -1) {
-                        index.push({position: position, word: word});
-                        startPosition = position + wordLen;
-                      }
-                      return index;
-                    }
-
-                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
-                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
-                  });
-                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
-                    isMatch = true;
-                    hitCount = indexOfTitle.length + indexOfContent.length;
-                  }
-                }
-
-                // show search results
-
-                if (isMatch) {
-                  // sort index by position of keyword
-
-                  [indexOfTitle, indexOfContent].forEach(function (index) {
-                    index.sort(function (itemLeft, itemRight) {
-                      if (itemRight.position !== itemLeft.position) {
-                        return itemRight.position - itemLeft.position;
-                      } else {
-                        return itemLeft.word.length - itemRight.word.length;
-                      }
-                    });
-                  });
-
-                  // merge hits into slices
-
-                  function mergeIntoSlice(text, start, end, index) {
-                    var item = index[index.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    var hits = [];
-                    var searchTextCountInSlice = 0;
-                    while (position + word.length <= end && index.length != 0) {
-                      if (word === searchText) {
-                        searchTextCountInSlice++;
-                      }
-                      hits.push({position: position, length: word.length});
-                      var wordEnd = position + word.length;
-
-                      // move to next position of hit
-
-                      index.pop();
-                      while (index.length != 0) {
-                        item = index[index.length - 1];
-                        position = item.position;
-                        word = item.word;
-                        if (wordEnd > position) {
-                          index.pop();
-                        } else {
-                          break;
-                        }
-                      }
-                    }
-                    searchTextCount += searchTextCountInSlice;
-                    return {
-                      hits: hits,
-                      start: start,
-                      end: end,
-                      searchTextCount: searchTextCountInSlice
-                    };
-                  }
-
-                  var slicesOfTitle = [];
-                  if (indexOfTitle.length != 0) {
-                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
-                  }
-
-                  var slicesOfContent = [];
-                  while (indexOfContent.length != 0) {
-                    var item = indexOfContent[indexOfContent.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    // cut out 100 characters
-                    var start = position - 20;
-                    var end = position + 80;
-                    if(start < 0){
-                      start = 0;
-                    }
-                    if (end < position + word.length) {
-                      end = position + word.length;
-                    }
-                    if(end > content.length){
-                      end = content.length;
-                    }
-                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
-                  }
-
-                  // sort slices in content by search text's count and hits' count
-
-                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
-                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
-                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
-                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
-                      return sliceRight.hits.length - sliceLeft.hits.length;
-                    } else {
-                      return sliceLeft.start - sliceRight.start;
-                    }
-                  });
-
-                  // select top N slices in content
-
-                  var upperBound = parseInt('1');
-                  if (upperBound >= 0) {
-                    slicesOfContent = slicesOfContent.slice(0, upperBound);
-                  }
-
-                  // highlight title and content
-
-                  function highlightKeyword(text, slice) {
-                    var result = '';
-                    var prevEnd = slice.start;
-                    slice.hits.forEach(function (hit) {
-                      result += text.substring(prevEnd, hit.position);
-                      var end = hit.position + hit.length;
-                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
-                      prevEnd = end;
-                    });
-                    result += text.substring(prevEnd, slice.end);
-                    return result;
-                  }
-
-                  var resultItem = '';
-
-                  if (slicesOfTitle.length != 0) {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
-                  } else {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
-                  }
-
-                  slicesOfContent.forEach(function (slice) {
-                    resultItem += "<a href='" + articleUrl + "'>" +
-                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
-                      "...</p>" + "</a>";
-                  });
-
-                  resultItem += "</li>";
-                  resultItems.push({
-                    item: resultItem,
-                    searchTextCount: searchTextCount,
-                    hitCount: hitCount,
-                    id: resultItems.length
-                  });
-                }
-              })
-            };
-            if (keywords.length === 1 && keywords[0] === "") {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
-            } else if (resultItems.length === 0) {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
-            } else {
-              resultItems.sort(function (resultLeft, resultRight) {
-                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
-                  return resultRight.searchTextCount - resultLeft.searchTextCount;
-                } else if (resultLeft.hitCount !== resultRight.hitCount) {
-                  return resultRight.hitCount - resultLeft.hitCount;
-                } else {
-                  return resultRight.id - resultLeft.id;
-                }
-              });
-              var searchResultList = '<ul class=\"search-result-list\">';
-              resultItems.forEach(function (result) {
-                searchResultList += result.item;
-              })
-              searchResultList += "</ul>";
-              resultContent.innerHTML = searchResultList;
-            }
-          }
-
-          if ('auto' === 'auto') {
-            input.addEventListener('input', inputEventFunction);
-          } else {
-            $('.search-icon').click(inputEventFunction);
-            input.addEventListener('keypress', function (event) {
-              if (event.keyCode === 13) {
-                inputEventFunction();
-              }
-            });
-          }
-
-          // remove loading animation
-          $(".local-search-pop-overlay").remove();
-          $('body').css('overflow', '');
-
-          proceedsearch();
-        }
-      });
-    }
-
-    // handle and trigger popup window;
-    $('.popup-trigger').click(function(e) {
-      e.stopPropagation();
-      if (isfetched === false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-    });
-
-    $('.popup-btn-close').click(onPopupClose);
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-    $(document).on('keyup', function (event) {
-      var shouldDismissSearchPopup = event.which === 27 &&
-        $('.search-popup').is(':visible');
-      if (shouldDismissSearchPopup) {
-        onPopupClose();
-      }
-    });
-  </script>
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-
-  
 
   
   <script>
@@ -2359,70 +1364,43 @@
   </script>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="/js/local-search.js?v=7.3.0"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
 
   
+
   
+
+
   
-  <script src="/lib/needsharebutton/needsharebutton.js"></script>
-  <script>
     
-    
-  </script>
-
-
-  
-
-  
-
-  
-
-  
-<script>
-  $('.highlight').not('.gist .highlight').each(function(i, e) {
-    var $wrap = $('<div>').addClass('highlight-wrap');
-    $(e).after($wrap);
-    $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
-      var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
-        return $(e).text();
-      }).toArray().join('\n');
-      var ta = document.createElement('textarea');
-      var yPosition = window.pageYOffset || document.documentElement.scrollTop;
-      ta.style.top = yPosition + 'px'; // Prevent page scroll
-      ta.style.position = 'absolute';
-      ta.style.opacity = '0';
-      ta.readOnly = true;
-      ta.value = code;
-      document.body.appendChild(ta);
-      const selection = document.getSelection();
-      const selected = selection.rangeCount > 0 ? selection.getRangeAt(0) : false;
-      ta.select();
-      ta.setSelectionRange(0, code.length);
-      ta.readOnly = false;
-      var result = document.execCommand('copy');
-      
-        if (result) $(this).text('复制成功');
-        else $(this).text('复制失败');
-      
-      ta.blur(); // For iOS
-      $(this).blur();
-      if (selected) {
-        selection.removeAllRanges();
-        selection.addRange(selected);
-      }
-    })).on('mouseleave', function(e) {
-      var $b = $(this).find('.copy-btn');
-      setTimeout(function() {
-        $b.text('复制');
-      }, 300);
-    }).append(e);
-  })
-</script>
-
-
-  
-
-  
 
 </body>
 </html>
