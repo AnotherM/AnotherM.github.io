@@ -4,10 +4,9 @@
 
 
 
-<html class="theme-next muse" lang="zh-CN">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-<meta name="generator" content="Hexo 3.9.0">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,7 +22,6 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
-  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
 
 
 <script id="hexo-configurations">
@@ -32,16 +30,17 @@
     root: '/',
     scheme: 'Muse',
     version: '7.3.0',
-    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
-    save_scroll: false,
+    exturl: true,
+    sidebar: {"position":"right","display":"post","offset":12,"onmobile":false},
     copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
     fancybox: false,
     mediumzoom: false,
     lazyload: false,
     pangu: false,
     algolia: {
-      applicationID: '',
+      appID: '',
       apiKey: '',
       indexName: '',
       hits: {"per_page":10},
@@ -49,13 +48,13 @@
     },
     localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
     path: 'search.xml',
-    tabs: true,
     motion: {"enable":false,"async":false,"transition":{"post_block":"swoopIn","post_header":"slideDownBigIn","post_body":"slideDownBigIn","coll_header":"slideDownBigIn","sidebar":"slideUpBigIn"}},
     translation: {
       copy_button: '复制',
       copy_success: '复制成功',
       copy_failure: '复制失败'
-    }
+    },
+    sidebarPadding: 40
   };
 </script>
 
@@ -81,7 +80,6 @@
   };
 </script>
 
-    
 
 
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -92,6 +90,7 @@
      });
 </script>
   <title>分类: 小世界 | Another.M</title>
+  <meta name="generator" content="Hexo 3.9.0">
   
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-89085652-1"></script>
   <script>
@@ -113,7 +112,6 @@
 
   <noscript>
   <style>
-  .use-motion .motion-element,
   .use-motion .brand,
   .use-motion .menu-item,
   .sidebar-inner,
@@ -122,7 +120,7 @@
   .use-motion .comments,
   .use-motion .post-header,
   .use-motion .post-body,
-  .use-motion .collection-title { opacity: initial; }
+  .use-motion .collection-header { opacity: initial; }
 
   .use-motion .logo,
   .use-motion .site-title,
@@ -139,15 +137,14 @@
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
-
-  <div class="container sidebar-position-left">
+  <div class="container">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
+      <div class="header-inner"><div class="site-brand-container">
   <div class="site-meta">
 
-    <div class="custom-logo-site-title">
+    <div>
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">Another.M</span>
@@ -283,32 +280,36 @@
 
   
 
-    <div class="site-search">
-      
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
-    </div>
-  </div>
-  <div id="local-search-result"></div>
-</div>
-
-
-    </div>
 </nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
 </div>
     </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
 
 
     <main id="main" class="main">
@@ -332,22 +333,31 @@
   
   
   <div class="post-block category">
-
     <div id="posts" class="posts-collapse">
       <div class="collection-title">
-        <h2>小世界<small>分类</small>
+        <h2 class="collection-header">小世界<small>分类</small>
         </h2>
       </div>
-        
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+      
+
+  
+  
+
+  
+    
+    <div class="collection-year">
+      <h2 class="collection-header">2018</h2>
+    </div>
+  
+
+  <article itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
 
       <h3 class="post-title">
+        
           <a class="post-title-link" href="/2018/11/19/FlaskTest/" itemprop="url">
-            
-              <span itemprop="name">Flask初探</span>
-            
+            <span itemprop="name">Flask初探</span>
           </a>
         
       </h3>
@@ -364,17 +374,24 @@
   </article>
 
 
-      
-        
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+
+  
+    
+    <div class="collection-year">
+      <h2 class="collection-header">2016</h2>
+    </div>
+  
+
+  <article itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
 
       <h3 class="post-title">
+        
           <a class="post-title-link" href="/2016/07/27/LinuxExperience/" itemprop="url">
-            
-              <span itemprop="name">关于我所用过的各版本Linux的浅谈</span>
-            
+            <span itemprop="name">关于我所用过的各版本Linux的浅谈</span>
           </a>
         
       </h3>
@@ -391,17 +408,19 @@
   </article>
 
 
-      
-        
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+
+  
+
+  <article itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
 
       <h3 class="post-title">
+        
           <a class="post-title-link" href="/2016/04/14/MarkdownTest/" itemprop="url">
-            
-              <span itemprop="name">Markdown常用语法测试</span>
-            
+            <span itemprop="name">Markdown常用语法测试</span>
           </a>
         
       </h3>
@@ -418,9 +437,8 @@
   </article>
 
 
-      
-    </div>
 
+    </div>
   </div>
   
   
@@ -447,18 +465,30 @@
     </div>
   </div>
 
-  <aside id="sidebar" class="sidebar">
+  <aside class="sidebar">
     <div class="sidebar-inner">
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
-        <div class="site-overview">
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
 
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image"
       src="/images/avatar.jpg"
       alt="Another.M">
   <p class="site-author-name" itemprop="name">Another.M</p>
-  <div class="site-description motion-element" itemprop="description"></div>
+  <div class="site-description" itemprop="description"></div>
 </div>
   <nav class="site-state motion-element">
       <div class="site-state-item site-state-posts">
@@ -558,7 +588,6 @@
 
 
 
-        </div>
       </div>
 
     </div>
@@ -590,42 +619,25 @@
 
 
 
+
+
+
+
         
       </div>
     </footer>
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-          <span id="scrollpercent"><span>0</span>%</span>
-        
-      </div>
-
-    
-  
-<script src="/lib/needsharebutton/needsharebutton.js"></script>
-<script>
-</script>
-
-
   </div>
 
   
-    
+
+
     
   
   <script color='0,0,0' opacity='1' zIndex='-1' count='32' src="/lib/canvas-nest/canvas-nest.min.js"></script>
-  <script src="/lib/jquery/index.js?v=3.4.1"></script>
-
+  <script src="/lib/anime.min.js?v=3.1.0"></script>
 <script src="/js/utils.js?v=7.3.0"></script>
-
-
-  <script src="/js/schemes/muse.js?v=7.3.0"></script>
-
-
+<script src="/js/schemes/muse.js?v=7.3.0"></script>
 <script src="/js/next-boot.js?v=7.3.0"></script>
-
-
-  <script src="/js/exturl.js?v=7.3.0"></script>
-
 
 
 
@@ -639,13 +651,6 @@
       s.parentNode.insertBefore(bp, s);
     })();
   </script>
-
-
-
-
-
-
-
 
 
 
@@ -675,9 +680,6 @@
 
   
 
-
-  
-    
 
 </body>
 </html>
