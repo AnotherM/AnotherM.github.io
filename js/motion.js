@@ -1,1 +1,125 @@
-window.$&&window.$.Velocity&&(window.Velocity=window.$.Velocity),NexT.motion={},NexT.motion.integrator={queue:[],cursor:-1,init:function(){return this.queue=[],this.cursor=-1,this},add:function(t){return this.queue.push(t),this},next:function(){this.cursor++;var t=this.queue[this.cursor];"function"==typeof t&&t(NexT.motion.integrator)},bootstrap:function(){this.next()}},NexT.motion.middleWares={logo:function(t){var o=[],e=document.querySelector(".brand"),i=document.querySelector(".custom-logo-image"),n=document.querySelector(".site-title"),s=document.querySelector(".site-subtitle"),r=document.querySelector(".logo-line-before i"),u=document.querySelector(".logo-line-after i");function c(t,o){return{e:t,p:{translateX:o},o:{duration:500,sequenceQueue:!1}}}function l(){o.push({e:i,p:{opacity:1,top:0},o:{duration:200}})}e&&o.push({e:e,p:{opacity:1},o:{duration:200}}),NexT.utils.isMist()&&r&&u&&o.push(c(r,"100%"),c(u,"-100%")),NexT.utils.isMuse()&&i&&l(),n&&o.push({e:n,p:{opacity:1,top:0},o:{duration:200}}),s&&o.push({e:s,p:{opacity:1,top:0},o:{duration:200}}),(NexT.utils.isPisces()||NexT.utils.isGemini())&&i&&l(),0<o.length?(o[o.length-1].o.complete=function(){t.next()},Velocity.RunSequence(o)):t.next(),CONFIG.motion.async&&t.next()},menu:function(t){Velocity(document.querySelectorAll(".menu-item"),"transition.slideDownIn",{display:null,duration:200,complete:function(){t.next()}}),CONFIG.motion.async&&t.next()},postList:function(t){var o=document.querySelectorAll(".post-block, .pagination, .comments"),e=CONFIG.motion.transition.post_block,i=document.querySelectorAll(".post-header"),n=CONFIG.motion.transition.post_header,s=document.querySelectorAll(".post-body"),r=CONFIG.motion.transition.post_body,u=document.querySelectorAll(".collection-header"),c=CONFIG.motion.transition.coll_header;if(0<o.length){var l=window.postMotionOptions||{stagger:100,drag:!0,complete:function(){t.next()}};CONFIG.motion.transition.post_block&&Velocity(o,"transition."+e,l),CONFIG.motion.transition.post_header&&Velocity(i,"transition."+n,l),CONFIG.motion.transition.post_body&&Velocity(s,"transition."+r,l),CONFIG.motion.transition.coll_header&&Velocity(u,"transition."+c,l)}(NexT.utils.isPisces()||NexT.utils.isGemini())&&t.next()},sidebar:function(t){var o=document.querySelector(".sidebar-inner"),e=CONFIG.motion.transition.sidebar;e&&(NexT.utils.isPisces()||NexT.utils.isGemini())&&Velocity(o,"transition."+e,{display:null,duration:200,complete:function(){o.style.transform="initial"}}),t.next()}};
+/* global NexT, CONFIG */
+
+NexT.motion = {};
+
+NexT.motion.integrator = {
+  queue: [],
+  init : function() {
+    this.queue = [];
+    return this;
+  },
+  add: function(fn) {
+    const sequence = fn();
+    if (CONFIG.motion.async) this.queue.push(sequence);
+    else this.queue = this.queue.concat(sequence);
+    return this;
+  },
+  bootstrap: function() {
+    if (!CONFIG.motion.async) this.queue = [this.queue];
+    this.queue.forEach(sequence => {
+      const timeline = window.anime.timeline({
+        duration: 200,
+        easing  : 'linear'
+      });
+      sequence.forEach(item => {
+        if (item.deltaT) timeline.add(item, item.deltaT);
+        else timeline.add(item);
+      });
+    });
+  }
+};
+
+NexT.motion.middleWares = {
+  header: function() {
+    const sequence = [];
+
+    function getMistLineSettings(targets) {
+      sequence.push({
+        targets,
+        scaleX  : [0, 1],
+        duration: 500,
+        deltaT  : '-=200'
+      });
+    }
+
+    function pushToSequence(targets, sequenceQueue = false) {
+      sequence.push({
+        targets,
+        opacity: 1,
+        top    : 0,
+        deltaT : sequenceQueue ? '-=200' : '-=0'
+      });
+    }
+
+    pushToSequence('.header');
+    CONFIG.scheme === 'Mist' && getMistLineSettings('.logo-line');
+    CONFIG.scheme === 'Muse' && pushToSequence('.custom-logo-image');
+    pushToSequence('.site-title');
+    pushToSequence('.site-brand-container .toggle', true);
+    pushToSequence('.site-subtitle');
+    (CONFIG.scheme === 'Pisces' || CONFIG.scheme === 'Gemini') && pushToSequence('.custom-logo-image');
+
+    document.querySelectorAll('.menu-item').forEach(targets => {
+      sequence.push({
+        targets,
+        complete: () => targets.classList.add('animated', 'fadeInDown'),
+        deltaT  : '-=200'
+      });
+    });
+
+    return sequence;
+  },
+
+  subMenu: function() {
+    const subMenuItem = document.querySelectorAll('.sub-menu .menu-item');
+    if (subMenuItem.length > 0) {
+      subMenuItem.forEach(element => {
+        element.classList.add('animated');
+      });
+    }
+    return [];
+  },
+
+  postList: function() {
+    const sequence = [];
+    const { post_block, post_header, post_body, coll_header } = CONFIG.motion.transition;
+
+    function animate(animation, selector) {
+      if (!animation) return;
+      document.querySelectorAll(selector).forEach(targets => {
+        sequence.push({
+          targets,
+          complete: () => targets.classList.add('animated', animation),
+          deltaT  : '-=100'
+        });
+      });
+    }
+
+    animate(post_block, '.post-block, .pagination, .comments');
+    animate(coll_header, '.collection-header');
+    animate(post_header, '.post-header');
+    animate(post_body, '.post-body');
+
+    return sequence;
+  },
+
+  sidebar: function() {
+    const sidebar = document.querySelector('.sidebar');
+    const sidebarTransition = CONFIG.motion.transition.sidebar;
+    // Only for Pisces | Gemini.
+    if (sidebarTransition && (CONFIG.scheme === 'Pisces' || CONFIG.scheme === 'Gemini')) {
+      return [{
+        targets : sidebar,
+        complete: () => sidebar.classList.add('animated', sidebarTransition)
+      }];
+    }
+    return [];
+  },
+
+  footer: function() {
+    return [{
+      targets: document.querySelector('.footer'),
+      opacity: 1
+    }];
+  }
+};
