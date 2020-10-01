@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.1">
+<meta name="generator" content="Hexo 5.2.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon-152x152.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
@@ -18,14 +18,14 @@
 <link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-  
-  <link rel="stylesheet" href="/lib/animate-css/animate.min.css">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.0/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"anotherm.github.io","root":"/","scheme":"Gemini","version":"8.0.0-rc.4","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"anotherm.github.io","root":"/","scheme":"Muse","version":"8.0.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
   <meta name="description" content="Python学习笔记32019&#x2F;6&#x2F;21，本章主要记录Python分支结构、循环结构This Article Is Not Python Tutorial，极大部分包含了个人的主观意见，知识仅供参考，本文目前使用Python版本为3.7.3路都是自己走出来的">
@@ -41,6 +41,7 @@
 <meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary">
 
+
 <link rel="canonical" href="https://anotherm.github.io/2019/06/21/LearnPython-3/">
 
 
@@ -52,13 +53,13 @@
     isPost : true,
     lang   : 'zh-CN'
   };
-</script>
-<script async custom-element="amp-auto-ads"
+</script><script async custom-element="amp-auto-ads"
         src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
 </script>
 
 <script data-ad-client="ca-pub-4522566152785892" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </script> 
+
   <title>LearnPython(3) | Another.M</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-89085652-1"></script>
@@ -114,18 +115,17 @@
 <link rel="alternate" href="/atom.xml" title="Another.M" type="application/atom+xml">
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
 
-    <main class="main">
-      <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-        <div class="header-inner"><div class="site-brand-container">
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切换导航栏">
-        <span class="toggle-line toggle-line-first"></span>
-        <span class="toggle-line toggle-line-middle"></span>
-        <span class="toggle-line toggle-line-last"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
   </div>
 
@@ -149,7 +149,7 @@
 
 
 <nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
+  <ul class="main-menu menu">
         <li class="menu-item menu-item-home">
 
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
@@ -196,7 +196,7 @@
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off"
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
            placeholder="搜索..." spellcheck="false"
            type="search" class="search-input">
   </div>
@@ -204,8 +204,8 @@
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
-<div id="search-result">
-  <div id="no-result">
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
     <i class="fa fa-spinner fa-pulse fa-5x"></i>
   </div>
 </div>
@@ -214,12 +214,12 @@
   </div>
 
 </div>
-          
+        
   
   <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
   </div>
 
   <aside class="sidebar">
@@ -236,16 +236,16 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#分支结构"><span class="nav-number">1.</span> <span class="nav-text">分支结构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#单分支结构"><span class="nav-number">1.1.</span> <span class="nav-text">单分支结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二分支结构"><span class="nav-number">1.2.</span> <span class="nav-text">二分支结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多分支结构"><span class="nav-number">1.3.</span> <span class="nav-text">多分支结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#条件判断和组合"><span class="nav-number">1.4.</span> <span class="nav-text">条件判断和组合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#异常处理"><span class="nav-number">1.5.</span> <span class="nav-text">异常处理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#循环结构"><span class="nav-number">2.</span> <span class="nav-text">循环结构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#计数遍历循环"><span class="nav-number">2.1.</span> <span class="nav-text">计数遍历循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串遍历循环"><span class="nav-number">2.2.</span> <span class="nav-text">字符串遍历循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#列表遍历循环"><span class="nav-number">2.3.</span> <span class="nav-text">列表遍历循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件遍历循环"><span class="nav-number">2.4.</span> <span class="nav-text">文件遍历循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#无限循环"><span class="nav-number">2.5.</span> <span class="nav-text">无限循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#循环控制"><span class="nav-number">2.6.</span> <span class="nav-text">循环控制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Random库"><span class="nav-number">2.7.</span> <span class="nav-text">Random库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#圆周率计算"><span class="nav-number">2.8.</span> <span class="nav-text">圆周率计算</span></a></li></ol></li></ol></div>
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%86%E6%94%AF%E7%BB%93%E6%9E%84"><span class="nav-number">1.</span> <span class="nav-text">分支结构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%95%E5%88%86%E6%94%AF%E7%BB%93%E6%9E%84"><span class="nav-number">1.1.</span> <span class="nav-text">单分支结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E5%88%86%E6%94%AF%E7%BB%93%E6%9E%84"><span class="nav-number">1.2.</span> <span class="nav-text">二分支结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%9A%E5%88%86%E6%94%AF%E7%BB%93%E6%9E%84"><span class="nav-number">1.3.</span> <span class="nav-text">多分支结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9D%A1%E4%BB%B6%E5%88%A4%E6%96%AD%E5%92%8C%E7%BB%84%E5%90%88"><span class="nav-number">1.4.</span> <span class="nav-text">条件判断和组合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86"><span class="nav-number">1.5.</span> <span class="nav-text">异常处理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84"><span class="nav-number">2.</span> <span class="nav-text">循环结构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%A1%E6%95%B0%E9%81%8D%E5%8E%86%E5%BE%AA%E7%8E%AF"><span class="nav-number">2.1.</span> <span class="nav-text">计数遍历循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%81%8D%E5%8E%86%E5%BE%AA%E7%8E%AF"><span class="nav-number">2.2.</span> <span class="nav-text">字符串遍历循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%97%E8%A1%A8%E9%81%8D%E5%8E%86%E5%BE%AA%E7%8E%AF"><span class="nav-number">2.3.</span> <span class="nav-text">列表遍历循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E9%81%8D%E5%8E%86%E5%BE%AA%E7%8E%AF"><span class="nav-number">2.4.</span> <span class="nav-text">文件遍历循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%A0%E9%99%90%E5%BE%AA%E7%8E%AF"><span class="nav-number">2.5.</span> <span class="nav-text">无限循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BE%AA%E7%8E%AF%E6%8E%A7%E5%88%B6"><span class="nav-number">2.6.</span> <span class="nav-text">循环控制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Random%E5%BA%93"><span class="nav-number">2.7.</span> <span class="nav-text">Random库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9C%86%E5%91%A8%E7%8E%87%E8%AE%A1%E7%AE%97"><span class="nav-number">2.8.</span> <span class="nav-text">圆周率计算</span></a></li></ol></li></ol></div>
       </section>
       <!--/noindex-->
 
       <section class="site-overview-wrap sidebar-panel">
-        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <p class="site-author-name" itemprop="name">Another.M</p>
   <div class="site-description" itemprop="description">The way is on your own.</div>
 </div>
-<div class="site-state-wrap animated">
+<div class="site-state-wrap site-overview-item animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
@@ -268,12 +268,12 @@
       </div>
   </nav>
 </div>
-  <div class="links-of-author animated">
+  <div class="links-of-author site-overview-item animated">
       <span class="links-of-author-item">
         <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0Fub3RoZXJN" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;AnotherM"><i class="github fa-fw"></i></span>
       </span>
   </div>
-  <div class="cc-license animated" itemprop="license">
+  <div class="cc-license site-overview-item animated" itemprop="license">
     <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></span>
   </div>
 
@@ -282,12 +282,12 @@
       </section>
     </div>
   </aside>
-  <div id="sidebar-dimmer"></div>
+  <div class="sidebar-dimmer"></div>
 
 
-      </header>
+    </header>
 
-      
+    
   <div class="back-to-top">
     <i class="fa fa-arrow-up"></i>
     <span>0%</span>
@@ -297,20 +297,23 @@
   <span class="exturl github-corner" data-url="aHR0cHM6Ly9naXRodWIuY29tL0Fub3RoZXJN" title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></span>
 
 <noscript>
-  <div id="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
 </noscript>
 
 
-      <div class="main-inner">
-        
+    <div class="main-inner post posts-expand">
+      
 
-        <div class="content post posts-expand">
-          
+      
 
-    
+  
+
+
+<div class="post-block">
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://anotherm.github.io/2019/06/21/LearnPython-3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -327,33 +330,35 @@
           LearnPython(3)
         </h1>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2019-06-21 14:55:54" itemprop="dateCreated datePublished" datetime="2019-06-21T14:55:54+08:00">2019-06-21</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-31 22:36:39" itemprop="dateModified" datetime="2019-12-31T22:36:39+08:00">2019-12-31</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/The-Universe/" itemprop="url" rel="index"><span itemprop="name">The Universe</span></a>
-                </span>
-            </span>
+      <time title="创建时间：2019-06-21 14:55:54" itemprop="dateCreated datePublished" datetime="2019-06-21T14:55:54+08:00">2019-06-21</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2019-12-31 22:36:39" itemprop="dateModified" datetime="2019-12-31T22:36:39+08:00">2019-12-31</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/The-Universe/" itemprop="url" rel="index"><span itemprop="name">The Universe</span></a>
+        </span>
+    </span>
 
-          
+  
+</div>
 
         </div>
       </header>
@@ -362,44 +367,24 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
         <html><head></head><body><p><font style="font-size:24px"><b>Python学习笔记3</b></font></p><blockquote><p>2019/6/21，本章主要记录Python分支结构、循环结构<br><br><strong><em>This Article Is Not Python Tutorial</em></strong>，极大部分包含了个人的主观意见，知识仅供参考，本文目前使用Python版本为3.7.3</p></blockquote><blockquote><p>路都是自己走出来的</p></blockquote><a id="more"></a><h1 id="分支结构"><a href="#分支结构" class="headerlink" title="分支结构"></a>分支结构</h1><h2 id="单分支结构"><a href="#单分支结构" class="headerlink" title="单分支结构"></a>单分支结构</h2><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">guess = eval(input(<span class="string">"猜数字（1-9）："</span>))</span><br><span class="line"><span class="keyword">if</span> guess == <span class="number">9</span>:</span><br><span class="line">    print(<span class="string">"正确"</span>)</span><br></pre></td></tr></tbody></table></figure><h2 id="二分支结构"><a href="#二分支结构" class="headerlink" title="二分支结构"></a>二分支结构</h2><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> guess == <span class="number">8</span>:</span><br><span class="line">    print(<span class="string">"正确"</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">"错误"</span>)</span><br><span class="line">    </span><br><span class="line">print(<span class="string">'{}'</span>.format(<span class="string">'t'</span> <span class="keyword">if</span> guess == <span class="number">8</span> <span class="keyword">else</span> <span class="string">'f'</span>))  <span class="comment"># 紧凑形式</span></span><br></pre></td></tr></tbody></table></figure><h2 id="多分支结构"><a href="#多分支结构" class="headerlink" title="多分支结构"></a>多分支结构</h2><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">score = eval(input(<span class="string">"输分数（0-100）："</span>))</span><br><span class="line">grade = <span class="string">""</span></span><br><span class="line"><span class="keyword">if</span> score >= <span class="number">60</span>:</span><br><span class="line">    grade = <span class="string">"D"</span></span><br><span class="line"><span class="keyword">elif</span> score >= <span class="number">70</span>:</span><br><span class="line">    grade = <span class="string">"C"</span></span><br><span class="line"><span class="keyword">elif</span> score >= <span class="number">80</span>:</span><br><span class="line">    grade = <span class="string">"B"</span></span><br><span class="line"><span class="keyword">elif</span> score >= <span class="number">90</span>:</span><br><span class="line">    grade = <span class="string">"A"</span></span><br><span class="line">print(<span class="string">"输入成绩属于级别{}"</span>.format(grade))</span><br></pre></td></tr></tbody></table></figure><h2 id="条件判断和组合"><a href="#条件判断和组合" class="headerlink" title="条件判断和组合"></a>条件判断和组合</h2><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># or关键字，逻辑或</span></span><br><span class="line"><span class="keyword">if</span> guess > <span class="number">7</span> <span class="keyword">or</span> guess < <span class="number">9</span>: </span><br><span class="line">    print(<span class="string">"or"</span>)</span><br><span class="line"><span class="comment"># and关键字，逻辑与</span></span><br><span class="line"><span class="keyword">elif</span> guess > <span class="number">1</span> <span class="keyword">and</span> guess > <span class="number">6</span>:  </span><br><span class="line">    print(<span class="string">"and"</span>)</span><br><span class="line"><span class="comment"># not关键字，逻辑非</span></span><br><span class="line"><span class="keyword">elif</span> <span class="keyword">not</span> <span class="literal">False</span>:  </span><br><span class="line">    print(<span class="string">"not"</span>)</span><br></pre></td></tr></tbody></table></figure><h2 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h2><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    num = eval(input(<span class="string">"请输入一个整数"</span>))</span><br><span class="line">    print(num ** <span class="number">2</span>)</span><br><span class="line"><span class="keyword">except</span> NameError:</span><br><span class="line">    print(<span class="string">"输入不是整数"</span>)</span><br></pre></td></tr></tbody></table></figure><h1 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h1><h2 id="计数遍历循环"><a href="#计数遍历循环" class="headerlink" title="计数遍历循环"></a>计数遍历循环</h2><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 5次循环 for (int i=0;i<5;i++)</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">5</span>):  </span><br><span class="line">    print(i)</span><br><span class="line"><span class="comment"># 从2-7步长为2 for (int i=2;i<7;){i+=2;}</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">2</span>, <span class="number">7</span>, <span class="number">2</span>): </span><br><span class="line">    print(i)</span><br></pre></td></tr></tbody></table></figure><h2 id="字符串遍历循环"><a href="#字符串遍历循环" class="headerlink" title="字符串遍历循环"></a>字符串遍历循环</h2><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> c <span class="keyword">in</span> <span class="string">"Python"</span>:</span><br><span class="line">    print(c, end=<span class="string">","</span>)</span><br></pre></td></tr></tbody></table></figure><h2 id="列表遍历循环"><a href="#列表遍历循环" class="headerlink" title="列表遍历循环"></a>列表遍历循环</h2><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> [<span class="number">123</span>, <span class="string">'Python'</span>, <span class="number">456</span>, <span class="string">"Another.M"</span>]:</span><br><span class="line">    print(line, end=<span class="string">","</span>)</span><br></pre></td></tr></tbody></table></figure><h2 id="文件遍历循环"><a href="#文件遍历循环" class="headerlink" title="文件遍历循环"></a>文件遍历循环</h2><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">file = open(<span class="string">"3_Loop.txt"</span>)</span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> file:</span><br><span class="line">    print(line)</span><br></pre></td></tr></tbody></table></figure><h2 id="无限循环"><a href="#无限循环" class="headerlink" title="无限循环"></a>无限循环</h2><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">3</span></span><br><span class="line"><span class="keyword">while</span> a > <span class="number">0</span>:</span><br><span class="line">    print(a)</span><br></pre></td></tr></tbody></table></figure><h2 id="循环控制"><a href="#循环控制" class="headerlink" title="循环控制"></a>循环控制</h2><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">string = <span class="string">"Python"</span></span><br><span class="line"><span class="keyword">for</span> c <span class="keyword">in</span> string:</span><br><span class="line">    <span class="keyword">if</span> c == <span class="string">"t"</span>:</span><br><span class="line">        <span class="keyword">continue</span>  <span class="comment"># 跳出单次循环</span></span><br><span class="line">    print(c, end=<span class="string">""</span>)</span><br><span class="line"><span class="keyword">else</span>:  <span class="comment"># 未使用break，继续执行</span></span><br><span class="line">    print(<span class="string">"正常退出"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> c <span class="keyword">in</span> string:</span><br><span class="line">    <span class="keyword">if</span> c == <span class="string">"t"</span>:</span><br><span class="line">        <span class="keyword">break</span>  <span class="comment"># 跳出整个循环</span></span><br><span class="line">    print(c, end=<span class="string">""</span>)</span><br><span class="line"><span class="keyword">else</span>:  <span class="comment"># 使用break，不执行</span></span><br><span class="line">    print(<span class="string">"正常退出"</span>)</span><br><span class="line"><span class="keyword">while</span> string != <span class="string">""</span>:</span><br><span class="line">    <span class="keyword">for</span> c <span class="keyword">in</span> string:</span><br><span class="line">        <span class="keyword">if</span> c == <span class="string">"t"</span>:</span><br><span class="line">            <span class="keyword">break</span>  <span class="comment"># 仅跳出最内层循环</span></span><br><span class="line">        print(c, end=<span class="string">""</span>)</span><br><span class="line">    string = string[:<span class="number">-1</span>]</span><br></pre></td></tr></tbody></table></figure><h2 id="Random库"><a href="#Random库" class="headerlink" title="Random库"></a>Random库</h2><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="comment"># 梅森旋转算法生成随机数</span></span><br><span class="line">print(random.random())  </span><br><span class="line"></span><br><span class="line"><span class="comment"># random种子，默认当前系统时间</span></span><br><span class="line"><span class="comment"># random.seed(10)  </span></span><br><span class="line"><span class="comment"># 种子固定，随机数则不变</span></span><br><span class="line">print(random.random())  </span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成[10,100]之间的整数</span></span><br><span class="line">print(random.randint(<span class="number">10</span>, <span class="number">100</span>))  </span><br><span class="line"><span class="comment"># 生成[10,100]之间以10为步长的整数</span></span><br><span class="line">print(random.randrange(<span class="number">10</span>, <span class="number">100</span>, <span class="number">10</span>))  </span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成k比特长的整数</span></span><br><span class="line">print(random.getrandbits(<span class="number">8</span>))</span><br><span class="line">print(random.getrandbits(<span class="number">16</span>))</span><br><span class="line">print(random.getrandbits(<span class="number">32</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成[a,b]之间的小数</span></span><br><span class="line">print(random.uniform(<span class="number">10</span>, <span class="number">100</span>))  </span><br><span class="line"></span><br><span class="line"><span class="comment"># 从序列seq中选择一个元素</span></span><br><span class="line">s = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">0</span>]</span><br><span class="line">print(random.choice(s))  </span><br><span class="line"><span class="comment"># 将seq中元素随机排序，返回打乱后的序列</span></span><br><span class="line">random.shuffle(s)</span><br><span class="line">print(s)</span><br></pre></td></tr></tbody></table></figure><h2 id="圆周率计算"><a href="#圆周率计算" class="headerlink" title="圆周率计算"></a>圆周率计算</h2><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> random <span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">from</span> time <span class="keyword">import</span> perf_counter</span><br><span class="line"></span><br><span class="line"><span class="string">"""近似计算"""</span></span><br><span class="line"><span class="comment"># 公式1/pow(16,k)*(4/(8*k+1)-2/(8*k+4)-1/(8*k+5)-1/(8*k+6))</span></span><br><span class="line">pi = <span class="number">0</span></span><br><span class="line">N = <span class="number">100</span></span><br><span class="line"><span class="keyword">for</span> k <span class="keyword">in</span> range(N):</span><br><span class="line">    pi += <span class="number">1</span> / pow(<span class="number">16</span>, k) * (<span class="number">4</span> / (<span class="number">8</span> * k + <span class="number">1</span>) - <span class="number">2</span> / (<span class="number">8</span> * k + <span class="number">4</span>) - <span class="number">1</span> / (<span class="number">8</span> * k + <span class="number">5</span>) - <span class="number">1</span> / (<span class="number">8</span> * k + <span class="number">6</span>))</span><br><span class="line">print(<span class="string">"{}"</span>.format(pi))</span><br><span class="line"></span><br><span class="line"><span class="string">"""蒙特卡罗（蒙眼戳飞镖）"""</span></span><br><span class="line">DARTS = <span class="number">1000</span> * <span class="number">1000</span></span><br><span class="line">hits = <span class="number">0.0</span></span><br><span class="line">start = perf_counter()</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, DARTS + <span class="number">1</span>):</span><br><span class="line">    x, y = random(), random()</span><br><span class="line">    dist = pow(x ** <span class="number">2</span> + y ** <span class="number">2</span>, <span class="number">0.5</span>)</span><br><span class="line">    <span class="keyword">if</span> dist <= <span class="number">1.0</span>:</span><br><span class="line">        hits = hits + <span class="number">1</span></span><br><span class="line">pi = <span class="number">4</span> * (hits / DARTS)</span><br><span class="line">print(<span class="string">"{}"</span>.format(pi))</span><br><span class="line">print(<span class="string">"{}"</span>.format(perf_counter() - start))</span><br></pre></td></tr></tbody></table></figure></body></html>
     </div>
 
     
     
     
-        <div class="reward-container">
-  <div></div>
-  <button onclick="document.getElementById('post-reward').classList.toggle('active');">
-    赞赏
-  </button>
-  <div id="post-reward">
-      
-      <div>
-        <img src="/images/wechatpay.png" alt="Another.M 微信">
-        <p>微信</p>
-      </div>
-      
-      <div>
-        <img src="/images/alipay.jpg" alt="Another.M 支付宝">
-        <p>支付宝</p>
-      </div>
 
-  </div>
-</div>
+    <footer class="post-footer">
+          
 
-        
-
-<div>
-<ul class="post-copyright">
+<div class="post-copyright">
+<ul>
   <li class="post-copyright-author">
-    <strong>本文作者： </strong>Another.M
+      <strong>本文作者： </strong>Another.M
   </li>
   <li class="post-copyright-link">
-    <strong>本文链接：</strong>
-    <a href="https://anotherm.github.io/2019/06/21/LearnPython-3/" title="LearnPython(3)">https://anotherm.github.io/2019/06/21/LearnPython-3/</a>
+      <strong>本文链接：</strong>
+      <a href="https://anotherm.github.io/2019/06/21/LearnPython-3/" title="LearnPython(3)">https://anotherm.github.io/2019/06/21/LearnPython-3/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
@@ -407,37 +392,34 @@
 </ul>
 </div>
 
-
-      <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/Python/" rel="tag"># Python</a>
           </div>
 
         
 
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2019/06/19/LearnPython-2/" rel="prev" title="LearnPython(2)">
-      <i class="fa fa-chevron-left"></i> LearnPython(2)
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2019/06/27/LearnPython-4/" rel="next" title="LearnPython(4)">
-      LearnPython(4) <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
-      </footer>
-    
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2019/06/19/LearnPython-2/" rel="prev" title="LearnPython(2)">
+                  <i class="fa fa-chevron-left"></i> LearnPython(2)
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2019/06/27/LearnPython-4/" rel="next" title="LearnPython(4)">
+                  LearnPython(4) <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
   </article>
-  
-  
-  
+</div>
 
 
 
-        </div>
-        
+
+
+
+      
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -446,7 +428,7 @@
       activeClass = localStorage.getItem('comments_active') || activeClass;
     }
     if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
       if (activeTab) {
         activeTab.click();
       }
@@ -455,60 +437,43 @@
   if (CONFIG.comments.storage) {
     window.addEventListener('tabs:click', event => {
       if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
+      const commentClass = event.target.classList[1];
       localStorage.setItem('comments_active', commentClass);
     });
   }
 </script>
 
-      </div>
-    </main>
+    </div>
+  </main>
 
-    <footer class="footer">
-      <div class="footer-inner">
-        
+  <footer class="footer">
+    <div class="footer-inner">
+      
 
-        
+      
 
 <div class="copyright">
   
   &copy; 2016 – 
   <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
-    <i class="fa fa-muisc"></i>
+    <i class="fa fa-music"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Another.M</span>
 </div>
-  <div class="powered-by">由 <span class="exturl theme-link" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl theme-link" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZw==">NexT.Gemini</span> 强力驱动
+  <div class="powered-by">由 <span class="exturl theme-link" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl theme-link" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZy9tdXNlLw==">NexT.Muse</span> 强力驱动
   </div>
 
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
+    </div>
+  </footer>
 
   
-  <script src="/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
 
   
   <script>
@@ -524,13 +489,23 @@
 
 
 
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
-<script src="/js/local-search.js"></script>
-
-
-
-
-
 
 
 

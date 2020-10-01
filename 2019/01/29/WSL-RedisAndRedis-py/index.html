@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.1">
+<meta name="generator" content="Hexo 5.2.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon-152x152.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
@@ -18,14 +18,14 @@
 <link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-  
-  <link rel="stylesheet" href="/lib/animate-css/animate.min.css">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.0/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"anotherm.github.io","root":"/","scheme":"Gemini","version":"8.0.0-rc.4","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"anotherm.github.io","root":"/","scheme":"Muse","version":"8.0.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
   <meta name="description" content="WSL + Redis与redis-py的使用本文章适用于有一定Linux基础的朋友，如果对Linux不熟悉的话，慢慢来，先学Linux命令-事情梗概最近无事，整理电脑时候看见一个redis-5.0.2.tar.gz静静的躺在某个角落想起本来要再Windows上试验一下Redis解压缩之后，看到了installserver. sh，嗯，这货看来是Linux版本的去官网看了一下，只有一个Downlo">
@@ -44,6 +44,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://anotherm.github.io/images/wsl-redis/redis-server.png">
 
+
 <link rel="canonical" href="https://anotherm.github.io/2019/01/29/WSL-RedisAndRedis-py/">
 
 
@@ -55,13 +56,13 @@
     isPost : true,
     lang   : 'zh-CN'
   };
-</script>
-<script async custom-element="amp-auto-ads"
+</script><script async custom-element="amp-auto-ads"
         src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
 </script>
 
 <script data-ad-client="ca-pub-4522566152785892" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </script> 
+
   <title>WSL + Redis与redis-py的使用 | Another.M</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-89085652-1"></script>
@@ -117,18 +118,17 @@
 <link rel="alternate" href="/atom.xml" title="Another.M" type="application/atom+xml">
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
 
-    <main class="main">
-      <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-        <div class="header-inner"><div class="site-brand-container">
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切换导航栏">
-        <span class="toggle-line toggle-line-first"></span>
-        <span class="toggle-line toggle-line-middle"></span>
-        <span class="toggle-line toggle-line-last"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
   </div>
 
@@ -152,7 +152,7 @@
 
 
 <nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
+  <ul class="main-menu menu">
         <li class="menu-item menu-item-home">
 
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
@@ -199,7 +199,7 @@
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off"
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
            placeholder="搜索..." spellcheck="false"
            type="search" class="search-input">
   </div>
@@ -207,8 +207,8 @@
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
-<div id="search-result">
-  <div id="no-result">
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
     <i class="fa fa-spinner fa-pulse fa-5x"></i>
   </div>
 </div>
@@ -217,12 +217,12 @@
   </div>
 
 </div>
-          
+        
   
   <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
   </div>
 
   <aside class="sidebar">
@@ -239,16 +239,16 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#WSL-Redis与redis-py的使用"><span class="nav-number">1.</span> <span class="nav-text">WSL + Redis与redis-py的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#事情梗概"><span class="nav-number">1.1.</span> <span class="nav-text">事情梗概</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#啰嗦了这么多，转向正题"><span class="nav-number">1.2.</span> <span class="nav-text">啰嗦了这么多，转向正题</span></a></li></ol></li></ol></div>
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#WSL-Redis%E4%B8%8Eredis-py%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="nav-number">1.</span> <span class="nav-text">WSL + Redis与redis-py的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8B%E6%83%85%E6%A2%97%E6%A6%82"><span class="nav-number">1.1.</span> <span class="nav-text">事情梗概</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%95%B0%E5%97%A6%E4%BA%86%E8%BF%99%E4%B9%88%E5%A4%9A%EF%BC%8C%E8%BD%AC%E5%90%91%E6%AD%A3%E9%A2%98"><span class="nav-number">1.2.</span> <span class="nav-text">啰嗦了这么多，转向正题</span></a></li></ol></li></ol></div>
       </section>
       <!--/noindex-->
 
       <section class="site-overview-wrap sidebar-panel">
-        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <p class="site-author-name" itemprop="name">Another.M</p>
   <div class="site-description" itemprop="description">The way is on your own.</div>
 </div>
-<div class="site-state-wrap animated">
+<div class="site-state-wrap site-overview-item animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
@@ -271,12 +271,12 @@
       </div>
   </nav>
 </div>
-  <div class="links-of-author animated">
+  <div class="links-of-author site-overview-item animated">
       <span class="links-of-author-item">
         <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0Fub3RoZXJN" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;AnotherM"><i class="github fa-fw"></i></span>
       </span>
   </div>
-  <div class="cc-license animated" itemprop="license">
+  <div class="cc-license site-overview-item animated" itemprop="license">
     <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></span>
   </div>
 
@@ -285,12 +285,12 @@
       </section>
     </div>
   </aside>
-  <div id="sidebar-dimmer"></div>
+  <div class="sidebar-dimmer"></div>
 
 
-      </header>
+    </header>
 
-      
+    
   <div class="back-to-top">
     <i class="fa fa-arrow-up"></i>
     <span>0%</span>
@@ -300,20 +300,23 @@
   <span class="exturl github-corner" data-url="aHR0cHM6Ly9naXRodWIuY29tL0Fub3RoZXJN" title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></span>
 
 <noscript>
-  <div id="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
 </noscript>
 
 
-      <div class="main-inner">
-        
+    <div class="main-inner post posts-expand">
+      
 
-        <div class="content post posts-expand">
-          
+      
 
-    
+  
+
+
+<div class="post-block">
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://anotherm.github.io/2019/01/29/WSL-RedisAndRedis-py/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -330,33 +333,35 @@
           WSL + Redis与redis-py的使用
         </h1>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2019-01-29 18:12:09" itemprop="dateCreated datePublished" datetime="2019-01-29T18:12:09+08:00">2019-01-29</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-31 23:13:55" itemprop="dateModified" datetime="2019-12-31T23:13:55+08:00">2019-12-31</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/The-Universe/" itemprop="url" rel="index"><span itemprop="name">The Universe</span></a>
-                </span>
-            </span>
+      <time title="创建时间：2019-01-29 18:12:09" itemprop="dateCreated datePublished" datetime="2019-01-29T18:12:09+08:00">2019-01-29</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2019-12-31 23:13:55" itemprop="dateModified" datetime="2019-12-31T23:13:55+08:00">2019-12-31</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/The-Universe/" itemprop="url" rel="index"><span itemprop="name">The Universe</span></a>
+        </span>
+    </span>
 
-          
+  
+</div>
 
         </div>
       </header>
@@ -365,44 +370,24 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
         <html><head></head><body><h1 id="WSL-Redis与redis-py的使用"><a href="#WSL-Redis与redis-py的使用" class="headerlink" title="WSL + Redis与redis-py的使用"></a>WSL + Redis与redis-py的使用</h1><p><em>本文章适用于有一定Linux基础的朋友，如果对Linux不熟悉的话，慢慢来，先学Linux命令-</em></p><h2 id="事情梗概"><a href="#事情梗概" class="headerlink" title="事情梗概"></a>事情梗概</h2><p>最近无事，整理电脑时候看见一个redis-5.0.2.tar.gz静静的躺在某个角落</p><p>想起本来要再Windows上试验一下Redis</p><p>解压缩之后，看到了<em>installserver. sh</em>，嗯，这货看来是Linux版本的</p><p>去官网看了一下，只有一个Download按钮，去查了查，作者觉得Windows太麻烦所以不打算开发</p><p>找了找，发现了<a href="https://github.com/MicrosoftArchive">Microsoft Archive</a>，竟然有<a href="https://github.com/MicrosoftArchive/redis">Windows版本的Redis</a>，看一下Release，嗯，Lastest Release是3.0.504,刚接触，啥也不知道，点了下载，然后一看发布的日期<strong>1 Jul 2016</strong>，玩个鬼头啊</p><p>整双系统吧，Rufus刻录完了Fedora，进BIOS关Secure Boot，安装时发现没分区，分区完了再装发现Fedora这货<code>***哔***</code>把EFI给我装硬盘没挂载到固态上，格式化分区重装，<strong>您所使用的分区无法挂载EFI<b style="color:red">（掀桌）</b></strong></p><p>折腾了两个小时，放弃了，想起了WSL，删除了msys2（为啥删我也不知道）</p><hr><h2 id="啰嗦了这么多，转向正题"><a href="#啰嗦了这么多，转向正题" class="headerlink" title="啰嗦了这么多，转向正题"></a>啰嗦了这么多，转向正题</h2><a id="more"></a><ul><li><p>启用WSL</p><p>Win + S - 启用或关闭Windows功能 - 适用于Linux的Windows子系统 - Microsoft Store - 搜索Linux - 在Windows上运行Linux</p><p>Ubuntu、openSUSE、SUSE、Debian、Kali Linux五种看个人喜好，本人选择的是Ubuntu</p></li><li><p>安装Redis</p><p>装好之后开始菜单打开Ubuntu，等待Install好后，设置username、password，修改源（可选，如果忍受得了官方源200kb/s的速度的话），本人用的是<a href="http://mirrors.ustc.edu.cn/help/ubuntu.html">中科大源</a></p><p>换源之后执行<code>sudo apt update</code>更新源，执行<code>sudo apt upgrade</code>更新一下软件包，然后使用<code>sudo apt install redis-server</code>安装redis</p></li><li><p>启用Redis</p><p>安装好之后<code>sudo vim /etc/redis/redis.conf</code>,为安全起见使用vim的<code>/bind</code>搜索到bind 127.0.0.1使用#注释，<code>/requirepass</code>搜索到密码并设置，守护进程<code>daemonize</code>设置为<code>yes</code>（未实验对于WSL来说是否有作用）</p><p>执行redis-server看到以下结果说明Redis安装成功，使用sudo service redis-server start启动Redis服务<br><img alt data-src="/images/wsl-redis/redis-server.png"></p></li><li><p>使用Redis</p><p>执行<code>redis-cli</code>，终端显示<code>127.0.0.1:6379</code>，端口号可以在redis.conf内更改，输入<code>ping</code>，提示<code>(error) NOAUTH Authentication required.</code>，使用<code>auth <你刚刚在redis.conf中设置的密码></code>，显示<code>OK</code>，输入<code>ping</code>，显示<code>PONG</code></p><p>环境搭建好了，现在该测试redis-py了，本人使用的是Anaconda环境，在Anaconda Prompt中输入<code>conda install redis-py</code>，等待安装完成，输入<code>python</code>进入Python环境，依次输入<code>import redis</code>、<code>r = redis.Redis(host='127.0.0.1',port=6379,db=0,password='你设置的密码')</code>、<code>r.set('test','redis-py test')</code>、<code>print(r.get('test'))</code>查看结果，或将这四句写入python的可执行脚本<br><img alt data-src="/images/wsl-redis/redis-test.png"></p></li></ul><blockquote><p>注意事项：</p><ul><li>由于WSL的特殊性，此方法每次需启动WSL输入sudo service redis-server start使用</li><li>可编写WSL的启动脚本，加入Windows的启动项，在此作为延伸不做实现</li><li><code>sudo systemctl enable redis-server</code>对于WSL无用，每次重启后Windows任务管理器内的WSL相关进程依然会消失</li><li></li></ul></blockquote></body></html>
     </div>
 
     
     
     
-        <div class="reward-container">
-  <div></div>
-  <button onclick="document.getElementById('post-reward').classList.toggle('active');">
-    赞赏
-  </button>
-  <div id="post-reward">
-      
-      <div>
-        <img src="/images/wechatpay.png" alt="Another.M 微信">
-        <p>微信</p>
-      </div>
-      
-      <div>
-        <img src="/images/alipay.jpg" alt="Another.M 支付宝">
-        <p>支付宝</p>
-      </div>
 
-  </div>
-</div>
+    <footer class="post-footer">
+          
 
-        
-
-<div>
-<ul class="post-copyright">
+<div class="post-copyright">
+<ul>
   <li class="post-copyright-author">
-    <strong>本文作者： </strong>Another.M
+      <strong>本文作者： </strong>Another.M
   </li>
   <li class="post-copyright-link">
-    <strong>本文链接：</strong>
-    <a href="https://anotherm.github.io/2019/01/29/WSL-RedisAndRedis-py/" title="WSL + Redis与redis-py的使用">https://anotherm.github.io/2019/01/29/WSL-RedisAndRedis-py/</a>
+      <strong>本文链接：</strong>
+      <a href="https://anotherm.github.io/2019/01/29/WSL-RedisAndRedis-py/" title="WSL + Redis与redis-py的使用">https://anotherm.github.io/2019/01/29/WSL-RedisAndRedis-py/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
@@ -410,37 +395,34 @@
 </ul>
 </div>
 
-
-      <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/WSL/" rel="tag"># WSL</a>
           </div>
 
         
 
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2018/12/06/Debian-Keyring/" rel="prev" title="Debian-Keyring">
-      <i class="fa fa-chevron-left"></i> Debian-Keyring
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2019/02/24/LearnPython-1/" rel="next" title="LearnPython(1)">
-      LearnPython(1) <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
-      </footer>
-    
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2018/12/06/Debian-Keyring/" rel="prev" title="Debian-Keyring">
+                  <i class="fa fa-chevron-left"></i> Debian-Keyring
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2019/02/24/LearnPython-1/" rel="next" title="LearnPython(1)">
+                  LearnPython(1) <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
   </article>
-  
-  
-  
+</div>
 
 
 
-        </div>
-        
+
+
+
+      
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -449,7 +431,7 @@
       activeClass = localStorage.getItem('comments_active') || activeClass;
     }
     if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
       if (activeTab) {
         activeTab.click();
       }
@@ -458,60 +440,43 @@
   if (CONFIG.comments.storage) {
     window.addEventListener('tabs:click', event => {
       if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
+      const commentClass = event.target.classList[1];
       localStorage.setItem('comments_active', commentClass);
     });
   }
 </script>
 
-      </div>
-    </main>
+    </div>
+  </main>
 
-    <footer class="footer">
-      <div class="footer-inner">
-        
+  <footer class="footer">
+    <div class="footer-inner">
+      
 
-        
+      
 
 <div class="copyright">
   
   &copy; 2016 – 
   <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
-    <i class="fa fa-muisc"></i>
+    <i class="fa fa-music"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Another.M</span>
 </div>
-  <div class="powered-by">由 <span class="exturl theme-link" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl theme-link" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZw==">NexT.Gemini</span> 强力驱动
+  <div class="powered-by">由 <span class="exturl theme-link" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl theme-link" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZy9tdXNlLw==">NexT.Muse</span> 强力驱动
   </div>
 
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
+    </div>
+  </footer>
 
   
-  <script src="/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
 
   
   <script>
@@ -527,13 +492,23 @@
 
 
 
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
-<script src="/js/local-search.js"></script>
-
-
-
-
-
 
 
 

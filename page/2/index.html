@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.1">
+<meta name="generator" content="Hexo 5.2.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon-152x152.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
@@ -18,14 +18,14 @@
 <link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-  
-  <link rel="stylesheet" href="/lib/animate-css/animate.min.css">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.0/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"anotherm.github.io","root":"/","scheme":"Gemini","version":"8.0.0-rc.4","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"anotherm.github.io","root":"/","scheme":"Muse","version":"8.0.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
   <meta name="description" content="The way is on your own.">
@@ -38,6 +38,7 @@
 <meta property="article:author" content="Another.M">
 <meta name="twitter:card" content="summary">
 
+
 <link rel="canonical" href="https://anotherm.github.io/page/2/">
 
 
@@ -49,13 +50,13 @@
     isPost : false,
     lang   : 'zh-CN'
   };
-</script>
-<script async custom-element="amp-auto-ads"
+</script><script async custom-element="amp-auto-ads"
         src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
 </script>
 
 <script data-ad-client="ca-pub-4522566152785892" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </script> 
+
   <title>Another.M</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-89085652-1"></script>
@@ -111,18 +112,17 @@
 <link rel="alternate" href="/atom.xml" title="Another.M" type="application/atom+xml">
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
 
-    <main class="main">
-      <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-        <div class="header-inner"><div class="site-brand-container">
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切换导航栏">
-        <span class="toggle-line toggle-line-first"></span>
-        <span class="toggle-line toggle-line-middle"></span>
-        <span class="toggle-line toggle-line-last"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
   </div>
 
@@ -146,7 +146,7 @@
 
 
 <nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
+  <ul class="main-menu menu">
         <li class="menu-item menu-item-home">
 
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
@@ -193,7 +193,7 @@
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off"
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
            placeholder="搜索..." spellcheck="false"
            type="search" class="search-input">
   </div>
@@ -201,8 +201,8 @@
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
-<div id="search-result">
-  <div id="no-result">
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
     <i class="fa fa-spinner fa-pulse fa-5x"></i>
   </div>
 </div>
@@ -211,12 +211,12 @@
   </div>
 
 </div>
-          
+        
   
   <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
   </div>
 
   <aside class="sidebar">
@@ -237,11 +237,11 @@
       <!--/noindex-->
 
       <section class="site-overview-wrap sidebar-panel">
-        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <p class="site-author-name" itemprop="name">Another.M</p>
   <div class="site-description" itemprop="description">The way is on your own.</div>
 </div>
-<div class="site-state-wrap animated">
+<div class="site-state-wrap site-overview-item animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
@@ -264,12 +264,12 @@
       </div>
   </nav>
 </div>
-  <div class="links-of-author animated">
+  <div class="links-of-author site-overview-item animated">
       <span class="links-of-author-item">
         <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0Fub3RoZXJN" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;AnotherM"><i class="github fa-fw"></i></span>
       </span>
   </div>
-  <div class="cc-license animated" itemprop="license">
+  <div class="cc-license site-overview-item animated" itemprop="license">
     <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></span>
   </div>
 
@@ -278,12 +278,12 @@
       </section>
     </div>
   </aside>
-  <div id="sidebar-dimmer"></div>
+  <div class="sidebar-dimmer"></div>
 
 
-      </header>
+    </header>
 
-      
+    
   <div class="back-to-top">
     <i class="fa fa-arrow-up"></i>
     <span>0%</span>
@@ -293,19 +293,22 @@
   <span class="exturl github-corner" data-url="aHR0cHM6Ly9naXRodWIuY29tL0Fub3RoZXJN" title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></span>
 
 <noscript>
-  <div id="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
 </noscript>
 
 
-      <div class="main-inner">
-        
-
-        <div class="content index posts-expand">
-          
+    <div class="main-inner index posts-expand">
       
+
+      
+    
+
+
+<div class="post-block">
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://anotherm.github.io/2019/04/12/DesktopEffect/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -323,33 +326,35 @@
             <a href="/2019/04/12/DesktopEffect/" class="post-title-link" itemprop="url">桌面美化</a>
         </h2>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2019-04-12 12:32:05" itemprop="dateCreated datePublished" datetime="2019-04-12T12:32:05+08:00">2019-04-12</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-31 23:13:17" itemprop="dateModified" datetime="2019-12-31T23:13:17+08:00">2019-12-31</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/The-Universe/" itemprop="url" rel="index"><span itemprop="name">The Universe</span></a>
-                </span>
-            </span>
+      <time title="创建时间：2019-04-12 12:32:05" itemprop="dateCreated datePublished" datetime="2019-04-12T12:32:05+08:00">2019-04-12</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2019-12-31 23:13:17" itemprop="dateModified" datetime="2019-12-31T23:13:17+08:00">2019-12-31</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/The-Universe/" itemprop="url" rel="index"><span itemprop="name">The Universe</span></a>
+        </span>
+    </span>
 
-          
+  
+</div>
 
         </div>
       </header>
@@ -358,8 +363,6 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
           <html><head></head><body><h1 id="软件"><a href="#软件" class="headerlink" title="软件"></a>软件</h1><p><a href="https://www.wallpaperengine.io/">Wallpaper Engine</a></p><p><a href="https://www.microsoft.com/zh-cn/p/translucenttb/9pf4kz2vn4w9">TranslucentTB</a></p><p><a href="https://www.rainmeter.net/">Rainmeter</a></p><p><a href="https://guanjia.qq.com/product/zmzl/">腾讯桌面整理</a></p><h1 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h1><p><a href="https://www.deviantart.com/novasev/art/Simply-Nova-267726929">Rainmeter－SimpleNova</a></p><p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1463562239">WallpaperEngine－「ー」/「しおん」</a></p><h1 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h1><p><video controls width="100%" src="/images/desktop.mp4">Your browser does not support the video tag.</video></p></body></html>
       
     </div>
@@ -367,18 +370,25 @@
     
     
     
-      <footer class="post-footer">
+
+    <footer class="post-footer">
         <div class="post-eof"></div>
-      </footer>
+      
+    </footer>
   </article>
-  
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://anotherm.github.io/2019/02/24/LearnPython-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -396,33 +406,35 @@
             <a href="/2019/02/24/LearnPython-1/" class="post-title-link" itemprop="url">LearnPython(1)</a>
         </h2>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2019-02-24 20:34:17" itemprop="dateCreated datePublished" datetime="2019-02-24T20:34:17+08:00">2019-02-24</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-31 22:36:43" itemprop="dateModified" datetime="2019-12-31T22:36:43+08:00">2019-12-31</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/The-Universe/" itemprop="url" rel="index"><span itemprop="name">The Universe</span></a>
-                </span>
-            </span>
+      <time title="创建时间：2019-02-24 20:34:17" itemprop="dateCreated datePublished" datetime="2019-02-24T20:34:17+08:00">2019-02-24</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2019-12-31 22:36:43" itemprop="dateModified" datetime="2019-12-31T22:36:43+08:00">2019-12-31</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/The-Universe/" itemprop="url" rel="index"><span itemprop="name">The Universe</span></a>
+        </span>
+    </span>
 
-          
+  
+</div>
 
         </div>
       </header>
@@ -431,8 +443,6 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
           <p><font style="font-size:24px"><b>Python学习笔记</b></font></p><blockquote><p>坑了很长时间，2019/2/24，推翻重构，本章主要记录Python学习概览<br><br><strong><em>This Article Is Not Python Tutorial</em></strong>，极大部分包含了个人的主观意见，知识仅供参考，本文目前使用Python版本为3.7.2</p></blockquote><blockquote><p>本笔记所有内容均来源于北京理工大学嵩天的《Python程序语言设计》</p></blockquote><blockquote><p>路都是自己走出来的</p></blockquote>
           <!--noindex-->
             <div class="post-button">
@@ -448,18 +458,25 @@
     
     
     
-      <footer class="post-footer">
+
+    <footer class="post-footer">
         <div class="post-eof"></div>
-      </footer>
+      
+    </footer>
   </article>
-  
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://anotherm.github.io/2019/01/29/WSL-RedisAndRedis-py/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -477,33 +494,35 @@
             <a href="/2019/01/29/WSL-RedisAndRedis-py/" class="post-title-link" itemprop="url">WSL + Redis与redis-py的使用</a>
         </h2>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2019-01-29 18:12:09" itemprop="dateCreated datePublished" datetime="2019-01-29T18:12:09+08:00">2019-01-29</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-31 23:13:55" itemprop="dateModified" datetime="2019-12-31T23:13:55+08:00">2019-12-31</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/The-Universe/" itemprop="url" rel="index"><span itemprop="name">The Universe</span></a>
-                </span>
-            </span>
+      <time title="创建时间：2019-01-29 18:12:09" itemprop="dateCreated datePublished" datetime="2019-01-29T18:12:09+08:00">2019-01-29</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2019-12-31 23:13:55" itemprop="dateModified" datetime="2019-12-31T23:13:55+08:00">2019-12-31</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/The-Universe/" itemprop="url" rel="index"><span itemprop="name">The Universe</span></a>
+        </span>
+    </span>
 
-          
+  
+</div>
 
         </div>
       </header>
@@ -512,8 +531,6 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
           <h1 id="WSL-Redis与redis-py的使用"><a href="#WSL-Redis与redis-py的使用" class="headerlink" title="WSL + Redis与redis-py的使用"></a>WSL + Redis与redis-py的使用</h1><p><em>本文章适用于有一定Linux基础的朋友，如果对Linux不熟悉的话，慢慢来，先学Linux命令-</em></p><h2 id="事情梗概"><a href="#事情梗概" class="headerlink" title="事情梗概"></a>事情梗概</h2><p>最近无事，整理电脑时候看见一个redis-5.0.2.tar.gz静静的躺在某个角落</p><p>想起本来要再Windows上试验一下Redis</p><p>解压缩之后，看到了<em>installserver. sh</em>，嗯，这货看来是Linux版本的</p><p>去官网看了一下，只有一个Download按钮，去查了查，作者觉得Windows太麻烦所以不打算开发</p><p>找了找，发现了<a href="https://github.com/MicrosoftArchive">Microsoft Archive</a>，竟然有<a href="https://github.com/MicrosoftArchive/redis">Windows版本的Redis</a>，看一下Release，嗯，Lastest Release是3.0.504,刚接触，啥也不知道，点了下载，然后一看发布的日期<strong>1 Jul 2016</strong>，玩个鬼头啊</p><p>整双系统吧，Rufus刻录完了Fedora，进BIOS关Secure Boot，安装时发现没分区，分区完了再装发现Fedora这货<code>***哔***</code>把EFI给我装硬盘没挂载到固态上，格式化分区重装，<strong>您所使用的分区无法挂载EFI<b style="color:red">（掀桌）</b></strong></p><p>折腾了两个小时，放弃了，想起了WSL，删除了msys2（为啥删我也不知道）</p><hr><h2 id="啰嗦了这么多，转向正题"><a href="#啰嗦了这么多，转向正题" class="headerlink" title="啰嗦了这么多，转向正题"></a>啰嗦了这么多，转向正题</h2>
           <!--noindex-->
             <div class="post-button">
@@ -529,18 +546,25 @@
     
     
     
-      <footer class="post-footer">
+
+    <footer class="post-footer">
         <div class="post-eof"></div>
-      </footer>
+      
+    </footer>
   </article>
-  
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://anotherm.github.io/2018/12/06/Debian-Keyring/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -558,33 +582,35 @@
             <a href="/2018/12/06/Debian-Keyring/" class="post-title-link" itemprop="url">Debian-Keyring</a>
         </h2>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2018-12-06 15:07:03" itemprop="dateCreated datePublished" datetime="2018-12-06T15:07:03+08:00">2018-12-06</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-06-19 14:26:54" itemprop="dateModified" datetime="2019-06-19T14:26:54+08:00">2019-06-19</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AD%A6%E4%B9%A0%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/" itemprop="url" rel="index"><span itemprop="name">学习中遇到的坑</span></a>
-                </span>
-            </span>
+      <time title="创建时间：2018-12-06 15:07:03" itemprop="dateCreated datePublished" datetime="2018-12-06T15:07:03+08:00">2018-12-06</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2019-06-19 14:26:54" itemprop="dateModified" datetime="2019-06-19T14:26:54+08:00">2019-06-19</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%AD%A6%E4%B9%A0%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/" itemprop="url" rel="index"><span itemprop="name">学习中遇到的坑</span></a>
+        </span>
+    </span>
 
-          
+  
+</div>
 
         </div>
       </header>
@@ -593,8 +619,6 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
           <h1 id="这次的标题是-🤦‍"><a href="#这次的标题是-🤦‍" class="headerlink" title="这次的标题是 🤦‍"></a>这次的标题是 🤦‍</h1><p>登陆SSH，使用<code>apt update</code>更新一下软件包，然后提示<code>NO_PUBKEY XXXXXXXXXXXXXXXX</code><br><img src="/images/debian-gpg/d01.png" alt=""><br>随即各种搜索，提示都是一致的提示使用<code>gpg --keyserver keyring.debian.com --recv-keys</code></p><p>输入之后，再次使用<code>apt update</code>报错依旧</p><p>然后查了一下还需要<code>gpg --armor --export XXXXXXXX | apt-key add -</code></p><p>使用之后，报错依旧</p><p>然后找到了一个网页上说删除<code>debian-archive-keyring</code>这个包然后使用<code>apt --fix-broken install</code>就好了</p><p>系统提示<strong>Please input the phrase: Yes, do as I say!</strong>，犹豫了一下<br>……<br><code>Ctrl + C</code><br>……<br>找了一会儿依然修不好</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt remove debian-archive-keyring</span><br><span class="line">Yes, do as I say!</span><br></pre></td></tr></table></figure><p><font size="10em" color="red">然后……</font></p>
           <!--noindex-->
             <div class="post-button">
@@ -610,18 +634,25 @@
     
     
     
-      <footer class="post-footer">
+
+    <footer class="post-footer">
         <div class="post-eof"></div>
-      </footer>
+      
+    </footer>
   </article>
-  
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://anotherm.github.io/2018/12/01/Archieved/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -639,33 +670,35 @@
             <a href="/2018/12/01/Archieved/" class="post-title-link" itemprop="url">Archieved</a>
         </h2>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2018-12-01 12:59:25" itemprop="dateCreated datePublished" datetime="2018-12-01T12:59:25+08:00">2018-12-01</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-31 23:13:43" itemprop="dateModified" datetime="2019-12-31T23:13:43+08:00">2019-12-31</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Notice/" itemprop="url" rel="index"><span itemprop="name">Notice</span></a>
-                </span>
-            </span>
+      <time title="创建时间：2018-12-01 12:59:25" itemprop="dateCreated datePublished" datetime="2018-12-01T12:59:25+08:00">2018-12-01</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2019-12-31 23:13:43" itemprop="dateModified" datetime="2019-12-31T23:13:43+08:00">2019-12-31</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Notice/" itemprop="url" rel="index"><span itemprop="name">Notice</span></a>
+        </span>
+    </span>
 
-          
+  
+</div>
 
         </div>
       </header>
@@ -674,8 +707,6 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
           <html><head></head><body><blockquote><p>2016/11/21-2017/04/07 期间学习总结已经归档不可访问<br><br>此博客内容已经接近全面更新</p></blockquote></body></html>
       
     </div>
@@ -683,18 +714,25 @@
     
     
     
-      <footer class="post-footer">
+
+    <footer class="post-footer">
         <div class="post-eof"></div>
-      </footer>
+      
+    </footer>
   </article>
-  
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://anotherm.github.io/2018/11/19/FlaskTest/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -712,33 +750,35 @@
             <a href="/2018/11/19/FlaskTest/" class="post-title-link" itemprop="url">Flask初探</a>
         </h2>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2018-11-19 22:10:16" itemprop="dateCreated datePublished" datetime="2018-11-19T22:10:16+08:00">2018-11-19</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-31 22:36:48" itemprop="dateModified" datetime="2019-12-31T22:36:48+08:00">2019-12-31</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/The-Universe/" itemprop="url" rel="index"><span itemprop="name">The Universe</span></a>
-                </span>
-            </span>
+      <time title="创建时间：2018-11-19 22:10:16" itemprop="dateCreated datePublished" datetime="2018-11-19T22:10:16+08:00">2018-11-19</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2019-12-31 22:36:48" itemprop="dateModified" datetime="2019-12-31T22:36:48+08:00">2019-12-31</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/The-Universe/" itemprop="url" rel="index"><span itemprop="name">The Universe</span></a>
+        </span>
+    </span>
 
-          
+  
+</div>
 
         </div>
       </header>
@@ -747,8 +787,6 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
           <h1 id="Flask初探"><a href="#Flask初探" class="headerlink" title="Flask初探"></a><b>Flask初探</b></h1><p>昨天花时间研究了一下Spring与SpringBoot相关的知识，然后过了一天，整个人就是这种感觉:</p><p><font color="red"><strong>你脑袋有毛病我不想和你玩</strong></font></p><p>今天看了看Flask</p><p>然后就有了这篇文章的标题—-<b>Flask初探</b></p><p>关于这篇文章的内容呢，就是教你用9行写出一个网站</p>
           <!--noindex-->
             <div class="post-button">
@@ -764,18 +802,25 @@
     
     
     
-      <footer class="post-footer">
+
+    <footer class="post-footer">
         <div class="post-eof"></div>
-      </footer>
+      
+    </footer>
   </article>
-  
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://anotherm.github.io/2017/04/04/BlogUpdateA/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -793,33 +838,35 @@
             <a href="/2017/04/04/BlogUpdateA/" class="post-title-link" itemprop="url">博客界面效果小更新</a>
         </h2>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2017-04-04 12:43:04" itemprop="dateCreated datePublished" datetime="2017-04-04T12:43:04+08:00">2017-04-04</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-31 22:24:11" itemprop="dateModified" datetime="2019-12-31T22:24:11+08:00">2019-12-31</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Notice/" itemprop="url" rel="index"><span itemprop="name">Notice</span></a>
-                </span>
-            </span>
+      <time title="创建时间：2017-04-04 12:43:04" itemprop="dateCreated datePublished" datetime="2017-04-04T12:43:04+08:00">2017-04-04</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2019-12-31 22:24:11" itemprop="dateModified" datetime="2019-12-31T22:24:11+08:00">2019-12-31</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Notice/" itemprop="url" rel="index"><span itemprop="name">Notice</span></a>
+        </span>
+    </span>
 
-          
+  
+</div>
 
         </div>
       </header>
@@ -828,8 +875,6 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
           <html><head></head><body><p>因<del><a href="http://dev.duoshuo.com/threads/58d1169ae293b89a20c57241">多说评论系统关闭</a></del>，所以整了整网页，准备取消多说服务，顺便翻了翻我现在正在使用的<a href="http://theme-next.iissnan.com/">NexT主题</a>，发现主题作者更新了，尤其意外的发现添加了<a href="https://github.com/hustcc/canvas-nest.js">canvas nest</a>这个动态背景效果，于是连带Hexo一起更新了一下</p><p><del>目前使用的背景为NexT的three_wave，具体可在作者主题文档找到</del></p><p>至于评论系统，反正也没人评论，所以干脆不弄了</p><p><font color="green">2018.12.01更新：多说已经关闭，而且canvas_line这个特效好炫酷，至于评论系统，嗯，洗洗睡吧😂,然后<a href="https://github.com/theme-next/hexo-theme-next">NexT主题</a>已经交由<a href="https://github.com/theme-next">NexT组织</a>更新，目前版本6.0</font></p></body></html>
       
     </div>
@@ -837,18 +882,25 @@
     
     
     
-      <footer class="post-footer">
+
+    <footer class="post-footer">
         <div class="post-eof"></div>
-      </footer>
+      
+    </footer>
   </article>
-  
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://anotherm.github.io/2016/07/27/LinuxExperience/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -866,33 +918,35 @@
             <a href="/2016/07/27/LinuxExperience/" class="post-title-link" itemprop="url">关于我所用过的各版本Linux的浅谈</a>
         </h2>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2016-07-27 15:57:39" itemprop="dateCreated datePublished" datetime="2016-07-27T15:57:39+08:00">2016-07-27</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-31 22:36:28" itemprop="dateModified" datetime="2019-12-31T22:36:28+08:00">2019-12-31</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/The-Universe/" itemprop="url" rel="index"><span itemprop="name">The Universe</span></a>
-                </span>
-            </span>
+      <time title="创建时间：2016-07-27 15:57:39" itemprop="dateCreated datePublished" datetime="2016-07-27T15:57:39+08:00">2016-07-27</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2019-12-31 22:36:28" itemprop="dateModified" datetime="2019-12-31T22:36:28+08:00">2019-12-31</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/The-Universe/" itemprop="url" rel="index"><span itemprop="name">The Universe</span></a>
+        </span>
+    </span>
 
-          
+  
+</div>
 
         </div>
       </header>
@@ -901,8 +955,6 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
           <h3 id="以下所写仅为个人观点，真实感受请自己体验，如有雷同，那就让它雷同吧"><a href="#以下所写仅为个人观点，真实感受请自己体验，如有雷同，那就让它雷同吧" class="headerlink" title="以下所写仅为个人观点，真实感受请自己体验，如有雷同，那就让它雷同吧"></a><del>以下所写仅为个人观点，真实感受请自己体验，如有雷同，那就让它雷同吧</del></h3><p><font color="green">2018.12.01更新:拥有VPS管理经验大概2年左右了，期间主要使用CentOS 6，最近更换了Debian 9，所以更新了一下大部分内容</font></p><p>文中部分文字、简介等来源于<a href="https://zh.wikipedia.org/wiki/Linux发行版列表">维基百科-Linux发行版列表</a></p><p><del></del></p><hr><h2 id="先列出我所用过的Linux，按使用先后排序"><a href="#先列出我所用过的Linux，按使用先后排序" class="headerlink" title="先列出我所用过的Linux，按使用先后排序"></a>先列出我所用过的Linux，按使用先后排序</h2><ul><li><p><a href="http://cn.ubuntu.com/">Ubuntu</a></p></li><li><p><del><a href="http://www.ubuntukylin.com/">Ubuntu Kylin</a></del></p></li><li><p><del><a href="https://www.kali.org/">Kali Linux</a></del></p></li><li><p><del><a href="https://www.deepin.org/">Deepin</a></del></p></li><li><p><del><a href="https://elementary.io/">elementary OS</a></del></p></li><li><p><a href="https://www.centos.org/">CentOS</a></p></li><li><p><a href="https://www.debian.org">Debian</a></p></li><li><p><del><a href="https://www.archlinux.org/">Arch Linux</a></del></p><p><font color="green">添加Fedora，Manjaro的部分简述，删除和修改了一些无用的描述，把 “★(\u2605)” 更换成为了 “⭐(\u2B50)” ，算是为了网页添加了一丝色彩，虽然不知道能不能被识别</font></p></li></ul><hr>
           <!--noindex-->
             <div class="post-button">
@@ -918,18 +970,25 @@
     
     
     
-      <footer class="post-footer">
+
+    <footer class="post-footer">
         <div class="post-eof"></div>
-      </footer>
+      
+    </footer>
   </article>
-  
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://anotherm.github.io/2016/04/14/MarkdownTest/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -947,33 +1006,35 @@
             <a href="/2016/04/14/MarkdownTest/" class="post-title-link" itemprop="url">Markdown常用语法测试</a>
         </h2>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2016-04-14 17:50:07" itemprop="dateCreated datePublished" datetime="2016-04-14T17:50:07+08:00">2016-04-14</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-31 22:36:25" itemprop="dateModified" datetime="2019-12-31T22:36:25+08:00">2019-12-31</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/The-Universe/" itemprop="url" rel="index"><span itemprop="name">The Universe</span></a>
-                </span>
-            </span>
+      <time title="创建时间：2016-04-14 17:50:07" itemprop="dateCreated datePublished" datetime="2016-04-14T17:50:07+08:00">2016-04-14</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2019-12-31 22:36:25" itemprop="dateModified" datetime="2019-12-31T22:36:25+08:00">2019-12-31</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/The-Universe/" itemprop="url" rel="index"><span itemprop="name">The Universe</span></a>
+        </span>
+    </span>
 
-          
+  
+</div>
 
         </div>
       </header>
@@ -982,8 +1043,6 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
           <p><img src="/images/avatar.jpg" alt="">图片测试</p><hr><h1 id="This-is-a-test-一级标题测试"><a href="#This-is-a-test-一级标题测试" class="headerlink" title="This is a test 一级标题测试"></a>This is a test 一级标题测试</h1><h2 id="This-is-a-test-二级标题测试"><a href="#This-is-a-test-二级标题测试" class="headerlink" title="This is a test 二级标题测试"></a>This is a test 二级标题测试</h2><h3 id="This-is-a-test-三级标题测试"><a href="#This-is-a-test-三级标题测试" class="headerlink" title="This is a test 三级标题测试"></a>This is a test 三级标题测试</h3><h4 id="This-is-a-test-四级标题测试"><a href="#This-is-a-test-四级标题测试" class="headerlink" title="This is a test 四级标题测试"></a>This is a test 四级标题测试</h4><h5 id="This-is-a-test-五级标题测试"><a href="#This-is-a-test-五级标题测试" class="headerlink" title="This is a test 五级标题测试"></a>This is a test 五级标题测试</h5><h6 id="This-is-a-test-六级标题测试"><a href="#This-is-a-test-六级标题测试" class="headerlink" title="This is a test 六级标题测试"></a>This is a test 六级标题测试</h6>
           <!--noindex-->
             <div class="post-button">
@@ -999,13 +1058,16 @@
     
     
     
-      <footer class="post-footer">
+
+    <footer class="post-footer">
         <div class="post-eof"></div>
-      </footer>
+      
+    </footer>
   </article>
-  
-  
-  
+</div>
+
+
+
 
 
   
@@ -1015,8 +1077,7 @@
 
 
 
-        </div>
-        
+      
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -1025,7 +1086,7 @@
       activeClass = localStorage.getItem('comments_active') || activeClass;
     }
     if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
       if (activeTab) {
         activeTab.click();
       }
@@ -1034,60 +1095,43 @@
   if (CONFIG.comments.storage) {
     window.addEventListener('tabs:click', event => {
       if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
+      const commentClass = event.target.classList[1];
       localStorage.setItem('comments_active', commentClass);
     });
   }
 </script>
 
-      </div>
-    </main>
+    </div>
+  </main>
 
-    <footer class="footer">
-      <div class="footer-inner">
-        
+  <footer class="footer">
+    <div class="footer-inner">
+      
 
-        
+      
 
 <div class="copyright">
   
   &copy; 2016 – 
   <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
-    <i class="fa fa-muisc"></i>
+    <i class="fa fa-music"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Another.M</span>
 </div>
-  <div class="powered-by">由 <span class="exturl theme-link" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl theme-link" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZw==">NexT.Gemini</span> 强力驱动
+  <div class="powered-by">由 <span class="exturl theme-link" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl theme-link" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZy9tdXNlLw==">NexT.Muse</span> 强力驱动
   </div>
 
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
+    </div>
+  </footer>
 
   
-  <script src="/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
 
   
   <script>
@@ -1103,13 +1147,23 @@
 
 
 
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
-<script src="/js/local-search.js"></script>
-
-
-
-
-
 
 
 
